@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="First International Trade and Finance House Ltm"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="/css/styles.css" rel="stylesheet" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="stylesheet" href="%PUBLIC_URL%/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <title>FITAFHOUSE</title>
+  </head>
+  <body style="font-family: Irish Gover">
+
+
+
+    <div id="root" style="font-family: Irish Gover"></div>
+
+
+  </body>
+       
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="js/index.js"></script>
+  <script src="js/app.js">
+
+const file = document.querySelector('#file');
+const img = document.querySelector('.image-wrapper');
+const uploadBtn = document.querySelector('#uploadBtn');
+const push = document.querySelector('#push');
+
+
+document.querySelector('.ship').style.display = 'none';
+uploadBtn.addEventListener('click', function(){
+    document.querySelector('.plus').style.display = 'none';
+    document.querySelector('.ship').style.display = 'block';
+})
+
+file.addEventListener('change', function(){
+    const choosedFile = this.files[0];
+
+
+    if (choosedFile){
+        const reader= new FileReader();
+
+        reader.addEventListener('load', function(){
+
+            img.style.backgroundImage  = reader.result
+        })
+        reader.readAsDataURL(choosedFile)
+    }
+})
+
+
+push.addEventListener('click', function(){
+    Swal.fire({
+        title: 'Wait Patiently',
+        text: 'Image will take a while to upload, wait for response',
+        icon: 'warning'
+    })
+    const ref = firebase.storage().ref()
+    const file = document.querySelector('#file').files[0]
+    const name = new Date() + '-Calibrain' + file.name
+    const metadata = {
+      contentType: file.type
+    }
+    const task = ref.child(name).put(file,metadata)
+    task
+    .then(snapshot=> snapshot.ref.getDownloadURL())
+    .then(url=>{
+      document.querySelector("#imageInput").value = url;
+      Swal.fire({
+        title: 'Image Added To Calibrain',
+        text: 'Proceed with registration',
+        input: `${url}`,
+        icon: 'success'
+    })
+    })
+  })
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-storage.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA47dEI6Sw9LPNl8AtdDizlKd2yONkaN74",
+    authDomain: "file-uploads-55ed9.firebaseapp.com",
+    databaseURL: "https://file-uploads-55ed9.firebaseio.com",
+    projectId: "file-uploads-55ed9",
+    storageBucket: "file-uploads-55ed9.appspot.com",
+    messagingSenderId: "928347985917",
+    appId: "1:928347985917:web:656280c8e7ac73bdb5eb94",
+    measurementId: "G-SM107ESEYH"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  console.log(firebase)
+
+</script>
+</html>
