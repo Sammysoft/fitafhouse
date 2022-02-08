@@ -4,7 +4,7 @@ import React from 'react';
 const  Menu = ()=>{
     return(
         <>
-               <section id="features">
+               <section id="download">
             <div className="container px-5">
                 <div className="row gx-5 align-items-center">
                     <div className="col-lg-8 order-lg-1 mb-5 mb-lg-0">
@@ -53,7 +53,7 @@ const  Menu = ()=>{
                     <div className="col-lg-4 order-lg-0">
 
                         <div className="features-device-mockup">
-                            <svg className="circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            {/* <svg className="circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                                 <defs>
                                     <linearGradient id="circleGradient" gradientTransform="rotate(45)">
                                         <stop className="gradient-start-color" offset="0%"></stop>
@@ -72,7 +72,8 @@ const  Menu = ()=>{
                                         <video muted="muted" autoplay="" loop="" style={{maxWidth: "100%", height: "100%"}}><source src="assets/img/demo-screen.mp4" type="video/mp4" /></video>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
+                            <img src="/images/logo.png" width="150%" height="150%" alt="High quality House Cliparts For Free!" />
                         </div>
                     </div>
                 </div>
