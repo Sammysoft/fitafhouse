@@ -6,8 +6,8 @@ const About =()=>{
         <section className="page-section" id="about">
             <div className="container">
                 <div className="text-center">
-                    <h2 className="section-heading text-uppercase">About</h2>
-                    <h3 className="section-subheading text-muted">A Short History about FITAFHOUSE.</h3>
+                    <h2 className="section-heading text-uppercase">About</h2><br/>
+                    <h3 className="section-subheading text-muted">A Short History about FITAFHOUSE.</h3><br/><br/><br/>
                 </div>
                 <ul className="timeline">
                     <li>

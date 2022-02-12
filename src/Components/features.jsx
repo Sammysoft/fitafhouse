@@ -14,7 +14,7 @@ const Features = ()=>{
                         of our operation will go down with corresponding increase in our profit. That means more returns will be made available to all investors at the end of the financial year</p>
                     </div>
                     <div className="col-sm-8 col-md-6">
-                        <div className=""><img  src="https://www.chronicle.co.zw/wp-content/uploads/sites/3/2018/05/BANKING1.jpg" width="100%" height="100%" alt="..." /></div>
+                        <div className=""><img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLPXdFo6lRh1QU6R_zDE2_-t0rGRbPKQiMng&usqp=CAU" width="100%" height="100%" alt="..." /></div>
                     </div>
                 </div>
             </div>
@@ -27,7 +27,7 @@ const Features = ()=>{
                         <br />
                         Join Us Now!.
                     </h2>
-                    <a className="btn btn-outline-light py-3 px-4 rounded-pill" href="https://startbootstrap.com/theme/new-age" target="_blank">Invest With Us</a>
+                    <a className="btn btn-outline-light py-3 px-4" href="https://startbootstrap.com/theme/new-age" target="_blank">Invest With Us</a>
                 </div>
             </div>
         </section>

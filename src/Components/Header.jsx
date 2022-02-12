@@ -11,15 +11,15 @@ const Header = () =>{
                     <div className="col-lg-6">
 
                         <div className="mb-5 mb-lg-0 text-center text-lg-start">
-                            <h1 className="display-1 lh-1 mb-3">FITAFHOUSE, bringing your ideas alife.</h1>
-                            <p className="lead fw-normal text-muted mb-5">We strike the balance between safety, profitability and liquidity for businesses and investments </p>
+                            <h1 className="display-1 lh-1 mb-3">WELCOME TO FITAFHOUSE</h1>
+                            <p className="lead fw-normal text-muted mb-5">Your home for comprehensive, all-round trade and financing.</p>
                             <div className="d-flex flex-column flex-lg-row align-items-center">
                                 {/* <a className="me-lg-3 mb-4 mb-lg-0" href="#!"><img className="app-badge" src="assets/img/google-play-badge.svg" alt="..." /></a>
                                 <a href="#!"><img className="app-badge" src="assets/img/app-store-badge.svg" alt="..." /></a> */}
-                                <button className="btn btn-success rounded-pill px-3 mb-2 mb-lg-0" >
+                                <button className="btn btn-success px-3 mb-2 mb-lg-0" >
                                 <span className="d-flex align-items-center">
-                                    <i className="bi-chat-text-fill me-2"></i>
-                                    <span className="small">Invest With Us </span>
+                                {/* <i className="bi bi-exclamation-square fill-me"> </i> */}
+                                    <span className="big"> Learn More</span>
                                 </span>
                                 </button>
                             </div>
@@ -50,7 +50,7 @@ const Header = () =>{
                                 </div>
 
                             </div> */}
-                            <a href="https://www.freeiconspng.com/img/165" title="Image from freeiconspng.com"><img src="https://www.freeiconspng.com/uploads/house-0.png" width="100%" height="100%" alt="High quality House Cliparts For Free!" /></a>                        {/* </div> */}
+                            <a href="https://www.freeiconspng.com/img/165" title="Image from freeiconspng.com"><img src="https://nairametrics.com/wp-content/uploads/2020/04/Naira.jpg?w=900" width="100%" height="100%" alt="High quality House Cliparts For Free!" /></a>                        {/* </div> */}
                     </div>
                 </div>
             </div>
