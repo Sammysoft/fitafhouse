@@ -10,7 +10,7 @@ const Features = ()=>{
                 <div className="col-sm-8 col-md-6">
                         <div className=""><img  src="/images/info.png" width="100%" height="100%" alt="..." /></div>
                     </div>
-                    <div className="col-12 col-lg-5" style={{fontSize: "10px"}}>
+                    <div className="col-12 col-lg-5" style={{fontSize: "10px", fontFamily:"ubuntu"}}>
                         <span style={{fontWeight: "bolder", fontSize: "40px"}}>Investment With <br/><span style={{color: "#0263aa", fontWeight: "bolder", fontSize: "px"}}>FITAF</span><span style={{color: "#6bbe43", fontWeight: "bolder"}}>House</span></span>
                         <p style={{fontFamily:"ubuntu", fontSize: "15px"}}>International trade business involves large sum of money expecially now that we have global challenges with the value of our currencies
                         It's on this note that we humbly ask for your investment in this company. Your massive investment in this company will give us oppurtunity to enjoy economies of sale. What that means is that the cost
@@ -35,7 +35,7 @@ const Features = ()=>{
                        century financing.
                     </h2>
                     <br /><br/>
-                    <a className="btn btn-outline-light py-3 px-4" href="/" target="_blank">Become Our partner</a>
+                    <a className="btn btn-outline-light py-3 px-4" href="/" target="_blank" style={{fontFamily:"ubuntu"}}>Become Our partner</a>
                 </div>
             </div>
         </section>
