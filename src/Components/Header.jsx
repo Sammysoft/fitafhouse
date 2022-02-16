@@ -4,53 +4,47 @@ import React from "react";
 const Header = () =>{
     return(
         <>
+        <nav style={{position: 'absolute', top: "20px", width: "90%", backgroundColor: 'transparent', display: 'flex', padding: '5% 5% 5% 5%'}}>
+            <div className="nav-brand" style={{flex: '1'}}>
+                    <span style={{padding: '5%'}}>
+                        <img src="/images/logo.png" alt="brand-logo" width={"50px"} height="50px"/>
+                    </span>
+                    <span style={{color: '#0263aa', fontWeight:"bolder", fontFamily: "ubuntu"}}>
+                      FITAFHouse
+                    </span>
+            </div>
+            <div className="nav-menu" style={{ display: 'inline-block', flex: '1', textAlign: "left"}}>
+                <ul style={{listStyle: "none", display: 'inline-block', cursor: "pointer"}}>
+                    <li style={{display: "inline-block", padding: "20px", fontFamily: "ubuntu"}}>Our Company</li>
+                    <li style={{display: "inline-block", padding: "20px", fontFamily: "ubuntu"}}>Invest With Us</li>
+                    <li style={{display: "inline-block", padding: "20px", fontFamily: "ubuntu"}}>  Get In Touch</li>
+                </ul>
+            </div>
+        </nav>
+        <header className="masthead" style={{width:"100%", height: "auto", margin: 'auto',  padding: '10px'}}>
+            <div className="container">
+                <div className="align-items-center" style={{display: "flex", flexDirection: "row", alignItems:"center", justifyContent: "space-between"}}>
+                    <div style={{flex: '1'}}>
 
-        <header className="masthead">
-            <div className="container px-5">
-                <div className="row gx-5 align-items-center">
-                    <div className="col-lg-6">
-
-                        <div className="mb-5 mb-lg-0 text-center text-lg-start">
-                            <h1 className="display-1 lh-1 mb-3">WELCOME TO FITAFHOUSE</h1>
+                        <div style={{paddingTop: "40%"}}>
+                            <h1 >Welcome to<br/> <span style={{color: "#0263aa"}}>FITAF</span><span style={{color: "#6bbe43"}}>HOUSE</span></h1>
                             <p className="lead fw-normal text-muted mb-5">Your home for comprehensive, all-round trade and financing.</p>
                             <div className="d-flex flex-column flex-lg-row align-items-center">
-                                {/* <a className="me-lg-3 mb-4 mb-lg-0" href="#!"><img className="app-badge" src="assets/img/google-play-badge.svg" alt="..." /></a>
-                                <a href="#!"><img className="app-badge" src="assets/img/app-store-badge.svg" alt="..." /></a> */}
-                                <button className="btn btn-success px-3 mb-2 mb-lg-0" >
+
+                                <button style={{backgroundColor: "#0263aa", color: 'white', padding: "5% 15% 5% 15%", border: "none"}}>
                                 <span className="d-flex align-items-center">
-                                {/* <i className="bi bi-exclamation-square fill-me"> </i> */}
-                                    <span className="big"> Learn More</span>
+                                    <span style={{fontSize: "14px", fontFamily: "ubuntu"}}> Learn More</span>
                                 </span>
                                 </button>
                             </div>
                         </div>
+
+                        <div style={{marginTop: "20%" }}>
+                        <span style={{ fontSize: "10px", fontWeight:"lighter", fontFamily: "ubuntu"}}>FIRST INTERNATIONAL TRADE AND FINANCE HOUSE LIMITED</span>
+                        </div>
                     </div>
-                    <div className="col-lg-6">
-
-                        {/* <div className="masthead-device-mockup"> */}
-                            {/* <svg className="circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <linearGradient id="circleGradient" gradientTransform="rotate(45)">
-                                        <stop className="gradient-start-color" offset="0%"></stop>
-                                        <stop className="gradient-end-color" offset="100%"></stop>
-                                    </linearGradient>
-                                </defs> */}
-                                {/* <circle cx="50" cy="50" r="50"></circle></svg>
-                                <svg className="shape-1 d-none d-sm-block" viewBox="0 0 240.83 240.83" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03" transform="translate(120.42 -49.88) rotate(45)"></rect>
-                                <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03" transform="translate(-49.88 120.42) rotate(-45)"></rect></svg>
-                                <svg className="shape-2 d-none d-sm-block" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"></circle></svg> */}
-                            {/* <div className="device-wrapper">
-                                 <div className="device" data-device="iPhoneX" data-orientation="portrait" data-color="black">
-                                     <div className="screen bg-black">
-                               <img src="/images/fitafhouse[5].jpg" alt="..." style={{maxWidth: "100%", height: "100%"}}/>
-
-
-                                    </div>
-                                </div>
-
-                            </div> */}
-                            <a href="https://www.freeiconspng.com/img/165" title="Image from freeiconspng.com"><img src="https://nairametrics.com/wp-content/uploads/2020/04/Naira.jpg?w=900" width="100%" height="100%" alt="High quality House Cliparts For Free!" /></a>                        {/* </div> */}
+                    <div style={{flex: "2.5"}} >
+                            <img src="/images/header.png" width="90%" height="100%" alt="High quality House Cliparts For Free!" />                    {/* </div> */}
                     </div>
                 </div>
             </div>

@@ -7,40 +7,40 @@ const Features = ()=>{
     <section className="bg-light">
             <div className="container px-5" id="features">
                 <div className="row gx-5 align-items-center justify-content-center justify-content-lg-between">
-                    <div className="col-12 col-lg-5">
-                        <h2 className="display-4 lh-1 mb-4">Investment With FITAFHOUSE</h2>
-                        <p className="lead fw-normal text-muted mb-5 mb-lg-0">International trade business involves large sum of money expecially now that we have global challenges with the value of our currencies
+                <div className="col-sm-8 col-md-6">
+                        <div className=""><img  src="/images/info.png" width="100%" height="100%" alt="..." /></div>
+                    </div>
+                    <div className="col-12 col-lg-5" style={{fontSize: "10px"}}>
+                        <span style={{fontWeight: "bolder", fontSize: "40px"}}>Investment With <br/><span style={{color: "#0263aa", fontWeight: "bolder", fontSize: "px"}}>FITAF</span><span style={{color: "#6bbe43", fontWeight: "bolder"}}>House</span></span>
+                        <p style={{fontFamily:"ubuntu", fontSize: "15px"}}>International trade business involves large sum of money expecially now that we have global challenges with the value of our currencies
                         It's on this note that we humbly ask for your investment in this company. Your massive investment in this company will give us oppurtunity to enjoy economies of sale. What that means is that the cost
                         of our operation will go down with corresponding increase in our profit. That means more returns will be made available to all investors at the end of the financial year</p>
+                        <button style={{backgroundColor: "#0263aa", color: 'white', padding: "5% 15% 5% 15%", border: "none"}}>
+                                <span className="d-flex align-items-center">
+                                    <span style={{fontSize: "14px", fontFamily: "ubuntu"}}> Learn More</span>
+                                </span>
+                                </button>
                     </div>
-                    <div className="col-sm-8 col-md-6">
-                        <div className=""><img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLPXdFo6lRh1QU6R_zDE2_-t0rGRbPKQiMng&usqp=CAU" width="100%" height="100%" alt="..." /></div>
-                    </div>
+
                 </div>
             </div>
         </section>
         <section className="cta">
-            <div className="cta-content">
-                <div className="container px-5">
-                    <h2 className="text-white display-1 lh-1 mb-4">
-                        Stop waiting.
-                        <br />
-                        Join Us Now!.
+            <div className="cta-content"  style={{display: 'flex'}}>
+                <div className="container"></div>
+                <div className="container" style={{}}>
+                    <h2 className="text-white " >
+                        Step into our world of  21st
+                        <br /><br/>
+                       century financing.
                     </h2>
-                    <a className="btn btn-outline-light py-3 px-4" href="https://startbootstrap.com/theme/new-age" target="_blank">Invest With Us</a>
+                    <br /><br/>
+                    <a className="btn btn-outline-light py-3 px-4" href="/" target="_blank">Become Our partner</a>
                 </div>
             </div>
         </section>
 
-        {/* <section className="bg-gradient-primary-to-secondary" id="download">
-            <div className="container px-5">
-                <h2 className="text-center text-white font-alt mb-4">Get the app now!</h2>
-                <div className="d-flex flex-column flex-lg-row align-items-center justify-content-center">
-                    <a className="me-lg-3 mb-4 mb-lg-0" href="#!"><img className="app-badge" src="assets/img/google-play-badge.svg" alt="..." /></a>
-                    <a href="#!"><img className="app-badge" src="assets/img/app-store-badge.svg" alt="..." /></a>
-                </div>
-            </div>
-        </section> */}
+
 
 
         </>

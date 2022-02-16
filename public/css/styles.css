@@ -79,7 +79,7 @@
     scroll-behavior: smooth;
   }
 }
-nav-item
+.text-muted
 body {
   margin: 0;
   font-family: var(--bs-body-font-family) !important;
@@ -7956,6 +7956,7 @@ textarea.form-control-lg {
   --bs-text-opacity: 1;
   color: black !important;
   font-family: 'Ubuntu', sans-serif !important;
+  text-align: left;
 }
 .text-gradient
 .text-black-50 {
@@ -11485,9 +11486,9 @@ html {
 .font-alt {
   font-family: 'Ubuntu', sans-serif;
 }
-
+.cta
 .text-gradient {
-  background: -webkit-linear-gradient(#008000, #008000);
+  background: -webkit-linear-gradient(#0263aa, #0263aa);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -11592,8 +11593,9 @@ section {
 
 section.cta {
   position: relative;
+  height: 40vh;
   padding: 15rem 0;
-  background-image: url("https://source.unsplash.com/5g41N3uRPf8/1500x800");
+  background-image: url("../images/info3.png");
   background-position: center;
   background-size: cover;
 }
