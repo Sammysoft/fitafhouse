@@ -27,8 +27,8 @@ const Features = ()=>{
         </section>
         <section className="cta">
             <div className="cta-content"  style={{display: 'flex'}}>
-                <div className="container"></div>
-                <div className="container" style={{}}>
+                <div className="container" style={{flex: 1}}></div>
+                <div className="container" style={{flex: 1, top: "5px"}}>
                     <h2 className="text-white " >
                         Step into our world of  21st
                         <br /><br/>
@@ -37,6 +37,7 @@ const Features = ()=>{
                     <br /><br/>
                     <a className="btn btn-outline-light py-3 px-4" href="/" target="_blank" style={{fontFamily:"ubuntu"}}>Become Our partner</a>
                 </div>
+
             </div>
         </section>
 

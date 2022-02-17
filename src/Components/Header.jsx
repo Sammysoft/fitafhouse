@@ -21,11 +21,11 @@ const Header = () =>{
                                 </span>
                                 </button>
                             </div>
+                            <div className="fitaf-wrapp">
+                        <span id="fitaf-full" style={{ fontSize: "12px", fontWeight:"lighter", fontFamily: "ubuntu",}}>FIRST INTERNATIONAL TRADE AND FINANCE HOUSE LIMITED</span>
+                        </div>
+                        </div>
 
-                        </div>
-                        <div style={{ padding: "10%"}}>
-                        <span id="fitaf-full"style={{ fontSize: "10px", fontWeight:"lighter", fontFamily: "ubuntu",}}>FIRST INTERNATIONAL TRADE AND FINANCE HOUSE LIMITED</span>
-                        </div>
                     </div>
                     <div style={{flex: "1"}} >
                             <img src="/images/header.png" width="100%" height="60%" alt="High quality House Cliparts For Free!" />
