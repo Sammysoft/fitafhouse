@@ -1,0 +1,44 @@
+@media (max-width: 500px) {
+.masthead{
+    margin: 30px;
+}
+.header-content{
+    margin: "10px"
+}
+.navbar{
+    position: relative !important
+}
+.lead{
+    font-size: 15px;
+}
+button{
+    background-color: "#0263aa";
+    color: 'white';
+    padding: "2% 5% 2% 5%" !important;
+    border: "none";
+    font-size: 10px !important;
+    margin-top: 20px !important
+}
+#btn{
+    font-size: 10px !important;
+    font-family: "ubuntu" !important;
+
+
+}
+#fitaf-full{
+    font-size: 8px !important;
+    font-family: 'ubuntu' !important;
+    font-weight: lighter !important;
+    display: none
+}
+}
+
+.fitaf-wrapp{
+    margin-top: 10px !important;
+}
+.text-center{
+    width: 120% !important
+}
+.cta-content{
+    display: block !important;
+}
