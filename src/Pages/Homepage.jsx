@@ -11,7 +11,7 @@ import About from "../Components/about";
 const Homepage = () =>{
     return(
         <>
-            {/* <Navbar /> */}
+            <Navbar />
             <Header />
             <Menu />
             <Features />

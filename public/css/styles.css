@@ -135,6 +135,10 @@ h2, .h2 {
 h3, .h3 {
   font-size: calc(1.3rem + 0.6vw);
 }
+
+@media (max-width: 500px){
+ 
+}
 @media (min-width: 1200px) {
   h3, .h3 {
     font-size: 1.75rem;
@@ -11532,12 +11536,6 @@ section {
   color: #2937f0;
 }
 
-/*!
- * html5-device-mockups (https://github.com/pixelsign/html5-device-mockups)
- * Copyright 2013 - 2017 pixelsign
- * Licensed under MIT (https://github.com/pixelsign/html5-device-mockups/blob/master/LICENSE.txt)
- * Last Build: Tue Nov 14 2017 12:40:57
- */
 .device-wrapper {
   max-width: 300px;
   width: 100%;
