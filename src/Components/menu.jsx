@@ -5,7 +5,7 @@ const  Menu = ()=>{
     return(
         <>
         <section id="download">
-        <div className="container-fluid px-5">
+
                             <div className="row" style={{padding: "10%", fontSize: "13px"}}>
                                 <div className="col-md-3 mb-5">
 
@@ -49,10 +49,6 @@ const  Menu = ()=>{
                           </div>
                            </div>
                             </div>
-
-                        </div>
-
-
         </section>
         </>
     )

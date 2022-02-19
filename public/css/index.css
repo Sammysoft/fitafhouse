@@ -1,6 +1,10 @@
 @media (max-width: 500px) {
 .masthead{
     margin: 30px;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('/images//header.png');
+    background-position: "cover";
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 .header-content{
     margin: "10px"
@@ -10,6 +14,13 @@
 }
 .lead{
     font-size: 15px;
+    color: white !important;
+}
+.header-welcome{
+    color: white;
+}
+.header-img{
+    display: none;
 }
 button{
     background-color: "#0263aa";
@@ -37,8 +48,9 @@ button{
     margin-top: 10px !important;
 }
 .text-center{
-    width: 120% !important
+    width: 100% !important
 }
 .cta-content{
     display: block !important;
 }
+

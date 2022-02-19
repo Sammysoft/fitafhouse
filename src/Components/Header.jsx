@@ -11,7 +11,7 @@ const Header = () =>{
                     <div style={{flex: '1'}}>
 
                         <div className="header-content" style={{padding: "20%"}}>
-                            <h1 >Welcome to<br/> <span style={{color: "#0263aa"}}>FITAF</span><span style={{color: "#6bbe43"}}>HOUSE</span></h1><br/><br/>
+                            <h1 className="header-welcome">Welcome to<br/> <span style={{color: "#0263aa"}}>FITAF</span><span style={{color: "#6bbe43"}}>HOUSE</span></h1><br/><br/>
                             <p className="lead fw-normal text-muted mb-5">Your home for comprehensive, <br/>all-round trade and financing.</p>
                             <div className="d-flex flex-column flex-lg-row align-items-center">
 
@@ -27,7 +27,7 @@ const Header = () =>{
                         </div>
 
                     </div>
-                    <div style={{flex: "1"}} >
+                    <div className="header-img" style={{flex: "1"}} >
                             <img src="/images/header.png" width="100%" height="60%" alt="High quality House Cliparts For Free!" />
                     </div>
                 </div>
