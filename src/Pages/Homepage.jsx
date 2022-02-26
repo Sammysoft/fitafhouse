@@ -5,7 +5,7 @@ import Testimonial from "../Components/testimonials";
 import Menu from '../Components/menu';
 import Features from "../Components/features";
 import Footer from "../Components/footer";
-import About from "../Components/about";
+import Partner from "../Components/partner";
 
 
 const Homepage = () =>{
@@ -15,8 +15,8 @@ const Homepage = () =>{
             <Header />
             <Menu />
             <Features />
+            <Partner />
             <Testimonial/>
-            <About />
             <Footer />
         </>
     )
