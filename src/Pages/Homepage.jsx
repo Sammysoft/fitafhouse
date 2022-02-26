@@ -16,7 +16,7 @@ const Homepage = () =>{
             <Menu />
             <Features />
             <Testimonial/>
-            {/* <About /> */}
+            <About />
             <Footer />
         </>
     )
