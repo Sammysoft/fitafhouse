@@ -61,7 +61,7 @@
   --bs-body-font-weight: 500;
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
-  --bs-body-bg: #fff;
+  --bs-body-bg: #f3f3f3;
 }
 
 *,
@@ -79,7 +79,7 @@
     scroll-behavior: smooth;
   }
 }
-.text-muted
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family) !important;
@@ -131,13 +131,13 @@ h2, .h2 {
     font-size: 2rem;
   }
 }
-
+.cta
 h3, .h3 {
   font-size: calc(1.3rem + 0.6vw);
 }
 
 @media (max-width: 500px){
- 
+
 }
 @media (min-width: 1200px) {
   h3, .h3 {
@@ -479,7 +479,7 @@ kbd kbd {
 figure {
   margin: 0 0 1rem;
 }
-
+.masthead
 img,
 svg {
   vertical-align: middle;
@@ -11592,7 +11592,7 @@ section {
 section.cta {
   position: relative;
   height: 40vh;
-  padding: 15rem 0;
+  padding: 15rem;
   background-image: url("../images/info3.png");
   background-position: center;
   background-size: cover;
@@ -11705,6 +11705,8 @@ section.cta:before {
     max-width: 15rem;
   }
 }
+
+
 @media (min-width: 1400px) {
   .features-device-mockup .circle {
     width: 80%;
@@ -11728,13 +11730,18 @@ footer a:hover, footer a:active, footer a:focus {
   padding-top: 9.5rem;
   padding-bottom: 5rem;
 }
-.masthead .masthead-device-mockup {
+.masthead3{
+  background-color: #f8f9fa;
+  padding-top: 9.5rem;
+  padding-bottom: 5rem;
+}
+.masthead .masthead3 .masthead-device-mockup {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
-.masthead .masthead-device-mockup .circle {
+.masthead .masthead3 .masthead-device-mockup .circle {
   position: absolute;
   fill: url(#circleGradient);
   width: 70%;
@@ -11755,6 +11762,8 @@ footer a:hover, footer a:active, footer a:focus {
   bottom: 15%;
   left: 10%;
 }
+
+
 .masthead .masthead-device-mockup .shape-2 {
   position: absolute;
   height: 0.75rem;

@@ -8,7 +8,7 @@ const Features = ()=>{
             <div className="container px-5" id="features">
                 <div className="row gx-5 align-items-center justify-content-center justify-content-lg-between">
                 <div className="col-sm-8 col-md-6">
-                        <div className=""><img  src="/images/info.png" width="100%" height="100%" alt="..." /></div>
+                        <div className=""><img  src="/images/info.jpg" width="100%" height="100%" alt="..." /></div>
                     </div>
                     <div className="col-12 col-lg-5" style={{fontSize: "10px", fontFamily:"ubuntu"}}>
                         <span style={{fontWeight: "bolder", fontSize: "40px"}}>Investment With <br/><span style={{color: "#0263aa", fontWeight: "bolder", fontSize: "px"}}>FITAF</span><span style={{color: "#6bbe43", fontWeight: "bolder"}}>House</span></span>
@@ -25,13 +25,15 @@ const Features = ()=>{
                 </div>
             </div>
         </section>
-        <section className="cta">
-            <div className="cta-content"  style={{display: 'flex'}}>
-                <div className="container" style={{flex: 1}}></div>
-                <div className="container" style={{flex: 1, top: "5px"}}>
-                    <h2 className="text-white " >
+        {/* <section className="cta">
+            <div className="cta-content" >
+                <div className="contain-wrap">
+                    <p></p>
+                </div>
+                <div className="contain-wrapp">
+                    <h2 className="text-white">
                         Step into our world of  21st
-                        <br /><br/>
+                        <br />
                        century financing.
                     </h2>
                     <br /><br/>
@@ -39,11 +41,7 @@ const Features = ()=>{
                 </div>
 
             </div>
-        </section>
-
-
-
-
+        </section> */}
         </>
     )
 }

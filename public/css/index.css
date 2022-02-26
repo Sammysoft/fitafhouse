@@ -1,14 +1,82 @@
-@media (max-width: 500px) {
+
+
+
+@media (max-width: 850px) {
+.cta{
+    height: 30vh;
+}
+.cta-content{
+        display: block;
+    }
+
+    .contact-card{
+        display: "flex" !important;
+        flex-direction: column !important;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .flex-wrapper{
+        width: 50% !important;
+        top: 30%;
+        left: 5%;
+        position: absolute;
+    }
+    .partner-wrapper {
+        position: relative;
+        height: 40vh;
+        padding: 10rem !important;
+        background-image: url("../images/info3.png");
+        background-position: center;
+        background-size: cover;
+        width: 100% !important;
+
+      }
+      .partner-wrapper:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+      }
+
+    .wrapper{
+        flex: 1;
+        width: 100% !important;
+    }
+    .contain-wrapp{
+        width: 100%;
+    }
+
 .masthead{
     margin: 30px;
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('/images//header.png');
-    background-position: "cover";
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('/images/head-img.jpg');
+    background-position:center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: "100%";
+}
+
+.masthead2{
+    margin: 30px;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('/images/hand.jpg');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: "100%";
+}
+.masthead3{
+    margin: 30px;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('/images/Man.jpg');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: "100%";
 }
 .header-content{
     margin: "10px"
 }
+
 .navbar{
     position: relative !important
 }
@@ -44,13 +112,121 @@ button{
 }
 }
 
+
+
+
+
+
+
+
+
+
+
 .fitaf-wrapp{
-    margin-top: 10px !important;
+    margin-top: 20% !important;
 }
 .text-center{
     width: 100% !important
 }
-.cta-content{
-    display: block !important;
+
+
+.icon-feature{
+    color: #0263aa;
 }
 
+.cta{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.masthead{
+    background-color: #f3f3f3;
+}
+.masthead3{
+    background-color: #f3f3f3;
+}
+
+.nav-item{
+    text-decoration: none !important;
+
+}
+
+.form-wrapper{
+    background-color: whitesmoke;
+    font-family:"ubuntu";
+}
+
+.form-inputs{
+    display: "flex";
+    flex-direction: "column";
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    flex: 1;
+    margin: 10%;
+    border: 1px solid gray;
+    font-size: 30px;
+}
+
+.contact-card{
+    display: "flex" !important;
+    flex-direction: column;
+    justify-content: space-between !important;
+    align-items: center;
+    width: 100% !important;
+}
+
+.wrapper{
+    border-top: 5px solid #6bbe43 !important;
+    border-bottom: 5px solid #6bbe43!important;
+    box-shadow: "0px 5px 5px 0px #888888" !important;
+    padding: 10px !important;
+    text-align: center !important;
+    width: auto;
+}
+
+.texter{
+    text-align: center;
+    font-family: "ubuntu";
+    line-height: 4rem;
+}
+.about-wrapper{
+    font-family: 'ubuntu';
+    background-color: #f3f3f3;
+    text-align: justify;
+    font-weight: 300;
+    padding: 0 10% 0 10%;
+}
+.partner-wrapper {
+    position: relative;
+    height: 30vh;
+    padding: 15rem;
+    background-image: url("../images/info3.png");
+    background-position: center;
+    background-size: cover;
+
+  }
+
+  .flex-wrapper{
+      /* flex: 1 !important; */
+      width: 50% !important;
+      /* background-color: red; */
+      float: right;
+      top: 30%;
+      right: 5%;
+      position: absolute;
+
+
+  }
+  .partner-wrapper:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }

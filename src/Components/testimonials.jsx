@@ -22,7 +22,7 @@ const Testimonial =()=>{
                                 </button>
                     </div>
                     <div className="col-sm-8 col-md-6">
-                        <div className=""><img  src="/images/info2.png" width="100%" height="100%" alt="..." /></div>
+                        <div className=""><img  src="/images/info3.jpg" width="100%" height="100%" alt="..." /></div>
                     </div>
                 </div>
             </div>

@@ -22,8 +22,8 @@ const Footer = () =>{
                     <li style={{display: "inline-block", padding: "20px", fontFamily: "ubuntu"}}> Privacy</li>
                 </ul>
             </div>
-            <div className="" style={{flex: "1", padding:"20px", textAlign: "center"}}>
-                Copyright &copy; Your Website 2022</div>
+            <div className="" style={{flex: "1", padding:"20px", textAlign: "center", fontFamily: "ubuntu"}}>
+                Copyright &copy; FIRST INTERNTIONAL TRADE AND FINANCE HOUSE LIMITED</div>
             </div>
         </footer>
 
