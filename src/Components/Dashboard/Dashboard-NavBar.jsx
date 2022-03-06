@@ -19,11 +19,37 @@ const NavBar = ()=>{
         </nav>
             <div className="dashboard-navbar">
                     <div className="dash-left-nav">
-                            Left Dashboard
+                            <ul className="dash-list">
+                                <li className="dash-list-item">My Account</li>
+                                <li className="dash-list-item">Payments</li>
+                                <li className="dash-list-item">Message</li>
+                                <li className="dash-list-item">ROI</li>
+                                <li className="dash-list-item">FAQ</li>
+                            </ul>
                         </div>
 
                         <div className="dash-right-nav">
                            <h5>Welcome, Good Afternoon</h5>
+                           <p>
+                               <div className="new-wrap">
+                                    <div className="new-wrap-item">
+                                            <span className="new-wrap-item-img">
+                                                    <img src="/images/Man.jpg" alt="roi image" height="100%" width="100%" />
+                                            </span>
+                                            <span className="new-text">
+                                                    <p>Current Investment</p>
+                                            </span>
+                                    </div>
+                                    <div className="new-wrap-item">
+                                    <span className="new-wrap-item-img">
+                                                    <img src="/images/Man.jpg" alt="roi image" height="100%" width="100%" />
+                                            </span>
+                                            <span className="new-text">
+                                                    <p>Time To Withdrawal</p>
+                                            </span>
+                                    </div>
+                                </div>
+                           </p>
                         </div>
                 </div>
 

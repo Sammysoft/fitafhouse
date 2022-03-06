@@ -134,7 +134,8 @@ button{
 }
 .wrap{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
 .right-top-nav{
     flex: 6;
@@ -142,11 +143,14 @@ button{
 .profile-pic-img{
     flex: 1;
     border-radius: 50%;
+    flex-basis: 40%;
 }
 .profile-name{
     flex:1;
     font-family: "ubuntu";
     font-weight:700;
+    text-align: center;
+    padding: 5%;
 }
 
 .dashboard-navbar{
@@ -160,7 +164,6 @@ button{
      flex: 1;
      background-color: #f3f3f3;
      height: 90vh;
-     padding: 2%;
      width: auto;
      border-right: 3px solid #6cbd44;
  }
@@ -170,6 +173,43 @@ button{
      height: 90vh;
      padding: 5%;
      border-left: 3px solid #0263aa;
+ }
+
+ .dash-list{
+     font-family: 'ubuntu';
+     list-style: none;
+     text-decoration: none;
+ }
+ .dash-list-item{
+     text-decoration: none;
+     padding-top: 50%;
+ }
+.new-wrap{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+ .new-wrap-item{
+     border-top-right-radius: 9px;
+     border-top-left-radius: 9px;
+     border-bottom-left-radius: 9px;
+     border-bottom-right-radius: 9px;
+     background-color: rgb(228, 228, 228);
+     font-family: inherit;
+     text-align: center;
+     flex: 1;
+     width: 40%;
+     height: auto;
+     /* padding: 5%; */
+     margin: 5%;
+ }
+
+ .new-text{
+     padding: 5%;
+     
  }
 
 .fitaf-wrapp{
