@@ -120,6 +120,7 @@ button{
     padding: 3%;
     font-family: "ubuntu";
     text-align: left;
+    color: white;
     background-color: #0263aa;
     display: flex;
     justify-content: space-between;
@@ -168,7 +169,7 @@ button{
      flex:9;
      height: 90vh;
      padding: 5%;
-     border-left: 3px solid #6cbd44;
+     border-left: 3px solid #0263aa;
  }
 
 .fitaf-wrapp{
