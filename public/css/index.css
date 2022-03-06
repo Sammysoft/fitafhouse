@@ -114,13 +114,62 @@ button{
 
 
 
+.top-nav{
+    height: 10vh;
+    background-color: #f3f3f3;
+    padding: 3%;
+    font-family: "ubuntu";
+    text-align: left;
+    background-color: #0263aa;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
 
+.left-top-nav{
+    display:flex;
+    flex: 1;
+    justify-content: flex-start;
+}
+.wrap{
+    display: flex;
+    justify-content: space-between;
+}
+.right-top-nav{
+    flex: 6;
+}
+.profile-pic-img{
+    flex: 1;
+    border-radius: 50%;
+}
+.profile-name{
+    flex:1;
+    font-family: "ubuntu";
+    font-weight:700;
+}
 
+.dashboard-navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0%;
+    font-family: "ubuntu"
+}
+ .dash-left-nav{
+     flex: 1;
+     background-color: #f3f3f3;
+     height: 90vh;
+     padding: 2%;
+     width: auto;
+     border-right: 3px solid #6cbd44;
+ }
 
-
-
-
-
+ .dash-right-nav{
+     flex:9;
+     height: 90vh;
+     padding: 5%;
+     border-left: 3px solid #6cbd44;
+ }
 
 .fitaf-wrapp{
     margin-top: 20% !important;
