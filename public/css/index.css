@@ -2,6 +2,23 @@
 
 
 @media (max-width: 850px) {
+    .btn-signin{
+        color: white;
+        background-color:#0263aa;
+        border: none;
+        padding: 0px 20px 0px 20px;
+        align-self: center;
+        margin-top: 10%;
+        font-size: 1.3rem !important;
+        float: center;
+    }
+
+    .sign-in-img{
+        display: none !important;
+    }
+
+
+
 .cta{
     height: 30vh;
 }
@@ -140,7 +157,7 @@ button{
 .right-top-nav{
     flex: 6;
 }
-.profile-pic-img{
+/* .profile-pic-img{
     flex: 1;
     border-radius: 50%;
     flex-basis: 40%;
@@ -179,6 +196,7 @@ button{
      font-family: 'ubuntu';
      list-style: none;
      text-decoration: none;
+     padding: 5%;
  }
  .dash-list-item{
      text-decoration: none;
@@ -204,12 +222,81 @@ button{
      width: 40%;
      height: auto;
      /* padding: 5%; */
-     margin: 5%;
- }
+     /* margin: 5%;
+ } */
 
+input{
+    margin-top: 15%;
+    border: none;
+    padding: 5%;
+    border-left: 2px #6bbe43;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    outline:#0263aa;
+    font-weight:100;
+}
+
+.sign-in-wrapper{
+    height: 90vh;
+}
+
+.sign-in-content{
+    padding: 10%;
+    position: relative;
+    font-family: 'ubuntu';
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3f3f3;
+}
+.btn-signin-wrapper{
+    position: relative;
+    width: "100%";
+    align-items: center;
+
+}
+.btn-signin{
+    color: white;
+    background-color:#0263aa;
+    border: none;
+    padding: 0px 15px 0px 15px;
+    align-self: center;
+    margin-top: 10%;
+    font-size: 1.2rem;
+    float: center;
+}
+
+.sign-in-img{
+flex: 2;
+width: 100vw;
+height: 60vh;
+position: relative;
+background-image: url("../images/logo.png");
+background-position: center;
+background-repeat: no-repeat;
+background-size: 50%;
+}
+
+.form-wrap{
+    flex: 1;
+    background-color: #f3f3f3;
+}
+
+.forgot-password{
+    text-align: center;
+    font-weight: 500;
+     padding-left: 20%;
+     text-decoration: none !important;
+     text-decoration-line: none !important;
+     text-decoration-style: none;
+     color: #6bbe43;
+}
  .new-text{
      padding: 5%;
-     
+
  }
 
 .fitaf-wrapp{
@@ -253,13 +340,13 @@ button{
     justify-content: center;
     align-items: center;
 }
-
+/*
 input{
     flex: 1;
     margin: 10%;
     border: 1px solid gray;
     font-size: 30px;
-}
+} */
 
 .contact-card{
     display: "flex" !important;

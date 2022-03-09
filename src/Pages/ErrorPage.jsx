@@ -1,6 +1,6 @@
 import React from "react";
 
-const AuthPage = () =>{
+const ErrorPage = () =>{
     return(
         <>
                 <div className="container" style={{fontFamily: "ubuntu", textAlign: "center", marginTop: "25%"}}>
@@ -14,4 +14,4 @@ const AuthPage = () =>{
         </>
     )
 }
-export default AuthPage;
+export default ErrorPage;

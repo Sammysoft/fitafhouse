@@ -1,11 +1,11 @@
 import React from "react";
 
-const Menu = () => {
+const Nav =()=>{
     return(
         <>
-            
+            <h3>Nav</h3>
         </>
     )
 }
 
-export default Menu;
+export default Nav;
