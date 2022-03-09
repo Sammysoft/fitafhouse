@@ -157,74 +157,6 @@ button{
 .right-top-nav{
     flex: 6;
 }
-/* .profile-pic-img{
-    flex: 1;
-    border-radius: 50%;
-    flex-basis: 40%;
-}
-.profile-name{
-    flex:1;
-    font-family: "ubuntu";
-    font-weight:700;
-    text-align: center;
-    padding: 5%;
-}
-
-.dashboard-navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 0%;
-    font-family: "ubuntu"
-}
- .dash-left-nav{
-     flex: 1;
-     background-color: #f3f3f3;
-     height: 90vh;
-     width: auto;
-     border-right: 3px solid #6cbd44;
- }
-
- .dash-right-nav{
-     flex:9;
-     height: 90vh;
-     padding: 5%;
-     border-left: 3px solid #0263aa;
- }
-
- .dash-list{
-     font-family: 'ubuntu';
-     list-style: none;
-     text-decoration: none;
-     padding: 5%;
- }
- .dash-list-item{
-     text-decoration: none;
-     padding-top: 50%;
- }
-.new-wrap{
-    width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
- .new-wrap-item{
-     border-top-right-radius: 9px;
-     border-top-left-radius: 9px;
-     border-bottom-left-radius: 9px;
-     border-bottom-right-radius: 9px;
-     background-color: rgb(228, 228, 228);
-     font-family: inherit;
-     text-align: center;
-     flex: 1;
-     width: 40%;
-     height: auto;
-     /* padding: 5%; */
-     /* margin: 5%;
- } */
-
 input{
     margin-top: 15%;
     border: none;
@@ -340,13 +272,6 @@ background-size: 50%;
     justify-content: center;
     align-items: center;
 }
-/*
-input{
-    flex: 1;
-    margin: 10%;
-    border: 1px solid gray;
-    font-size: 30px;
-} */
 
 .contact-card{
     display: "flex" !important;
@@ -406,4 +331,66 @@ input{
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
+  }
+
+  .menu-wrapper{
+      font-family: "ubuntu";
+      flex: 3;
+
+  }
+  .inner-menu{
+    background-color: white;
+    padding: 20px;
+    margin-left: 10px;
+    border-bottom-left-radius:10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 80%;
+    position: relative;
+    margin: auto;
+  }
+
+  .right-menu-wrapper{
+      font-family: "ubuntu";
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 2;
+      overflow-y: scroll;
+      height: 80vh;
+  }
+  .nav-wrapper{
+    flex: 0.2;
+    width: 15px;
+    border-bottom-left-radius:10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 5px solid black;
+    background-color: white;
+    height: 60vh;
+    padding: 5px;
+    text-align: center;
+}
+
+  .dashboard-wrapper{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 2%;
+      font-family: "ubuntu";
+      width: 100%;
+      height: max-content;
+  }
+
+  .investment-wrapper, .amount-wrapper, .withdrawal-wrapper{
+        margin: 10%;
+        border-bottom-left-radius:6px;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+        background-color: white;
+        padding: 10%;
   }

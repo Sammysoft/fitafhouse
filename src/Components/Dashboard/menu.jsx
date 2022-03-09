@@ -4,7 +4,9 @@ const Menu = ()=>{
     return(
         <>
                 <div className="menu-wrapper">
-                        <p>Menu</p>
+                        <div className="inner-menu">
+                                <b>Welcome Back</b> <i>@Sammysoft</i>
+                        </div>
                 </div>
         </>
     )
