@@ -1,0 +1,31 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  background: #222;
+}
+.page {
+  margin: 150px auto;
+  text-align: center;
+  max-width: 960px;
+  background: #222;
+}
+.page > h1 {
+  font-weight: 300 !important;
+  color: #fff;
+  font-size: 44px;
+
+}
+.circles-container {
+  min-height: 400px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+@media screen and (max-width: 400px){
+  .circles-container {
+    min-height: 820px;
+    width: 100%;
+    flex-direction: column;
+  }
+}

@@ -349,7 +349,22 @@ background-size: 50%;
     width: 80%;
     position: relative;
     margin: auto;
+    overflow-y: scroll;
+    height: 90vh;
   }
+
+
+.inner-menu-add {
+    padding: 10px;
+    height: 40vh;
+    text-align: center;
+    margin-top: 50vh;
+    border-top: 2px solid #888888;
+    width: 80%;
+    position: relative;
+    align-self: center;
+    margin: auto;
+}
 
   .right-menu-wrapper{
       font-family: "ubuntu";
@@ -359,6 +374,7 @@ background-size: 50%;
       flex: 2;
       overflow-y: scroll;
       height: 80vh;
+      direction: rtl;
   }
   .nav-wrapper{
     flex: 0.2;
@@ -367,7 +383,7 @@ background-size: 50%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    box-shadow: 5px solid black;
+    box-shadow: 5px 5px 5px 5px #888888;
     background-color: white;
     height: 60vh;
     padding: 5px;
@@ -393,4 +409,145 @@ background-size: 50%;
         border-bottom-right-radius: 6px;
         background-color: white;
         padding: 10%;
+        direction: ltr;
   }
+
+
+  .icon-nav{
+      padding-top: 6vh;
+      display: block;
+  }
+
+  /* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #6bbe43;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #0263aa;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0263aa;
+  }
+
+
+  .icon-nav .nav-wrapper-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: #0263aa;
+    color: #f3f3f3;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+.bi{
+    color:rgba(0, 0, 0, 0.5)
+}
+.bi:hover{
+    cursor: pointer;
+    color:#6bbe43;
+}
+  .icon-nav:hover .nav-wrapper-text{
+      visibility: visible;
+  }
+
+  .nav-wrapper-text{
+      margin-left: 0.8%;
+  }
+
+  .icon-nav .nav-wrapper-text::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 100%; /* To the left of the tooltip */
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #0263aa transparent transparent;
+  }
+
+  /* Show the tooltip text when you mouse over the tooltip container */
+
+
+  .pie {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: orangered;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.sides {
+    position: relative;
+    width: inherit;
+    height: inherit
+}
+.sides .left, .sides .right {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    transform: rotate(0);
+}
+.sides .left {
+    left: -100px
+}
+.sides .right {
+    left: 100px
+}
+.half {
+    width: 100px;
+    height: 200px;
+    transition: 0.4s;
+}
+.sides .left .half {
+    left: 100px;
+    position: absolute;
+    background: white;
+    transform-origin: 100px 100px
+}
+.sides .right .half {
+    position: absolute;
+    background: white;
+    transform-origin: 0 100px
+}
+.occluder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#circle-1, #circle-3, .circle-2{
+    display: none;
+}
+.circles-container{
+    background-color: white !important;
+}
+.page{
+    background-color: white !important;
+}
+.occlusion {
+    position: relative;
+    display: block;
+    background: white;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}

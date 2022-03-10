@@ -11,6 +11,18 @@
       name="description"
       content="First International Trade and Finance House Ltm"
     />
+
+    <link href="//www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/circle.css">
+    <link rel="stylesheet" type="text/css" href="/assets/demo.css">
+    <link rel="stylesheet" type="text/css" href="/assets/skins/yellowcircle.css">
+    <link rel="stylesheet" type="text/css" href="/assets/skins/purplecircle.css">
+    <link rel="stylesheet" type="text/css" href="/assets/skins/firecircle.css">
+    <link rel="stylesheet" type="text/css" href="/assets/skins/whitecircle.css">
+    <link rel="stylesheet" type="text/css" href="/assets/skins/simplecircle.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+    <script type="text/javascript" src="/assets/circle.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
@@ -50,15 +62,131 @@
 
     <div id="root" style="font-family: Irish Gover"></div>
 
+    <script>
+      $(document).ready(function() {
+          $("#circle-1").Circlebar({
+              maxValue: 20,
+              fontSize: "14px",
+              triggerPercentage: true
+          });
+          var t2 = new Circlebar({
+              element: ".circle-2",
+              maxValue: 252,
+              dialWidth: 40,
+              fontColor: "#777",
+              fontSize: "30px",
+              skin: "fire",
+              type: "manual"
+          });
 
+          new Circlebar({
+              element: "#circle-3",
+              maxValue: 230,
+              size: "240px",
+              fontSize: "30px",
+              type: "progress"
+          });
+      });
+      </script>
+      <script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-36251023-1']);
+_gaq.push(['_setDomainName', 'jqueryscript.net']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
   </body>
+
+ <script>
+
+function rotate_pie(container, degree) {
+    const parent = $(`${container}`)
+    const left = $(`${container} .sides .left .half`)
+    const right = $(`${container} .sides .right .half`)
+
+    if (!parent.dataset.degree)
+        parent.dataset.degree = 0
+
+    if (parent) {
+
+        if (degree >= 0 && degree <= 180) {
+            if (parent.dataset.degree > 180) {
+                left.style.transform = `rotate(0deg)`
+                setTimeout(()=>{right.style.transform = `rotate(${degree}deg)`}, 401)
+            } else
+                right.style.transform = `rotate(${degree}deg)`
+        } else if (degree >= 180) {
+            if (parent.dataset.degree < 180) {
+                right.style.transform = `rotate(180deg)`
+                setTimeout(()=>{left.style.transform = `rotate(${degree-180}deg)`}, 401)
+            } else
+                left.style.transform = `rotate(${degree-180}deg)`
+        }
+
+        // memorize degree on container
+        parent.dataset.degree = degree
+
+         console.log(`Degree now is ${parent.dataset.degree}`)
+   }
+}
+ </script>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="js/scripts.js"></script>
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   <script src="js/index.js"></script>
-  <script src="js/app.js">
+
+  <script>
+    $(document).ready(function() {
+        $("#circle-1").Circlebar({
+            maxValue: 20,
+            fontSize: "14px",
+            triggerPercentage: true
+        });
+        var t2 = new Circlebar({
+            element: ".circle-2",
+            maxValue: 252,
+            dialWidth: 40,
+            fontColor: "#777",
+            fontSize: "30px",
+            skin: "fire",
+            type: "manual"
+        });
+
+        new Circlebar({
+            element: "#circle-3",
+            maxValue: 230,
+            size: "240px",
+            fontSize: "30px",
+            type: "progress"
+        });
+    });
+    </script>
+    <script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-36251023-1']);
+_gaq.push(['_setDomainName', 'jqueryscript.net']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+document.getElementsByClassName("circle-1").display = "none"
+</script>
+
+
+  <!-- <script src="js/app.js">
 
 const file = document.querySelector('#file');
 const img = document.querySelector('.image-wrapper');
@@ -113,7 +241,7 @@ push.addEventListener('click', function(){
     })
     })
   })
-</script>
+</script> -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
