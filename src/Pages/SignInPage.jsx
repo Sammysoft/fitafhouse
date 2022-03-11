@@ -1,7 +1,7 @@
 import React from "react";
 import SignIn from "../Components/Onboard/signin";
 
-const AuthInPage = ()=>{
+const SignInPage = ()=>{
     return(
         <>
             <SignIn />
@@ -9,4 +9,4 @@ const AuthInPage = ()=>{
     )
 }
 
-export default AuthInPage;
+export default SignInPage;

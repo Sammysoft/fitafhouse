@@ -5,6 +5,26 @@
     .right-menu-wrapper{
         display: none !important;
     }
+
+    .menu-wrapper{
+        font-family: "ubuntu";
+        flex: 4;
+
+    }
+    .inner-menu{
+      background-color: white;
+      /* padding: 10px !important; */
+      margin-left: 5px !important;
+      border-bottom-left-radius:10px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      width: 95% !important;
+      position: relative;
+      margin: auto;
+      overflow-y: scroll;
+      height: 90vh;
+    }
     .btn-signin{
         color: white;
         background-color:#0263aa;
