@@ -10,22 +10,23 @@ const SignInForm = ()=>{
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-   
+
     let navigate = useNavigate();
 
     const submit = (e)=>{
         e.preventDefault();
-        axios.post('http://localhost:8089/api/auth', {username, password})
+        axios.post('https://fitafhouse-api.herokuapp.com/api/auth', {username, password})
             .then(user=>{
-
+                console.log(user.data)
                 localStorage.setItem('token', user.data.token)
                 navigate('/dashboard')
             })
             .catch(error=>{
+                console.log(error)
                 Swal.fire({
                         title: "error",
                         icon:"error",
-                        text:error.response.data.msg
+                        text:error.response
                        } )
             })
     }

@@ -19,7 +19,7 @@ const Navbar = () =>{
                 <div className="collapse navbar-collapse" id="navbarResponsive">
                     <ul className="navbar-nav ms-auto me-4 my-3 my-lg-0">
                         <li className="nav-item"><a className="nav-link me-lg-3" href="/ourcompany" style={{padding: "20px", fontFamily: "ubuntu"}}>Our Company</a></li>
-                         <li className="nav-item"><a className="nav-link me-lg-3" href="#download" style={{padding: "20px", fontFamily: "ubuntu"}}>Invest With Us</a></li>
+                         <li className="nav-item"><a className="nav-link me-lg-3" href="/onboarding" style={{padding: "20px", fontFamily: "ubuntu"}}>Invest With Us</a></li>
                          <li className="nav-item"><a className="nav-link me-lg-3" href="/contact" style={{padding: "20px", fontFamily: "ubuntu"}}>Get In Touch</a></li>
                     </ul>
 

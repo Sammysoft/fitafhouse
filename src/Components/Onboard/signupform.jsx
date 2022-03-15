@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Form } from "semantic-ui-react";
 import { useNavigate } from "react-router";
 import Swal from 'sweetalert2';
@@ -15,7 +15,7 @@ const SignUpForm = ()=>{
 const submit =(e)=>{
 e.preventDefault();
 
-axios.post('http://localhost:8089/api/onboarding', {fullname, email, username, phonenumber, password})
+axios.post('https://fitafhouse-api.herokuapp.com/api/onboarding', {fullname, email, username, phonenumber, password})
     .then(err=>{
         navigate('/auth')
           Swal.fire({
@@ -26,6 +26,14 @@ axios.post('http://localhost:8089/api/onboarding', {fullname, email, username, p
     } )
 }
 
+
+ useEffect(()=>{
+    Swal.fire({
+        icon: 'info',
+        title: 'You can register with us',
+        text: 'Follow the investment process to get started'
+    })
+ },[])
     return(
         <>
             <div className="form-wrap">
