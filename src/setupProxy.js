@@ -3,7 +3,7 @@ module.exports = function(app) {
   app.use(
     '/api',
     createProxyMiddleware({
-      target: 'http://localhost:8089/',
+      target: 'https://fitafhouse-api.herokuapp.com/',
       changeOrigin: true,
     })
   );
