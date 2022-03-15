@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Form } from "semantic-ui-react";
 import axios from "axios";
 import Swal from 'sweetalert2';
+import Loading from '../Loader';
 import { useNavigate } from 'react-router';
 
 
@@ -10,30 +11,30 @@ const SignInForm = ()=>{
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [isLoading, setLoading] = useState(false)
 
     let navigate = useNavigate();
 
     const submit = (e)=>{
         e.preventDefault();
         axios.post('https://fitafhouse-api.herokuapp.com/api/auth', {username, password})
-            .then(user=>{
-                console.log(user.data)
-                localStorage.setItem('token', user.data.token)
-                navigate('/dashboard')
-            })
-            .catch(error=>{
-                console.log(error)
-                Swal.fire({
-                        title: "error",
-                        icon:"error",
-                        text:error.response
-                       } )
-            })
+        .then(user=>{
+            localStorage.setItem('token', user.data.token)
+            navigate('/dashboard')
+            setLoading(false)
+        })
+        .catch(error=>{
+            Swal.fire({
+                    title: "error",
+                    icon:"error",
+                    text:error.response.data.msg
+                   } )
+        })
     }
 
     return(
         <>
-            <div className="form-wrap">
+         {isLoading === false?  <div className="form-wrap">
             <Form className="form-wrap">
                 <p style={{textAlign: "left", fontSize: "1.3rem", fontWeight: "900", color: "#0263aa", borderBottom: "3px solid #6bbe43"}}>Sign In</p>
                     <input type="text" name="username"  value={username} onChange={event=> setUsername(event.target.value)} placeholder="Enter Your Username" />
@@ -47,7 +48,7 @@ const SignInForm = ()=>{
             </Form>
 
 
-            </div>
+            </div>: <Loading />}
         </>
     )
 }

@@ -626,3 +626,22 @@ background-size: 50%;
     border-left: 2px solid #0263aa;
 
 }
+
+.loader-wrapper{
+    width: 100vw;
+    height: 100vh;
+    /* position: absolute; */
+    z-index: 9999;
+}
+/* .swal2-icon{
+    color: #6bbe43 !important;
+} */
+.swal2-confirm{
+    background-color:#0263aa !important;
+}
+.swal2-html-container{
+    color: #6bbe43 !important;
+}
+.swal2-title{
+    color: #0263aa !important;
+}

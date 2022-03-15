@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SignUpForm from "./signupform";
 
+
 const SignUp = ()=>{
+
     return(
         <>
             <div className="sign-in-wrapper">

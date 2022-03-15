@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Form } from "semantic-ui-react";
 import { useNavigate } from "react-router";
+import Loader from '../Loader';
 import Swal from 'sweetalert2';
 const SignUpForm = ()=>{
 
@@ -10,34 +11,42 @@ const SignUpForm = ()=>{
     const [email, setEmail] = useState('');
     const [phonenumber, setPhonenumber] = useState('')
     const [password, setPassword] = useState('');
+    const [isLoading, setLoading] = useState(true)
     let navigate = useNavigate();
+    useEffect(()=>{
+        Swal.fire({
+            icon: 'info',
+            title: 'Register Now!',
+            text: 'To make Investment, check your dashboard for options',
+        })
+    },[])
 
 const submit =(e)=>{
 e.preventDefault();
 
-axios.post('https://fitafhouse-api.herokuapp.com/api/onboarding', {fullname, email, username, phonenumber, password})
+
+    axios.post('https://fitafhouse-api.herokuapp.com/api/onboarding', {fullname, email, username, phonenumber, password})
     .then(err=>{
-        navigate('/auth')
-          Swal.fire({
-              title:"sucess",
-              icon: "success",
-              text: "Account Created Succesfully, Login"
-          })
-    } )
+            navigate('/auth')
+            setLoading(false)
+              Swal.fire({
+                  title:"Success",
+                  icon: "success",
+                  text: "Account Created Succesfully, Login"
+              })
+    } ).catch(error=>{
+        Swal.fire({
+            title:'Oops!',
+            icon: 'error',
+            text:error.response.data.msg
+        })
+    })
 }
 
-
- useEffect(()=>{
-    Swal.fire({
-        icon: 'info',
-        title: 'You can register with us',
-        text: 'Follow the investment process to get started'
-    })
- },[])
     return(
         <>
-            <div className="form-wrap">
-            <Form className="form-wrap">
+          {isLoading === true ?<div className="form-wrap" >
+            <Form className="form-wrap" >
                 <p style={{textAlign: "left", fontSize: "1.3rem", fontWeight: "900", color: "#0263aa", borderBottom: "3px solid #6bbe43"}}>Sign Up</p>
                     <input type="text" name="fullname" value={fullname} onChange={event=>setFullname(event.target.value)}  placeholder="Enter Your Full Name" />
                     <input type="email" name="email" value={email} onChange={event=>setEmail(event.target.value)} placeholder="Enter Your Email Address" />
@@ -53,7 +62,8 @@ axios.post('https://fitafhouse-api.herokuapp.com/api/onboarding', {fullname, ema
             </Form>
 
 
-            </div>
+            </div>: <Loader /> }
+
         </>
     )
 }
