@@ -25,7 +25,7 @@ const submit =(e)=>{
 e.preventDefault();
 
 
-    axios.post('http://localhost:6069/api/onboarding', {fullname, email, username, phonenumber, password})
+    axios.post('https://fitafhouse-api.herokuapp.com/api/onboarding', {fullname, email, username, phonenumber, password})
     .then(err=>{
             navigate('/auth')
             setLoading(false)

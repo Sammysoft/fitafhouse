@@ -18,7 +18,7 @@ const AdminMenu = (props)=>{
                 confirmButtonText: 'Yes, delete it!'
               }).then((result) => {
                 if (result.isConfirmed) {
-                    axios.post(`http://localhost:6069/api/delete/${id}`, {
+                    axios.post(`https://fitafhouse-api.herokuapp.com/api/delete/${id}`, {
                         headers: {
                             Authorization: token
                         }

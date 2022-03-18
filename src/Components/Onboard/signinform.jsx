@@ -17,7 +17,7 @@ const SignInForm = ()=>{
 
     const submit = (e)=>{
         e.preventDefault();
-        axios.post('http://localhost:6069/api/auth', {username, password})
+        axios.post('https://fitafhouse-api.herokuapp.com/api/auth', {username, password})
         .then(user=>{
             localStorage.setItem('token', user.data.token)
             navigate('/dashboard')

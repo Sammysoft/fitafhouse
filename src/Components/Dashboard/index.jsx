@@ -18,7 +18,7 @@ const Dashboard = (props)=>{
     let token = localStorage.getItem('token')
     let navigate = useNavigate();
     useEffect(()=>{
-            fetch('http://localhost:6069/api/dashboard', {
+            fetch('https://fitafhouse-api.herokuapp.com/api/dashboard', {
                 headers:{
                     Authorization: token
                 }
