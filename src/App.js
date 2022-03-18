@@ -9,9 +9,12 @@ import Onboarding from "./Pages/Onboarding";
 import SignInPage from "./Pages/SignInPage";
 import PasswordAuthPage from "./Pages/PasswordAuthPage";
 import InvestmentPage from "./Pages/InvestmentPage";
+import AOS from 'aos';
+ import 'aos/dist/aos.css';
 
 
 const App = () =>{
+    AOS.init()
     return(
         <>
             <Routes>

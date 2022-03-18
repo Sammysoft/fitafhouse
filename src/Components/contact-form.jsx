@@ -3,19 +3,15 @@ import React from "react";
 const ContactForm = () =>{
     return(
         <>
-            <div className="container">
-                <div className="form-wrapper">
-                <form action="">
-                   <div className="form-inputs">
-                        <input name="fullname" type="text" placeholder="Full Name" />
-                        <input name="email" type="text" placeholder="Email" />
-                        <textarea name="message" width="auto" height="70">
-                            Message
-                        </textarea>
-                   </div>
-                </form>
-                </div>
-            </div>
+          <div className="contact-form-wrapper">
+              <form>
+                  <input id="input" type="text" name="fullname" placeholder="FullName" /><br/>
+                  <input id="input" type="text" name="email" placeholder="Email" /><br/>
+                  <textarea id="input" name="message" placeholder="Message"></textarea>
+              </form>
+
+              <span className="send-msg">Send us a message</span>
+          </div>
         </>
     )
 }

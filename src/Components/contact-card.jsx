@@ -5,7 +5,7 @@ const ContactCard = () =>{
         <>
         <section>
             <div className="contact-card" style={{display: "flex", flexDirection:"row", padding: "10%", width:"100%", justifyContent: "space-between"}} >
-                <div className="wrapper" style={{flex: 1, width:"30%", height: "auto", borderTop: "2px solid green", borderBottom: "2px solid green", boxShadow: "0px 5px 5px 0px #888888"}}>
+                <div data-aos="fade-up" data-aos-duration="1000" className="wrapper" style={{flex: 1, width:"30%", height: "auto", borderTop: "2px solid green", borderBottom: "2px solid green", boxShadow: "0px 5px 5px 0px #888888"}}>
                     <div className="text-center">
                         <i className="bi bi-geo-alt-fill icon-feature text-gradient d-block mb-3"></i>
                              <h3 className="font-alt">Head Office</h3>
@@ -13,7 +13,7 @@ const ContactCard = () =>{
                     </div>
                 </div>
 
-                <div className="wrapper" style={{flex: 1, width:"30%", height: "auto", borderTop: "2px solid green", borderBottom: "2px solid green", boxShadow: "0px 5px 5px 0px #888888"}}>
+                <div data-aos="fade-up" data-aos-duration="1000" className="wrapper" style={{flex: 1, width:"30%", height: "auto", borderTop: "2px solid green", borderBottom: "2px solid green", boxShadow: "0px 5px 5px 0px #888888"}}>
                     <div className="text-center" >
                         <i className="bi bi-telephone-outbound-fill icon-feature text-gradient d-block mb-3"></i>
                            <h3 className="font-alt">Phone Lines</h3>
@@ -21,7 +21,7 @@ const ContactCard = () =>{
                     </div>
                 </div>
 
-                <div className="wrapper"style={{flex: 1, width:"30%", height: "auto", borderTop: "2px solid green", borderBottom: "2px solid green", boxShadow: "0px 5px 5px 0px #888888"}}>
+                <div  data-aos="fade-up" data-aos-duration="1000" className="wrapper"style={{flex: 1, width:"30%", height: "auto", borderTop: "2px solid green", borderBottom: "2px solid green", boxShadow: "0px 5px 5px 0px #888888"}}>
                     <div className="text-center" >
                         <i className="bi bi-geo-alt-fill icon-feature text-gradient d-block mb-3"></i>
                              <h3 className="font-alt">Email Addresses</h3>

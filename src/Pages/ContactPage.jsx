@@ -13,7 +13,7 @@ const ContactPage = () =>{
             <Header />
             <ContactCard />
             <Partner />
-            {/* <ContactForm /> */}
+            <ContactForm />
             <Footer />
         </>
     )
