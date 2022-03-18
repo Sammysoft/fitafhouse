@@ -8,6 +8,7 @@ import ErrorPage from './Pages/ErrorPage';
 import Onboarding from "./Pages/Onboarding";
 import SignInPage from "./Pages/SignInPage";
 import PasswordAuthPage from "./Pages/PasswordAuthPage";
+import InvestmentPage from "./Pages/InvestmentPage";
 
 
 const App = () =>{
@@ -19,6 +20,7 @@ const App = () =>{
                 <Route path="/contact"  element={<ContactPage />} />
                 <Route path="/dashboard"  element={<DashboardPage />}/>
                 <Route path="/onboarding"  element={<Onboarding />} />
+                <Route path='/dashboard/investments' element={<InvestmentPage />} />
                 <Route path="/auth"  element={<SignInPage />} />
                 <Route path="/forgot-password"  element={<PasswordAuthPage />} />
                 <Route path="*"  element={<ErrorPage />} />

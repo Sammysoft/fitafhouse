@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Navbar from "../navbar";
 import SignUpForm from "./signupform";
 
 
@@ -6,13 +7,13 @@ const SignUp = ()=>{
 
     return(
         <>
-            <div className="sign-in-wrapper">
-                <div className="sign-in-content">
-                    <SignUpForm />
-                    <div className="sign-in-img">
-                    </div>
-                </div>
+        <Navbar />
+        <div className="sign-in-img">
+                 <h1 style={{margin: '10vh'}}>Sign Up</h1>
              </div>
+             <div className="sign-up-content">
+                       <SignUpForm />
+            </div>
         </>
     )
 }

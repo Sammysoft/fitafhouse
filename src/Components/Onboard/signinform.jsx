@@ -17,7 +17,7 @@ const SignInForm = ()=>{
 
     const submit = (e)=>{
         e.preventDefault();
-        axios.post('https://fitafhouse-api.herokuapp.com/api/auth', {username, password})
+        axios.post('http://localhost:6069/api/auth', {username, password})
         .then(user=>{
             localStorage.setItem('token', user.data.token)
             navigate('/dashboard')
@@ -34,16 +34,16 @@ const SignInForm = ()=>{
 
     return(
         <>
-         {isLoading === false?  <div className="form-wrap">
-            <Form className="form-wrap">
-                <p style={{textAlign: "left", fontSize: "1.3rem", fontWeight: "900", color: "#0263aa", borderBottom: "3px solid #6bbe43"}}>Sign In</p>
-                    <input type="text" name="username"  value={username} onChange={event=> setUsername(event.target.value)} placeholder="Enter Your Username" />
-                    <input type="password" name="password"  value={password} onChange={event=> setPassword(event.target.value)} placeholder="Enter Your Secured Password" />
+         {isLoading === false?
+         <div className="form-wrap">
+            <Form>
+                    <input type="text" name="username"  value={username} onChange={event=> setUsername(event.target.value)} placeholder="Username" /><br/>
+                    <input type="password" name="password"  value={password} onChange={event=> setPassword(event.target.value)} placeholder="Password" />
                     <div className="btn-signin-wrapper">
-                    <button onClick={submit} type="submit" className="btn-signin">Done</button>
-                    <span >
-                        <a className="forgot-password" href="/forgot-password">forgot password?</a>
-                    </span>
+                    <button onClick={submit} type="submit" className="btn-signin">Sign In</button>
+                    <div style={{padding: '10px 0px 0px 0px'}}>
+                        Don't have an account?  <a className="link" href="/onboarding">SIGN UP HERE!</a>
+                    </div>
                     </div>
             </Form>
 

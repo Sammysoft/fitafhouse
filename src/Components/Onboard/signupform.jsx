@@ -25,7 +25,7 @@ const submit =(e)=>{
 e.preventDefault();
 
 
-    axios.post('https://fitafhouse-api.herokuapp.com/api/onboarding', {fullname, email, username, phonenumber, password})
+    axios.post('http://localhost:6069/api/onboarding', {fullname, email, username, phonenumber, password})
     .then(err=>{
             navigate('/auth')
             setLoading(false)
@@ -46,18 +46,17 @@ e.preventDefault();
     return(
         <>
           {isLoading === true ?<div className="form-wrap" >
-            <Form className="form-wrap" >
-                <p style={{textAlign: "left", fontSize: "1.3rem", fontWeight: "900", color: "#0263aa", borderBottom: "3px solid #6bbe43"}}>Sign Up</p>
-                    <input type="text" name="fullname" value={fullname} onChange={event=>setFullname(event.target.value)}  placeholder="Enter Your Full Name" />
-                    <input type="email" name="email" value={email} onChange={event=>setEmail(event.target.value)} placeholder="Enter Your Email Address" />
-                    <input type="email" name="email" value={username} onChange={event=>setUsername(event.target.value)} placeholder="Enter Your Username" />
-                    <input type="password" name="password"  value={password} onChange={event=>setPassword(event.target.value)} placeholder="Enter Your Password" />
-                    <input type="number" name="phonenumber" value={phonenumber} onChange={event=>setPhonenumber(event.target.value)} placeholder="Enter Your Phone Number" />
+            <Form >
+                    <input type="text" name="fullname" value={fullname} onChange={event=>setFullname(event.target.value)}  placeholder="Full Name" />
+                    <input type="email" name="email" value={email} onChange={event=>setEmail(event.target.value)} placeholder="Email Address" />
+                    <input type="text" name="username" value={username} onChange={event=>setUsername(event.target.value)} placeholder="Username" />
+                    <input type="password" name="password"  value={password} onChange={event=>setPassword(event.target.value)} placeholder="Password" />
+                    <input type="text" name="phonenumber" value={phonenumber} onChange={event=>setPhonenumber(event.target.value)} placeholder="Phone Number" />
                     <div className="btn-signin-wrapper">
-                    <button onClick={submit} type="submit" className="btn-signin">Done</button>
-                    <span >
-                        <a className="forgot-password" href="/auth">Have an account?</a>
-                    </span>
+                    <button onClick={submit} type="submit" className="btn-signin">Sign Up</button>
+                    <div style={{padding: '10px 0px 0px 0px'}}>
+                        Already have an account?  <a className="link" href="/auth">SIGN IN HERE!</a>
+                    </div>
                     </div>
             </Form>
 

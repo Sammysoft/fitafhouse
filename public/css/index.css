@@ -159,7 +159,7 @@
 button{
     background-color: "#0263aa";
     color: 'white';
-    padding: "2% 5% 2% 5%" !important;
+    padding: "5% 2% 5% 2%" !important;
     border: "none";
     font-size: 10px !important;
     margin-top: 20px !important
@@ -206,66 +206,107 @@ button{
 .right-top-nav{
     flex: 6;
 }
+
 input{
-    margin-top: 15%;
-    border: none;
-    padding: 5%;
-    border-left: 2px #6bbe43;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    outline:#0263aa;
-    font-weight:100;
+    margin-top: 10px;
+    border: 2px solid #b4b4b4;
+    padding: 10px;
+    width: 35vw;
+    /* font-weight:400; */
 }
 
 .sign-in-wrapper{
     height: 90vh;
 }
-
+.sign-up-content{
+    position: absolute;
+    font-family: 'ubuntu';
+    top: 50vh;
+    align-items: center;
+    text-align: center;
+    background-color: #f3f3f3;
+    padding: 5px 20px 5px 20px;
+    width: 100vw;
+}
 .sign-in-content{
-    padding: 10%;
-    position: relative;
+    position: absolute;
     font-family: 'ubuntu';
     display: flex;
+    top: 50vh;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     background-color: #f3f3f3;
+    padding: 5px 20px 5px 20px;
+    width: 100vw;
 }
+
+.img-signin-content{
+    flex:1;
+    background-image: url("../images/logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40%;
+    height: 50vh;
+}
+
 .btn-signin-wrapper{
     position: relative;
     width: "100%";
     align-items: center;
 
 }
+
 .btn-signin{
     color: white;
     background-color:#0263aa;
     border: none;
-    padding: 0px 15px 0px 15px;
+    padding: 10px 20px 10px 20px;
     align-self: center;
-    margin-top: 10%;
+    margin-top: 5%;
     font-size: 1.2rem;
     float: center;
+    width: 40%;
 }
-
+.btn-signup{
+    color: white;
+    background-color:#0263aa;
+    border: none;
+    padding: 10px 20px 10px 20px;
+    align-self: center;
+    margin-top: 5%;
+    font-size: 1.2rem;
+    float: center;
+    width: 20%;
+}
+.link{
+    text-decoration: none;
+    text-decoration-line: none;
+    color: #0263aa;
+    font-weight: 800;
+    margin-left: '10px';
+}
 .sign-in-img{
-flex: 2;
 width: 100vw;
-height: 60vh;
-position: relative;
-background-image: url("../images/logo.png");
+height: 30vh;
+position: absolute;
+background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/hand.jpg");
 background-position: center;
 background-repeat: no-repeat;
-background-size: 50%;
+background-size: 100%;
+color: white;
+font-weight: 900;
+text-align: center;
+margin-top: 15vh;
+flex: 1;
 }
 
 .form-wrap{
     flex: 1;
     background-color: #f3f3f3;
+    top: 50vh;
 }
-
+input
 .forgot-password{
     text-align: center;
     font-weight: 500;
@@ -385,24 +426,65 @@ background-size: 50%;
   .menu-wrapper{
       font-family: "ubuntu";
       flex: 3;
-
+        overflow-y: scroll;
+        height: 90vh;
+        padding: '30px'
   }
   .inner-menu{
     background-color: white;
     padding: 20px;
-    margin-left: 10px;
     border-bottom-left-radius:10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    width: 80%;
+    width: 70%;
     position: relative;
+    height: fit-content;
+    text-align: center;
     margin: auto;
-    overflow-y: scroll;
-    height: 90vh;
+    color: #0263aa;
+    line-height: 5rem;
+    font-weight: 900;
   }
+.btn-investment{
+    background-color: #0263aa;
+    color: white;
+    padding: 15px 25px 15px 25px !important;
+     border:none;
+     cursor: pointer;
+     margin: '100px' !important
+}
+.investment{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    padding: '20px'
+}
+.investment-info1, .investment-info2{
+ flex: 1;
+}
+.info-desc{
+    color: #0263aa;
+    text-align: center;
 
-
+}
+#inv-change:hover{
+color: white !important;
+}
+.investment-wrapper:hover{
+    background-color: #0263aa;
+    cursor: pointer;
+    color: white !important;
+}
+.logout-div{
+    width: 100%;
+    padding: 15vh 25vh 15vh;
+    font-weight: 900;
+    color: grey;
+    text-align: right;
+    height: 20vh;
+    cursor: pointer;
+}
 .inner-menu-add {
     padding: 10px;
     height: 40vh;
@@ -426,17 +508,21 @@ background-size: 50%;
       direction: rtl;
   }
   .nav-wrapper{
-    flex: 0.2;
-    width: 15px;
-    border-bottom-left-radius:10px;
+    flex: 1;
+    width: 100%;
+    /* border-bottom-left-radius:10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    box-shadow: 5px 5px 5px 5px #888888;
+    border-bottom-right-radius: 10px; */
+    /* box-shadow: 5px 5px 5px 5px #888888; */
     background-color: white;
-    height: 60vh;
+    height: 100vh;
     padding: 5px;
-    text-align: center;
+    position: relative;
+    /* margin-top: 60px; */
+    text-align: right;
+    font-size: '3rem';
+
 }
 
   .dashboard-wrapper{
@@ -444,10 +530,10 @@ background-size: 50%;
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
-      padding: 2%;
+      /* padding: 2%; */
       font-family: "ubuntu";
       width: 100%;
-      height: max-content;
+      /* height: max-content; */
   }
 
   .investment-wrapper, .amount-wrapper, .withdrawal-wrapper{
@@ -517,7 +603,27 @@ background-size: 50%;
   .nav-wrapper-text{
       margin-left: 0.8%;
   }
+.nav-dash-link{
+    text-decoration: 'none';
+    text-decoration-line: none;
+    color: grey;
+    font-weight: 900
+}
 
+.nav-dash-link:hover{
+    text-decoration: 'none';
+    text-decoration-line: none;
+    color: '#0263aa';
+    font-weight: 900
+}
+.brand-icon-wrapper{
+    height: 20vh;;
+}
+.nav-content-wrapper{
+    width: 70%;
+    margin: 'auto';
+    padding-top: 30px
+}
   .icon-nav .nav-wrapper-text::after {
     content: " ";
     position: absolute;
@@ -645,3 +751,24 @@ background-size: 50%;
 .swal2-title{
     color: #0263aa !important;
 }
+
+table, td, th {
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+  th{
+      color: #0263aa;
+  }
+  td{
+      font-size: '2px' !important;
+  }
+  tr:nth-child(even) {background-color: #f2f2f2;}

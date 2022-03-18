@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router";
+import { Divider } from "semantic-ui-react";
 import Swal from 'sweetalert2';
 
 const Nav =(props)=>{
@@ -16,11 +17,16 @@ const Nav =(props)=>{
     return(
         <>
             <div className="nav-wrapper">
-            <span className="icon-nav"><i className="bi bi-house-fill"></i><span className="nav-wrapper-text">Home</span></span>
-            <span className="icon-nav"><i className="bi bi-bell-fill"></i><span className="nav-wrapper-text">Notifications</span></span>
-            <span className="icon-nav"><i className="bi bi-credit-card-fill"></i><span className="nav-wrapper-text">Account</span></span>
-             <span className="icon-nav"><i className="bi bi-briefcase-fill"></i><span className="nav-wrapper-text">History</span></span>
-            <span className="icon-nav"><i className="bi bi-arrow-left-square-fill" onClick={() => logout()}></i><span className="nav-wrapper-text" >Logout</span></span>
+               <div className="nav-content-wrapper">
+               <div className="brand-icon-wrapper">
+                    <img src="/images/logo.png" alt="brand-logo" width="50px" height="50px"/><span style={{padding: '20px 0px 10px 15px', color: '#0263aa', fontWeight: '900'}}>FITAFHouse</span>
+                </div>
+            <span className="icon-nav"><a className="nav-dash-link" href="/dashboard">Dashboard</a></span>
+            <span className="icon-nav"><a className="nav-dash-link" href="/dashboard/investments">Investment</a></span>
+            <span className="icon-nav"><a className="nav-dash-link" href="">Profile</a></span>
+             <span className="icon-nav"><a className="nav-dash-link" href="">Support</a></span>
+            <span className="icon-nav"><a className="nav-dash-link" href="" onClick={()=>logout()}>Logout</a></span>
+               </div>
             </div>
         </>
     )
