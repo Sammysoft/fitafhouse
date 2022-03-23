@@ -1,9 +1,20 @@
 import React, { useState, useEffect } from "react";
 import AdminNav from "./adminnav";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router";
 
 const Investors=()=>{
+    const Navigate = useNavigate()
     const [value, setValue] = useState([])
-
+    const logout=()=>{
+        localStorage.removeItem('token');
+        Navigate('/auth')
+        Swal.fire({
+            icon: 'info',
+            title: 'Logged Out',
+            text: 'Thank You for using FITAFHouse'
+        })
+    }
     useEffect(()=>{
         fetch('https://fitafhouse-api.herokuapp.com/api/active-investors')
         .then(async res=>{
