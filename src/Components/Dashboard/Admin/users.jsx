@@ -21,7 +21,7 @@ useEffect(()=>{
     fetch('https://fitafhouse-api.herokuapp.com/api/users')
     .then(async res=>{
         let response = await res.json()
-        setValue(response.Investors)
+        setValue(response)
         console.log(response.Investors)
     })
 },[])

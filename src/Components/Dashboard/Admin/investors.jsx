@@ -4,15 +4,16 @@ import Swal from "sweetalert2";
 import { useNavigate } from "react-router";
 
 const Investors=()=>{
-    const Navigate = useNavigate()
     const [value, setValue] = useState([])
+    const Navigate= useNavigate()
+
     const logout=()=>{
-        localStorage.removeItem('token');
+        localStorage.removeItem('token')
         Navigate('/auth')
         Swal.fire({
             icon: 'info',
-            title: 'Logged Out',
-            text: 'Thank You for using FITAFHouse'
+            title: "Logged Out",
+            text: 'Thanks for using FITAFHouse'
         })
     }
     useEffect(()=>{
