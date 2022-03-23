@@ -12,7 +12,7 @@ const SignIn = ()=>{
              <div className="sign-in-content">
                  <div className="img-signin-content">
                  </div>
-                       <SignInForm />
+                       <SignInForm className="form-wrapper"/>
             </div>
 
         </>

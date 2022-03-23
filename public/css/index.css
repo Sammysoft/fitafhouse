@@ -2,6 +2,107 @@
 
 
 @media (max-width: 850px) {
+    .sign-in-img{
+        width: 100vw;
+        height: 30vh;
+        position: absolute;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/hand.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        color: white;
+        font-weight: 900;
+        text-align: center;
+        margin-top: 10vh;
+        flex: 1;
+        }
+
+
+    .sign-in-content{
+        position: absolute;
+        font-family: 'ubuntu';
+        display: flex;
+        top: 50vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #f3f3f3;
+        padding: 5px 20px 5px 20px;
+        width: 100vw;
+    }
+    .form-wrap{
+        top: 25vh;
+        width: 100%;
+
+    }
+    input{
+        width: 100% !important;
+        margin-left: 0px !important
+    }
+    .img-signin-content{
+        display: none !important;
+    }
+
+  .menu-wrapper{
+    font-family: "ubuntu";
+      overflow-y: scroll;
+      height: 100vh !important;
+      padding: 15px !important;
+      width: 100% !important
+}
+.inner-menu{
+  background-color: white;
+  padding: 20px;
+  border-bottom-left-radius:10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 70%;
+  position: relative;
+  height: fit-content;
+  text-align: center;
+  margin: auto;
+  color: #0263aa;
+  line-height: 5rem;
+  font-weight: 900;
+}
+.btn-investment{
+  background-color: #0263aa;
+  color: white;
+  padding: 15px 25px 15px 25px !important;
+   border:none;
+   cursor: pointer;
+   margin: '100px' !important
+}
+.investment{
+  display: flex;
+  flex-direction: column !important;
+  width: 100%;
+  padding: 20px;
+  height: 80vh !important
+}
+.investment-info1, .investment-info2{
+ width: 100% !important;
+}
+.logout-div{
+    width: 100%;
+    padding: 5vh 10vh 5vh !important;
+    font-weight: 900;
+    color: #808080;
+    text-align: right;
+    height: 10vh !important;
+    cursor: pointer;
+}
+.investment-wrapper{
+    margin: 0% !important;
+    border-bottom-left-radius:6px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-color: white;
+    padding: 10%;
+    direction: ltr;
+}
 
 
     .contact-form-wrapper{
@@ -12,13 +113,25 @@
           text-align: center;
           margin: auto;
     }
-    /* textarea{
-        width: 70vw !important;
-        height: 40vh;
-        margin-top: 5vh;
-        padding: 10px;
-        border: 2px solid #b4b4b4;
-    } */
+
+    .dashboard-wrapper{
+        display: flex;
+        flex-direction: column !important;
+        justify-content: space-between;
+        align-items: flex-start;
+        font-family: "ubuntu";
+        width: 100%;
+        height: 100vh !important
+    }
+    .menu-wrapper{
+        font-family: "ubuntu";
+        width: 90% !important;
+        margin: auto
+    }
+    .nav-wrapper{
+        display: none !important
+
+    }
 
     #input{
         margin-top: 10px;
@@ -44,7 +157,6 @@
     .menu-wrapper{
         font-family: "ubuntu";
         flex: 4;
-
     }
     .inner-menu{
       background-color: white;
@@ -71,9 +183,9 @@
         float: center;
     }
 
-    .sign-in-img{
+    /* .sign-in-img{
         display: none !important;
-    }
+    } */
 
 
 
@@ -217,11 +329,17 @@ button{
 .right-top-nav{
     flex: 6;
 }
-
+.active{
+    text-decoration: 'none';
+    text-decoration-line: none;
+    color: #808080;
+    font-weight: 900
+}
 input{
     margin-top: 10px;
     border: 2px solid #b4b4b4;
     padding: 10px;
+    margin-left: 10px;
     width: 35vw;
 }
 
@@ -481,7 +599,7 @@ flex: 1;
 color: white !important;
 }
 .investment-wrapper:hover{
-    background-color: #0263aa;
+
     cursor: pointer;
     color: white !important;
 }
@@ -489,7 +607,7 @@ color: white !important;
     width: 100%;
     padding: 15vh 25vh 15vh;
     font-weight: 900;
-    color: grey;
+    color: #808080;
     text-align: right;
     height: 20vh;
     cursor: pointer;
@@ -563,19 +681,19 @@ color: white !important;
 
   /* Track */
   ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px #6bbe43;
+    box-shadow: inset 0 0 5px whitesmoke;
     border-radius: 10px;
   }
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #0263aa;
+    background: #808080;
     border-radius: 10px;
   }
 
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #0263aa;
+    background: #808080;
   }
 
 
@@ -608,7 +726,7 @@ color: white !important;
 .nav-dash-link{
     text-decoration: 'none';
     text-decoration-line: none;
-    color: grey;
+    color: #808080;
     font-weight: 900
 }
 
@@ -755,13 +873,14 @@ color: white !important;
 }
 
 table, td, th {
-    border: 1px solid #ddd;
     text-align: left;
   }
 
   table {
     border-collapse: collapse;
     width: 100%;
+    min-height: '60vh' !important;
+    overflow-y: scroll;
   }
 
   th, td {
@@ -770,10 +889,9 @@ table, td, th {
   th{
       color: #0263aa;
   }
-  td{
-      font-size: '2px' !important;
-  }
-  tr:nth-child(even) {background-color: #f2f2f2;}
+td{
+    color: #808080;
+}
 
 
 
@@ -806,4 +924,16 @@ table, td, th {
   }
   .send-msg:hover{
       cursor: pointer;
+  }
+
+  .nav-link{
+      text-decoration: none;
+      text-decoration-line: none;
+      color: #0263aa;
+      font-size: '36px'
+  }
+  .unselected{
+    text-decoration: none;
+    text-decoration-line: none;
+    color: #808080
   }

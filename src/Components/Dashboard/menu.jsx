@@ -36,7 +36,7 @@ const Menu = (props)=>{
 
         <>
            {
-                       props.investment.length == 0 ?
+      props.investment.length == 0 ?
 
         <div className="menu-wrapper">
                         <div className="logout-div">
@@ -65,7 +65,7 @@ const Menu = (props)=>{
                                                         <span style={{color: 'grey', fontWeight: '800'}} key={info._id}>
                                                                 {info.plan}
                                                         </span><br/>
-                                                <span style={{color: 'grey', fontWeight: '900', fontSize: '2.5rem'}} key={info._id}>
+                                                <span style={{color: 'grey', fontWeight: '900', fontSize: '2.0rem'}} key={info._id}>
                                                                 N{new Number(info.amount).toLocaleString('en-US', {minimumFractionDigits: 0})}
                                                         </span><br/>
                                                         <span style={{color: '#0263aa', fontWeight: '800', textTransform: 'uppercase'}}>{revealDuration()}</span>

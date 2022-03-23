@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router";
-import { Divider } from "semantic-ui-react";
 import Swal from 'sweetalert2';
+import { NavLink } from "react-router-dom";
 
 const Nav =(props)=>{
     const navigate = useNavigate();
@@ -21,7 +21,7 @@ const Nav =(props)=>{
                <div className="brand-icon-wrapper">
                     <img src="/images/logo.png" alt="brand-logo" width="50px" height="50px"/><span style={{padding: '20px 0px 10px 15px', color: '#0263aa', fontWeight: '900'}}>FITAFHouse</span>
                 </div>
-            <span className="icon-nav"><a className="nav-dash-link" href="/dashboard">Dashboard</a></span>
+            <span className="icon-nav"><NavLink to="/dashboard" activeClassName="active" className="navlink">Dashboard</NavLink></span>
             <span className="icon-nav"><a className="nav-dash-link" href="/dashboard/investments">Investment</a></span>
             <span className="icon-nav"><a className="nav-dash-link" href="">Profile</a></span>
              <span className="icon-nav"><a className="nav-dash-link" href="">Support</a></span>

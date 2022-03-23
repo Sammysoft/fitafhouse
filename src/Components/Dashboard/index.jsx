@@ -3,7 +3,7 @@ import Menu from './menu';
 import Nav from './nav';
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router";
-import AdminDashboard from "./admin";
+import AdminDashboard from "./Admin/admin";
 
 
 
@@ -28,6 +28,7 @@ const Dashboard = (props)=>{
                 setFullname(response.data.fullname)
                 setRole(response.data.role)
                 setInvestment(response.data.investment)
+                console.log(investment)
             if(!response.data){
                 navigate('/auth')
                 Swal.fire({

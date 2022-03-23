@@ -1,14 +1,13 @@
 import React from 'react';
-import Nav from './nav';
 import AdminMenu from './admin_menu';
-import NavBar from '../navbar';
+import AdminNav from './adminnav';
 
 const AdminDashboard = (props)=>{
     return(
     <>
-<NavBar />
+
     <div className="dashboard-wrapper">
-            <Nav />
+            <AdminNav />
             <AdminMenu name={props.name} fullname={props.fullname}/>
     </div>
     </>)

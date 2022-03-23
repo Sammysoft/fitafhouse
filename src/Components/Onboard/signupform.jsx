@@ -11,6 +11,8 @@ const SignUpForm = ()=>{
     const [email, setEmail] = useState('');
     const [phonenumber, setPhonenumber] = useState('')
     const [password, setPassword] = useState('');
+    const [accountnumber, setAccountnumber] = useState('');
+    const [bank, setBank] = useState('');
     const [isLoading, setLoading] = useState(true)
     let navigate = useNavigate();
     useEffect(()=>{
@@ -52,6 +54,8 @@ e.preventDefault();
                     <input type="text" name="username" value={username} onChange={event=>setUsername(event.target.value)} placeholder="Username" />
                     <input type="password" name="password"  value={password} onChange={event=>setPassword(event.target.value)} placeholder="Password" />
                     <input type="text" name="phonenumber" value={phonenumber} onChange={event=>setPhonenumber(event.target.value)} placeholder="Phone Number" />
+                    <input type="text" name="accountnumber" value={accountnumber} onChange={event=>setAccountnumber(event.target.value)} placeholder="Account Number" />
+                    <input type="text" name="bank" value={bank} onChange={event=>setBank(event.target.value)} placeholder="Bank Name" />
                     <div className="btn-signin-wrapper">
                     <button onClick={submit} type="submit" className="btn-signin">Sign Up</button>
                     <div style={{padding: '10px 0px 0px 0px'}}>
