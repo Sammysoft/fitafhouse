@@ -83,7 +83,7 @@ const Menu = (props)=>{
                                                 <span style={{color: 'grey', fontWeight: '900', fontSize: '2.0rem'}} key={info._id}>
                                                                 N{new Number(info.amount).toLocaleString('en-US', {minimumFractionDigits: 0})}
                                                         </span><br/>
-                                                        <span style={{color: '#0263aa', fontWeight: '800', textTransform: 'uppercase'}}>{info.created_at  +' - ' + info.dueDate}</span>
+                                                        <span style={{color: '#0263aa', fontWeight: '800', textTransform: 'uppercase'}}>{info.created_at  +' - ' + info.dueDate}</span><br/><br/>
                                               </>)}
                                         </div>
                                         <div className="duration-investment">

@@ -1,13 +1,45 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import Swal from 'sweetalert2';
 
 
 
 const InvestmentMenu = ()=>{
+        const [user, setUser ] = useState('');
+
+        const token = localStorage.getItem('token')
+
+        useEffect(()=>{
+                fetch('https://fitafhouse-api.herokuapp.com/api/dashboard', {
+                        headers: {
+                                Authorization: token
+                        }
+                }).then(async res=>{
+                        let response = await res.json()
+                        console.log(response.data._id)
+                        setUser(response.data._id)
+                })
+        },[])
+
+const initiateInvestment=(val)=>{
+        axios.post(`https://fitafhouse-api.herokuapp.com/api/invest/${user}`, val)
+        .then(()=>{
+                Swal.fire({
+                        title: `${val.plan} plan`,
+                        text: `You have made a placement for ${val.plan}
+                                  investment of N${val.amount} for
+                                   ${val.investmentDuration} Months you will recieve
+                                   ${val.rate} at the end of each month, Thank You for using FITAFHOUSE!`,
+                        icon: 'success'
+                })
+        })
+
+}
 
  var data = {
 
         Quarterly1:{
-                        Name:'Quarterly Plans',
+                    Name:'Quarterly Plans',
                     Amount: 'N100,000',
                     ROI: 'at 3% ROI Monthly'
         },
@@ -53,7 +85,7 @@ const InvestmentMenu = ()=>{
         <>
             <div className="menu-wrapper">
             <div className="investment">
-                                 <div className="investment-info1">
+                                 <div className="investment-info1" onClick={()=>{initiateInvestment({plan: 'Quarterly', amount: 100000, rate: '3% ROI', isActive: true, investmentDuration: 1})}}>
                                  <p style={{textAlign: 'left', paddingLeft: '30px'}} className="info-desc">{data.Quarterly1.Name}</p>
                                 <div className="investment-wrapper">
                                         <span id="inv-change" style={{color: 'black', fontWeight: '500', fontSize: '2rem'}}>{data.Quarterly1.Amount}</span><br/>
@@ -62,7 +94,7 @@ const InvestmentMenu = ()=>{
                                 </div>
 
 
-                                <div className="investment-info1">
+                                <div className="investment-info1" onClick={()=>{initiateInvestment({plan: 'Quarterly', amount: 300000, rate: '4% ROI', isActive: true, investmentDuration: 1})}}>
                                 <br/>
                                 <div className="investment-wrapper">
                                 <span id="inv-change" style={{color: 'black', fontWeight: '500', fontSize: '2rem'}}>{data.Quarterly2.Amount}</span><br/>
@@ -70,7 +102,7 @@ const InvestmentMenu = ()=>{
                                 </div>
                                 </div>
 
-                                <div className="investment-info1">
+                                <div className="investment-info1" onClick={()=>{initiateInvestment({plan: 'Quarterly', amount: 500000, rate: '5% ROI', isActive: true, investmentDuration: 1})}}>
                                 <br/>
                                 <div className="investment-wrapper">
                                 <span id="inv-change" style={{color: 'black', fontWeight: '500', fontSize: '2rem'}}>{data.Quarterly3.Amount}</span><br/>
@@ -85,7 +117,7 @@ const InvestmentMenu = ()=>{
 
 
                             <div className="investment">
-                                 <div className="investment-info1">
+                                 <div className="investment-info1" onClick={()=>{initiateInvestment({plan: 'Six Months', amount: 500000, rate: '6% ROI', isActive: true, investmentDuration: 6})}}>
                                  <p style={{textAlign: 'left', paddingLeft: '30px'}} className="info-desc">{data.SixMonth1.Name}</p>
                                 <div className="investment-wrapper">
                                         <span id="inv-change" style={{color: 'black', fontWeight: '500', fontSize: '2rem'}}>{data.SixMonth1.Amount}</span><br/>
@@ -94,7 +126,7 @@ const InvestmentMenu = ()=>{
                                 </div>
 
 
-                                <div className="investment-info1">
+                                <div className="investment-info1" onClick={()=>{initiateInvestment({plan: 'Six Months', amount: 1000000, rate: '7% ROI', isActive: true, investmentDuration: 6})}}>
                                 <br/>
                                 <div className="investment-wrapper">
                                 <span id="inv-change" style={{color: 'black', fontWeight: '500', fontSize: '2rem'}}>{data.SixMonth2.Amount}</span><br/>
@@ -102,7 +134,7 @@ const InvestmentMenu = ()=>{
                                 </div>
                                 </div>
 
-                                <div className="investment-info1">
+                                <div className="investment-info1" onClick={()=>{initiateInvestment({plan: 'Six Months', amount: 1200000, rate: '8% ROI', isActive: true, investmentDuration: 6})}}>
                                 <br/>
                                 <div className="investment-wrapper">
                                 <span id="inv-change" style={{color: 'black', fontWeight: '500', fontSize: '2rem'}}>{data.SixMonth3.Amount}</span><br/>
@@ -118,7 +150,7 @@ const InvestmentMenu = ()=>{
 
 
                             <div className="investment">
-                                 <div className="investment-info1">
+                                 <div className="investment-info1" onClick={()=>{initiateInvestment({plan: 'Yearly', amount: 1500000, rate: '9% ROI', isActive: true, investmentDuration: 12})}}>
                                  <p style={{textAlign: 'left', paddingLeft: '30px'}} className="info-desc">{data.Yearly1.Name}</p>
                                 <div className="investment-wrapper">
                                         <span id="inv-change" style={{color: 'black', fontWeight: '500', fontSize: '2rem'}}>{data.Yearly1.Amount}</span><br/>
@@ -127,7 +159,7 @@ const InvestmentMenu = ()=>{
                                 </div>
 
 
-                                <div className="investment-info1">
+                                <div className="investment-info1" onClick={()=>{initiateInvestment({plan: 'Yearly', amount: 2000000, rate: '10% ROI', isActive: true, investmentDuration: 12})}}>
                                 <br/>
                                 <div className="investment-wrapper">
                                 <span id="inv-change" style={{color: 'black', fontWeight: '500', fontSize: '2rem'}}>{data.Yearly2.Amount}</span><br/>
@@ -135,7 +167,7 @@ const InvestmentMenu = ()=>{
                                 </div>
                                 </div>
 
-                                <div className="investment-info1">
+                                <div className="investment-info1" onClick={()=>{initiateInvestment({plan: 'Yearly', amount: 5000000, rate: '11% ROI', isActive: true, investmentDuration: 12})}}>
                                 <br/>
                                 <div className="investment-wrapper">
                                 <span id="inv-change" style={{color: 'black', fontWeight: '500', fontSize: '2rem'}}>{data.Yearly3.Amount}</span><br/>
