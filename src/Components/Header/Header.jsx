@@ -15,8 +15,8 @@ const Header = () =>{
                     <div style={{flex: '1'}}>
 
                         <div data-aos="fade-right" data-aos-duration="3000" className="header-content" style={{padding: "20%"}}>
-                            <h1 className="header-welcome">Welcome to<br/> <span style={{color: "#0263aa"}}>FITAF</span><span style={{color: "#6bbe43"}}>HOUSE</span></h1><br/><br/>
-                            <p className="lead fw-normal text-muted mb-5">Your home for comprehensive, <br/>all-round trade and financing.</p>
+                            <h1 className="header-welcome">Welcome to<br/> <span className="fitaf" style={{color: "#0263aa"}}>FITAF</span><span className="house" style={{color: "#6bbe43"}}>HOUSE</span></h1><br/><br/>
+                            <p className="lead fw-normal text-muted">Your home for comprehensive, <br/>all-round trade and financing.</p>
                             <div className="d-flex flex-column flex-lg-row align-items-center">
 
                                 <button style={{backgroundColor: "#0263aa", color: 'white', padding: "5% 15% 5% 15%", border: "none"}}>

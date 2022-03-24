@@ -5,33 +5,12 @@ const About = () =>{
         <>
                 <div data-aos="zoom-in" data-aos-duration="3000" className="about-wrapper">
                 <p>
-                For purely decorative icons, add aria-hidden="true". Otherwise, provide an appropriate text alternative. Depending on which method you’re
-                 using to add the icons, and where you’re using them (e.g. as standalone images, or as the only content of a button or similar control), there are
-                 various possible approaches. Here are a few examples:
-                 For purely decorative icons, add aria-hidden="true". Otherwise, provide an appropriate text alternative. Depending on which method you’re
-                 using to add the icons, and where you’re using them (e.g. as standalone images, or as the only content of a button or similar control), there are
-                 various possible approaches. Here are a few examples:
-                 For purely decorative icons, add aria-hidden="true". Otherwise, provide an appropriate text alternative. Depending on which method you’re
-                 using to add the icons, and where you’re using them (e.g. as standalone images, or as the only content of a button or similar control), there are
-                 various possible approaches. Here are a few examples: <br/>
-                 For purely decorative icons, add aria-hidden="true". Otherwise, provide an appropriate text alternative. Depending on which method you’re
-                 using to add the icons, and where you’re using them (e.g. as standalone images, or as the only content of a button or similar control), there are
-                 various possible approaches. Here are a few examples:
-                 For purely decorative icons, add aria-hidden="true". Otherwise, provide an appropriate text alternative. Depending on which method you’re
-                 using to add the icons, and where you’re using them (e.g. as standalone images, or as the only content of a button or similar control), there are
-                 various possible approaches. Here are a few examples:
-                 For purely decorative icons, add aria-hidden="true". Otherwise, provide an appropriate text alternative. Depending on which method you’re
-                 using to add the icons, and where you’re using them (e.g. as standalone images, or as the only content of a button or similar control), there are
-                 various possible approaches. Here are a few examples:<br/>
-                 For purely decorative icons, add aria-hidden="true". Otherwise, provide an appropriate text alternative. Depending on which method you’re
-                 using to add the icons, and where you’re using them (e.g. as standalone images, or as the only content of a button or similar control), there are
-                 various possible approaches. Here are a few examples:
-                 For purely decorative icons, add aria-hidden="true". Otherwise, provide an appropriate text alternative. Depending on which method you’re
-                 using to add the icons, and where you’re using them (e.g. as standalone images, or as the only content of a button or similar control), there are
-                 various possible approaches. Here are a few examples:
-                 For purely decorative icons, add aria-hidden="true". Otherwise, provide an appropriate text alternative. Depending on which method you’re
-                 using to add the icons, and where you’re using them (e.g. as standalone images, or as the only content of a button or similar control), there are
-                 various possible approaches. Here are a few examples:
+                FITAFHOUSE is a business house where we determine whether a project or business
+                        or investment is viable or not. We raise money for qualified ones and appoint credible team for execution.<br/><br/><br/>
+                        International trade business involves large sum of money expecially now that we have global challenges with the value of our currencies
+                        It's on this note that we humbly ask for your investment in this company. Your massive investment in this company will give us oppurtunity to enjoy economies of sale. What that means is that the cost
+                        of our operation will go down with corresponding increase in our profit. That means more returns will be made available to all investors at the end of the financial year<br/><br/><br/>
+                        We are located at FITAFHOUSE, 6 Tiamiyu Aborisade Crescent, Beside Assembly of God Church, G.R.A Ado Ekiti, Ekiti State
                 </p>
                 </div>
         </>

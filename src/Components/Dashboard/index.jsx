@@ -4,6 +4,7 @@ import Nav from './nav';
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router";
 import AdminDashboard from "./Admin/admin";
+import HarmbuggerNav from "./harmbugger-nav";
 
 
 
@@ -60,6 +61,7 @@ const Dashboard = (props)=>{
         <>
         { role === 'Admin' ? <AdminDashboard name={username} fullname={fullname}/> : <div>
         <div className="dashboard-wrapper">
+         <HarmbuggerNav />
         <Nav />
         <Menu name={username} fullname={fullname} investment={investment}/>
         </div>

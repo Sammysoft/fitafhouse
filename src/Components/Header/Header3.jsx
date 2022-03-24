@@ -12,7 +12,7 @@ const Header3 = () =>{
                     <div style={{flex: '1'}}>
 
                         <div data-aos-duration="3000" data-aos="fade-right" className="header-content" style={{padding: "20%"}}>
-                            <h1 className="header-welcome">Get in Touch -<br/> <span style={{color: "#0263aa"}}>FITAF</span><span style={{color: "#6bbe43"}}>HOUSE</span></h1><br/><br/>
+                            <h1 className="header-welcome">Get in Touch -<br/> <span style={{color: "#0263aa"}} className="fitaf">FITAF</span><span style={{color: "#6bbe43"}} className="house">HOUSE</span></h1><br/><br/>
                             <p className="lead fw-normal text-muted mb-5">Your home for comprehensive, <br/>all-round trade and financing.</p>
                             <div className="d-flex flex-column flex-lg-row align-items-center">
 

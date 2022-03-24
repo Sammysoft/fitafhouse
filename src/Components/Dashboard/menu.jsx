@@ -15,20 +15,35 @@ const Menu = (props)=>{
                 })
         }
 
-        const revealDate = ()=>{
-              const   date = new Date();
-              const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-                let month = months[date.getMonth()];
-                 return(`${date.getDay()} ${ month} ${ date.getFullYear()}`
-                 )
+        const daysToNextROI = (value)=>{
+                const date = new Date;
+                let currentDay = date.getDate()
+                let str = value.toString();
+                let getDay = str.substring(0,2);
+                const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
+                let lastDayOfTheCurrentMonth = lastDay.getDate()
+                let remainingDay = Math.abs(currentDay - lastDayOfTheCurrentMonth)
+                return(
+                                Number(remainingDay) + Number(getDay)
+
+                )
         }
 
-        const revealDuration =()=>{
+        const revealDuration =(value)=>{
+                let valMonth, finalDate
+                let str = value.toString();
+                let getDay = str.substring(0,2);
                 const date =new Date();
                 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
                 let month = months[date.getMonth()];
+                finalDate =   ` ${months[date.getMonth() + 1]} ${date.getFullYear()}`
+                if(Number(date.getMonth() + 1) === 12){
+                        valMonth = Number(date.getMonth() - 12)
+                        month = months[valMonth]
+                        finalDate =   `${getDay} ${month} ${date.getFullYear()}`
+                }
                 return(
-                        `${month} - ${months[date.getMonth() + 6]} ${date.getFullYear()}`
+                                finalDate
                 )
         }
 
@@ -68,7 +83,7 @@ const Menu = (props)=>{
                                                 <span style={{color: 'grey', fontWeight: '900', fontSize: '2.0rem'}} key={info._id}>
                                                                 N{new Number(info.amount).toLocaleString('en-US', {minimumFractionDigits: 0})}
                                                         </span><br/>
-                                                        <span style={{color: '#0263aa', fontWeight: '800', textTransform: 'uppercase'}}>{revealDuration()}</span>
+                                                        <span style={{color: '#0263aa', fontWeight: '800', textTransform: 'uppercase'}}>{info.created_at  +' - ' + info.dueDate}</span>
                                               </>)}
                                         </div>
                                         <div className="duration-investment">
@@ -84,9 +99,9 @@ const Menu = (props)=>{
                                         {props.investment.map((info, key)=><>
                                         <br/>
                                                         <span style={{color: 'grey', fontWeight: '900', fontSize: '2.5rem'}} key={info._id}>
-                                                                {info.timeDue}
+                                                                {daysToNextROI(info.dueDate) + ' Days' }
                                                         </span><br/>
-                                                        <span style={{color: '#0263aa', fontWeight: '800', textTransform: 'uppercase'}}>{revealDate()}</span>
+                                                        <span style={{color: '#0263aa', fontWeight: '800', textTransform: 'uppercase'}}>{revealDuration(info.created_at)}</span>
 
                                               </>)}
                                         </div>

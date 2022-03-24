@@ -2,21 +2,44 @@
 
 
 @media (max-width: 850px) {
-    .sign-in-img{
-        width: 100vw;
-        height: 30vh;
-        position: absolute;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/hand.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 100%;
-        color: white;
-        font-weight: 900;
-        text-align: center;
-        margin-top: 10vh;
-        flex: 1;
-        }
 
+    .harmbugger{
+        display: block !important
+    }
+.sign-in-img{
+    width: 100vw;
+    height: 30vh;
+    position: absolute;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/hand.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: white;
+    font-weight: 900;
+    text-align: center;
+    margin-top: 10vh;
+    flex: 1;
+    }
+    .lead{
+        text-align: center !important;
+        font-size: 20px !important;
+    }
+
+    .flex-wrapper{
+        width: 80% !important;
+        top: 30%;
+        left: 5%;
+        position: absolute;
+        text-align: center;
+        margin:  auto;
+    }
+.header-content{
+    text-align: center;
+}
+.fitaf, .house{
+    color: white !important;
+    font-size: 25px !important;
+}
 
     .sign-in-content{
         position: absolute;
@@ -218,7 +241,6 @@
         background-position: center;
         background-size: cover;
         width: 100% !important;
-
       }
 
 
@@ -936,4 +958,9 @@ td{
     text-decoration: none;
     text-decoration-line: none;
     color: #808080
+  }
+
+
+  .harmbugger{
+      display: none
   }

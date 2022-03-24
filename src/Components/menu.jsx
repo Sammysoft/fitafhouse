@@ -38,9 +38,9 @@ const  Menu = ()=>{
             <div className="row">
             <div className="wrap" style={{textAlign: "center", width: 'center'}}>
             <div  style={{alignItems: 'center'}}>
-            <button style={{backgroundColor: "#0263aa", color: 'white', padding: "2% 5% 2% 5%", border: "none", float: 'center'}}>
-                <span className="d-flex align-items-center">
-                    <span style={{fontSize: "14px"}}> Learn More</span>
+            <button style={{backgroundColor: "#0263aa", color: 'white', padding: "2% 5% 2% 5%", border: "none", float: 'center', padding: '10px 30px 10px 30px'}}>
+                <span className="align-items-center">
+                    <span style={{fontSize: "12px", textAlign: 'center', width: '100%'}}> Learn More</span>
                 </span>
                 </button>
             </div>

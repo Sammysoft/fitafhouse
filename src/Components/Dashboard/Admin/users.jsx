@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import AdminNav from "./adminnav";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router";
+import AdminHarmbugger from "./admin-harmuggernav";
 
 
 const Users=()=>{
@@ -21,13 +22,14 @@ useEffect(()=>{
     fetch('https://fitafhouse-api.herokuapp.com/api/users')
     .then(async res=>{
         let response = await res.json()
-        setValue(response)
-        console.log(response.Investors)
+        setValue(response.Investors)
+        console.log(response)
     })
 },[])
     return(
         <>
                   <div className="dashboard-wrapper">
+                      <AdminHarmbugger />
                         <AdminNav />
                         <div className="menu-wrapper">
                                         <div className="logout-div">

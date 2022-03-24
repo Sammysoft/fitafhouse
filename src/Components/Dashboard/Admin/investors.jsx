@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import AdminNav from "./adminnav";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router";
+import AdminHarmbugger from "./admin-harmuggernav";
 
 const Investors=()=>{
     const [value, setValue] = useState([])
@@ -27,6 +28,7 @@ const Investors=()=>{
         return(
             <>
                       <div className="dashboard-wrapper">
+                              <AdminHarmbugger />
                             <AdminNav />
                             <div className="menu-wrapper">
                                             <div className="logout-div">
