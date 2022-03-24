@@ -17,6 +17,24 @@ const Investors=()=>{
             text: 'Thanks for using FITAFHouse'
         })
     }
+
+    const revealDuration =(value)=>{
+        let valMonth, finalDate
+        let str = value.toString();
+        let getDay = str.substring(0,2);
+        const date =new Date();
+        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        let month = months[date.getMonth()];
+        finalDate =   ` ${months[date.getMonth() + 1]} ${date.getFullYear()}`
+        if(Number(date.getMonth() + 1) === 12){
+                valMonth = Number(date.getMonth() - 12)
+                month = months[valMonth]
+                finalDate =   `${getDay} ${month} ${date.getFullYear()}`
+        }
+        return(
+                        finalDate
+        )
+}
     useEffect(()=>{
         fetch('https://fitafhouse-api.herokuapp.com/api/active-investors')
         .then(async res=>{
@@ -72,7 +90,13 @@ const Investors=()=>{
                                                                                         </>
                                                                                     )
                                                                 })}</td>
-                                                                <td></td>
+                                                                <td key={id}>{detail.investment.map((val)=>{
+                                                                            return(
+                                                                                <>
+                                                                                        {revealDuration(val.dueDate)}
+                                                                                </>
+                                                                            )
+                                                                })}</td>
                                                         </tr>
                                                             )
                                                 })}
