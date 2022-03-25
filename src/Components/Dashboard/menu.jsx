@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router";
+import { NavLink } from "react-router-dom";
 import Swal from 'sweetalert2';
 
 const Menu = (props)=>{
@@ -22,11 +23,17 @@ const Menu = (props)=>{
                 let getDay = str.substring(0,2);
                 const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
                 let lastDayOfTheCurrentMonth = lastDay.getDate()
-                let remainingDay = Math.abs(currentDay - lastDayOfTheCurrentMonth)
-                return(
+                let remainingDay =  Number(lastDayOfTheCurrentMonth) - Number(currentDay)
+                if(remainingDay < 0){
+                        return(
+                                Number(currentDay - Number(getDay))
+                        )
+                }else{
+                        return(
                                 Number(remainingDay) + Number(getDay)
-
                 )
+                }
+
         }
 
         const revealDuration =(value)=>{
@@ -36,7 +43,7 @@ const Menu = (props)=>{
                 const date =new Date();
                 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
                 let month = months[date.getMonth()];
-                finalDate =   ` ${months[date.getMonth() + 1]} ${date.getFullYear()}`
+                finalDate =   `${getDay} ${months[date.getMonth() + 1]} ${date.getFullYear()}`
                 if(Number(date.getMonth() + 1) === 12){
                         valMonth = Number(date.getMonth() - 12)
                         month = months[valMonth]
@@ -61,7 +68,7 @@ const Menu = (props)=>{
                        <br/>
                        No investments yet!<br/>
                        Make an investment with us and get good offer! <br/>
-                       <span className="btn-investment">View Investment Plans</span>
+                        <NavLink to="/dashboard/investments"><span className="btn-investment">View Investment Plans</span></NavLink>
                </div>
         </div>  :
 

@@ -16,23 +16,35 @@ const InvestmentMenu = ()=>{
                         }
                 }).then(async res=>{
                         let response = await res.json()
-                        console.log(response.data._id)
                         setUser(response.data._id)
                 })
         },[])
 
 const initiateInvestment=(val)=>{
-        axios.post(`https://fitafhouse-api.herokuapp.com/api/invest/${user}`, val)
-        .then(()=>{
-                Swal.fire({
-                        title: `${val.plan} plan`,
-                        text: `You have made a placement for ${val.plan}
-                                  investment of N${val.amount} for
-                                   ${val.investmentDuration} Months you will recieve
-                                   ${val.rate} at the end of each month, Thank You for using FITAFHOUSE!`,
-                        icon: 'success'
-                })
-        })
+        Swal.fire({
+                title: `N${val.amount}, ${val.plan} plan `,
+                showDenyButton: true,
+                showCancelButton: true,
+                confirmButtonText: 'Continue',
+                denyButtonText: `Don't Continue`,
+              }).then((result) => {
+                if (result.isConfirmed) {
+                        axios.post(`https://fitafhouse-api.herokuapp.com/api/invest/${user}`, val)
+                        .then(()=>{
+                                Swal.fire({
+                                        title: `${val.plan} plan`,
+                                        text: `You have made a placement for ${val.plan}
+                                                  investment of N${val.amount} for
+                                                   ${val.investmentDuration} Months you will recieve
+                                                   ${val.rate} at the end of each month, Thank You for using FITAFHOUSE!`,
+                                        icon: 'success'
+                                })
+                        })
+
+                } else if (result.isDenied) {
+                  Swal.fire('Request has been cancelled!', '', 'info')
+                }
+              })
 
 }
 

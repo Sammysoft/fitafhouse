@@ -25,7 +25,7 @@ const Investors=()=>{
         const date =new Date();
         const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
         let month = months[date.getMonth()];
-        finalDate =   ` ${months[date.getMonth() + 1]} ${date.getFullYear()}`
+        finalDate =   `${getDay} ${months[date.getMonth() + 1]} ${date.getFullYear()}`
         if(Number(date.getMonth() + 1) === 12){
                 valMonth = Number(date.getMonth() - 12)
                 month = months[valMonth]
