@@ -5,6 +5,7 @@ import Swal from 'sweetalert2';
 
 const Menu = (props)=>{
         console.log(props.investment)
+        console.log(props.approved)
         const navigate = useNavigate();
         const logout=()=>{
                 localStorage.removeItem('token');
@@ -73,14 +74,17 @@ const Menu = (props)=>{
         </div>  :
 
                <>
+
                <div className="menu-wrapper">
                                                         <div className="logout-div">
                                                                 <p ><span onClick={() => logout()}>Logout</span></p>
                                                         </div>
-                        <div className="investment">
-                                 <div className="investment-info1">
-                                 <p className="info-desc">Active Investment Plan</p>
-                                <div className="investment-wrapper">
+
+                                {props.approved === true ?
+                                <div className="investment">
+                                        <div className="investment-info1">
+                                        <p className="info-desc">Active Investment Plan</p>
+                                        <div className="investment-wrapper">
 
                                         <div className="active-investment">
                                               {props.investment.map((info, key)=><>
@@ -105,10 +109,14 @@ const Menu = (props)=>{
                                         <div className="active-investment">
                                         {props.investment.map((info, key)=><>
                                         <br/>
-                                                        <span style={{color: 'grey', fontWeight: '900', fontSize: '2.5rem'}} key={info._id}>
-                                                                {daysToNextROI(info.dueDate) + ' Days' }
-                                                        </span><br/>
-                                                        <span style={{color: '#0263aa', fontWeight: '800', textTransform: 'uppercase'}}>{revealDuration(info.created_at)}</span>
+
+                                                               <>
+                                                                                <span style={{color: 'grey', fontWeight: '900', fontSize: '2.5rem'}} key={info._id}>
+                                                                                {daysToNextROI(info.dueDate) + ' Days' }
+                                                                                </span><br/>
+                                                                                <span style={{color: '#0263aa', fontWeight: '800', textTransform: 'uppercase'}}>{revealDuration(info.created_at)}</span>
+                                                               </>
+
 
                                               </>)}
                                         </div>
@@ -118,6 +126,26 @@ const Menu = (props)=>{
                                 </div>
                                 </div>
                                  </div>
+                                 :
+                                                               <>
+
+                                <div className="investment">
+                                        <div className="investment-info1">
+                                        <p className="info-desc">Active Investment Plan</p>
+                                        <div className="investment-wrapper">
+
+                                        <div className="active-investment">
+                                                                        <span style={{color: 'grey', fontWeight: '900', fontSize: '2.5rem'}} >Awaiting approval</span><br/>
+                                                                        <span style={{color: '#0263aa', fontWeight: '800', textTransform: 'lowercase'}}>
+                                                                                Your application is undergoing review
+                                                                        </span>
+                                                </div>
+                                                </div>
+                                                </div>
+                                                </div>
+                                                               </>
+
+                                                }
                 </div>
                </>
 

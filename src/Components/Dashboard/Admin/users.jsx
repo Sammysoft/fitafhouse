@@ -54,7 +54,7 @@ useEffect(()=>{
                                                             <td key={id}>{detail.fullname}</td>
                                                             <td key={id}>{detail.email}</td>
                                                             <td key={id}>{detail.phonenumber}</td>
-                                                            <td key={id}>{detail.accountNumber}</td>
+                                                            <td key={id}>{detail.accountnumber}</td>
                                                             <td key={id}>{detail.bank}</td>
                                                     </tr>
                                                         )

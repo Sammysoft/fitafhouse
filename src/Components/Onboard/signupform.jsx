@@ -2,9 +2,14 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Form } from "semantic-ui-react";
 import { useNavigate } from "react-router";
-import Loader from '../Loader';
 import Swal from 'sweetalert2';
-const SignUpForm = ()=>{
+
+
+
+
+
+
+const SignUpForm = ({ load })=>{
 
     const [fullname, setFullname] = useState('');
     const [username, setUsername] = useState('');
@@ -13,7 +18,7 @@ const SignUpForm = ()=>{
     const [password, setPassword] = useState('');
     const [accountnumber, setAccountnumber] = useState('');
     const [bank, setBank] = useState('');
-    const [isLoading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(false)
     let navigate = useNavigate();
     useEffect(()=>{
         Swal.fire({
@@ -26,7 +31,7 @@ const SignUpForm = ()=>{
 const submit =(e)=>{
 e.preventDefault();
 
-
+   setLoading(true)
     axios.post('https://fitafhouse-api.herokuapp.com/api/onboarding', {fullname, email, username, phonenumber, password, accountnumber, bank})
     .then(err=>{
             navigate('/auth')
@@ -37,6 +42,7 @@ e.preventDefault();
                   text: "Account Created Succesfully, Login"
               })
     } ).catch(error=>{
+        setLoading(false)
         Swal.fire({
             title:'Oops!',
             icon: 'error',
@@ -47,7 +53,10 @@ e.preventDefault();
 
     return(
         <>
-          {isLoading === true ?<div className="form-wrap" >
+          {loading?
+          load
+          :
+          <div className="form-wrap" >
             <Form >
                     <input type="text" name="fullname" value={fullname} onChange={event=>setFullname(event.target.value)}  placeholder="Full Name" />
                     <input type="email" name="email" value={email} onChange={event=>setEmail(event.target.value)} placeholder="Email Address" />
@@ -63,9 +72,8 @@ e.preventDefault();
                     </div>
                     </div>
             </Form>
-
-
-            </div>: <Loader /> }
+            </div>
+             }
 
         </>
     )
