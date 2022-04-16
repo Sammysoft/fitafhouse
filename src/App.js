@@ -15,6 +15,7 @@ import Investors from "./Components/Dashboard/Admin/investors";
 
 import AOS from 'aos';
  import 'aos/dist/aos.css';
+import Developing from "./Pages/Developing";
 
 
 
@@ -23,8 +24,8 @@ const App = () =>{
     return(
         <>
             <Routes>
-                <Route path="/"  element={<Homepage />}/>
-                <Route path="/home"  element={<Homepage />}/>
+                <Route path="/"  element={<Developing />}/>
+                {/* <Route path="/home"  element={<Homepage />}/>
                 <Route path="/ourcompany"  element={<AboutPage />}/>
                 <Route path="/contact"  element={<ContactPage />} />
                 <Route path="/dashboard"  element={<DashboardPage />}/>
@@ -33,7 +34,7 @@ const App = () =>{
                 <Route path="/auth"  element={<SignInPage />} />
                 <Route path="/users"  element={<Users />} />
                 <Route path="/investors"  element={<Investors />} />
-                <Route path="/forgot-password"  element={<PasswordAuthPage />} />
+                <Route path="/forgot-password"  element={<PasswordAuthPage />} /> */}
                 <Route path="*"  element={<ErrorPage />} />
             </Routes>
 
