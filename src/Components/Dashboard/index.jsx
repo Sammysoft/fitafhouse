@@ -17,6 +17,7 @@ const Dashboard = (props)=>{
     const [username, setUsername] = useState('')
     const [fullname, setFullname] = useState('')
     const [role, setRole] = useState('');
+    const [id, setId] = useState('');
     const [approved, setApproved] = useState(Boolean)
     const [investment, setInvestment] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -37,7 +38,7 @@ const Dashboard = (props)=>{
 
     useEffect(()=>{
         setLoading(true)
-            fetch('https://fitafhouse-api.herokuapp.com/api/dashboard', {
+            fetch('http://localhost:6069/api/dashboard', {
                 headers:{
                     Authorization: token
                 }
@@ -45,6 +46,7 @@ const Dashboard = (props)=>{
                 let response = await res.json()
                 setUsername(response.data.username)
                 setFullname(response.data.fullname)
+                setId(response.data._id)
                 setRole(response.data.role)
                 setInvestment(response.data.investment)
                 setApproved(response.data.approved)
@@ -102,7 +104,7 @@ const Dashboard = (props)=>{
                     <div className="dashboard-wrapper">
                     <HarmbuggerNav />
                     <Nav />
-                    <Menu name={username} fullname={fullname} investment={investment} approved={approved}/>
+                    <Menu name={username} fullname={fullname} investment={investment} approved={approved} id={id}/>
                     </div>
                  }
             </div>

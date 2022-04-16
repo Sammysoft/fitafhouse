@@ -30,7 +30,7 @@ const AdminMenu = (props)=>{
 
 
     useEffect(()=>{
-                fetch('https://fitafhouse-api.herokuapp.com/api/stats')
+                fetch('http://localhost:6069/api/stats')
                 .then(async res=>{
                         const response = await res.json();
                         console.log(response)

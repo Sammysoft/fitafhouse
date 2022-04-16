@@ -1,11 +1,12 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { NavLink } from "react-router-dom";
 import Swal from 'sweetalert2';
 
 const Menu = (props)=>{
-        console.log(props.investment)
-        console.log(props.approved)
+        const [notification, setNotification] = useState();
+        console.log(props.id)
         const navigate = useNavigate();
         const logout=()=>{
                 localStorage.removeItem('token');
@@ -13,47 +14,48 @@ const Menu = (props)=>{
                 Swal.fire({
                     icon: 'info',
                     title:'Logged Out',
-                    text: 'Thanks for Using FITAFHouse!'
+                    text: 'Thanks for Using FITAFHOUSE!'
                 })
         }
 
-        const daysToNextROI = (value)=>{
+        const daysToROI = (value)=>{
                 const date = new Date;
-                let currentDay = date.getDate()
-                let str = value.toString();
-                let getDay = str.substring(0,2);
-                const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
-                let lastDayOfTheCurrentMonth = lastDay.getDate()
-                let remainingDay =  Number(lastDayOfTheCurrentMonth) - Number(currentDay)
+                let currentDay = date.getTime()
+              const  remainingDay = Math.floor(new Date(value).getTime() / (1000 * 3600 * 24) - currentDay / (1000 * 3600 * 24))
                 if(remainingDay < 0){
                         return(
-                                Number(currentDay - Number(getDay))
+                                "Payment is Due"
                         )
                 }else{
                         return(
-                                Number(remainingDay) + Number(getDay)
+                                remainingDay
                 )
                 }
 
         }
 
-        const revealDuration =(value)=>{
-                let valMonth, finalDate
-                let str = value.toString();
-                let getDay = str.substring(0,2);
-                const date =new Date();
-                const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-                let month = months[date.getMonth()];
-                finalDate =   `${getDay} ${months[date.getMonth() + 1]} ${date.getFullYear()}`
-                if(Number(date.getMonth() + 1) === 12){
-                        valMonth = Number(date.getMonth() - 12)
-                        month = months[valMonth]
-                        finalDate =   `${getDay} ${month} ${date.getFullYear()}`
-                }
-                return(
-                                finalDate
-                )
+        useEffect(()=>{
+                fetch(`http://localhost:6069/api/notifications/${props.id}`)
+                        .then(async res=>{
+                                let response = await res.json();
+                                console.log(response)
+                                setNotification(response.notification)
+                        })
+        },[])
+
+        const notify = ()=>{
+                Swal.fire({
+                        title:'Notifications',
+                        text: notification
+                })
         }
+
+        // const revealAmount =(value)=>{
+
+        //         return(
+        //                         finalDate
+        //         )
+        // }
 
     return(
 
@@ -77,7 +79,7 @@ const Menu = (props)=>{
 
                <div className="menu-wrapper">
                                                         <div className="logout-div">
-                                                                <p ><span onClick={() => logout()}>Logout</span></p>
+                                                                <p ><div style={{float: 'left', position:"relative"}}><i className="bi bi-bell-fill" onClick={()=>{notify()}} style={{fontSize: "35px"}}></i><span style={{width: '24px', height: "24px", borderRadius: "50%", backgroundColor: "red", color: "white",zIndex:"9999", position: "absolute", right:"-2px", top:"-2px", textAlign:"center", display: "flex", justifyContent:"center"}}>!</span></div><span onClick={() => logout()}>Logout</span></p>
                                                         </div>
 
                                 {props.approved === true ?
@@ -103,7 +105,7 @@ const Menu = (props)=>{
                                 </div>
                                  </div>
                                  <div className="investment-info2">
-                                <p className="info-desc">Time to next ROI</p>
+                                <p className="info-desc">Time to ROI</p>
                                 <div className="investment-wrapper">
 
                                         <div className="active-investment">
@@ -112,9 +114,9 @@ const Menu = (props)=>{
 
                                                                <>
                                                                                 <span style={{color: 'grey', fontWeight: '900', fontSize: '2.5rem'}} key={info._id}>
-                                                                                {daysToNextROI(info.dueDate) + ' Days' }
+                                                                                {daysToROI(info.dueDate) + ' Days' }
                                                                                 </span><br/>
-                                                                                <span style={{color: '#0263aa', fontWeight: '800', textTransform: 'uppercase'}}>{revealDuration(info.created_at)}</span>
+                                                                                <span style={{color: '#0263aa', fontWeight: '800', textTransform: 'uppercase'}}>{info.dueDate}</span>
                                                                </>
 
 

@@ -19,7 +19,7 @@ const Users=()=>{
     }
 
 useEffect(()=>{
-    fetch('https://fitafhouse-api.herokuapp.com/api/users')
+    fetch('http://localhost:6069/api/users')
     .then(async res=>{
         let response = await res.json()
         setValue(response.Investors)

@@ -23,19 +23,46 @@ const Investors=()=>{
     position: absolute;
     `;
 
+const sendNotification=(id)=>{
+    Swal.fire({
+        title: "Send Notification",
+        text: 'Enter your mesage body',
+        input: "text",
+        content: "input",
+        button: {
+          text: "Done",
+          closeModal: false,
+        },
+      })
+      .then(name => {
+          const message = name.value;
+        if (!name) throw null;
+
+        axios.post(`http://localhost:6069/api/notifications/${id}`,{
+            message
+        })
+      })
+      .then(() => {
+        Swal.fire({
+            title: "Success",
+            text: "Notification has been sent",
+            icon: "success"
+        })
+      })
+}
+
     const approveInvestment=(id)=>{
         console.log(id)
         setLoading(true)
-        axios.post(`https://fitafhouse-api.herokuapp.com/api/approve/${id}`)
+        axios.post(`http://localhost:6069/api/approve/${id}`)
             .then(()=>{
                 Swal.fire({
                     icon: 'success',
                     text: 'Investment is now Approved!',
                     title: 'Approved'
                 })
-                window.location.reload(false);
             })
-
+            window.location.reload(false);
             setLoading(false)
     }
 
@@ -49,26 +76,53 @@ const Investors=()=>{
         })
     }
 
-    const revealDuration =(value)=>{
-        let valMonth, finalDate
-        let str = value.toString();
-        let getDay = str.substring(0,2);
-        const date =new Date();
-        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-        let month = months[date.getMonth()];
-        finalDate =   `${getDay} ${months[date.getMonth() + 1]} ${date.getFullYear()}`
-        if(Number(date.getMonth() + 1) === 12){
-                valMonth = Number(date.getMonth() - 12)
-                month = months[valMonth]
-                finalDate =   `${getDay} ${month} ${date.getFullYear()}`
-        }
-        return(
-                        finalDate
+    const daysToROI = (value)=>{
+        const date = new Date;
+        let currentDay = date.getTime()
+      const  remainingDay = Math.floor(new Date(value).getTime() / (1000 * 3600 * 24) - currentDay / (1000 * 3600 * 24))
+        if(remainingDay < 0){
+                return(
+                        "Payment is Due"
+                )
+        }else{
+                return(
+                        remainingDay
         )
+        }
+
+}
+
+
+const deleteInvestor = (id)=>{
+
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+            axios.post(`http://localhost:6069/api/delete/${id}`)
+            .then(()=>{
+                Swal.fire({
+                    icon: 'success',
+                    text: 'Investment is now Approved!',
+                    title: 'Deleted'
+                })
+            })
+        }
+        window.location.reload(false);
+      })
+
+
+
 }
     useEffect(()=>{
         setLoading(true)
-        fetch('https://fitafhouse-api.herokuapp.com/api/active-investors')
+        fetch('http://localhost:6069/api/active-investors')
         .then(async res=>{
             let response = await res.json()
             console.log(response)
@@ -85,19 +139,10 @@ const Investors=()=>{
                                             <div className="logout-div">
                                                     <p ><span onClick={() => logout()}>Logout</span></p>
                                             </div>
-                            <div className="investment">
-                                    <table>
-                                        <thead>
-                                            <th>S/N</th>
-                                            <th>Full Name</th>
-                                            <th>Active Plan</th>
-                                            <th>Start Date</th>
-                                            <th>End Date</th>
-                                            <th>Next Payment</th>
-                                            <th>Amount to Pay</th>
-                                            <th>Action</th>
-                                        </thead>
-                                        <tbody>
+                            <div>
+
+                                        <div className="invest-card-wrapper" >
+
                                             {loading?
                                             <PulseLoader
                                                     size={30}
@@ -106,60 +151,84 @@ const Investors=()=>{
                                                     loading={loading}
                                                     color="#2377DA"
                                             /> :
-                                            <>
-                                            {value.map((detail, id)=>{
-                                                            return(
-                                                            <tr>
-                                                                <td>{id + 1}</td>
-                                                                <td key={id}>{detail.fullname}</td>
-                                                                <td key={id}>{detail.investment.map((val)=>{
-                                                                    return(
-                                                                        <>
-                                                                            {val.plan} (N{new Number(val.amount).toLocaleString('en-US', {minimumFractionDigits: 0})})<br/>
-                                                                        </>
-                                                                    )
-                                                                })}</td>
-                                                                <td key={id}>{detail.investment.map((val)=>{
-                                                                                  return(
-                                                                                      <>
-                                                                                        {val.created_at}
-                                                                                     </>
-                                                                                  )
-                                                                })}</td>
-                                                                <td key={id}>{detail.investment.map((val)=>{
-                                                                                    return(
-                                                                                        <>
-                                                                                        {detail.approved == true ? val.dueDate: <>
-                                                                                                Not Approved
-                                                                                        </>}
-                                                                                        </>
-                                                                                    )
-                                                                })}</td>
-                                                                <td key={id}>{detail.investment.map((val)=>{
-                                                                            return(
-                                                                                <>
-                                                                                        {detail.approved === true? revealDuration(val.dueDate): <>
-                                                                                                Not Approved
-                                                                                        </>}
-                                                                                </>
-                                                                            )
-                                                                })}</td>
-                                                                <td></td>
-                                                                <td key={id}>
-                                                                    <button onClick={()=>{approveInvestment(detail._id)}} style={{color: 'white', backgroundColor: '#0263aa', border: 'none'}}>Approve</button>
+                                                    <>
+                                                    {value.map((info, id)=>{
+                                                        return(
+                                                            <>
+                                                            <div className="wrap-invest">
+                                                            <div className="invest-card">
+                                                                    <div className="invest-card-head">
+                                                                       <span style={{width: "40%"}}>
+                                                                           @ {info.username}
+                                                                       </span>
+                                                                        <span style={{width: "20%", cursor: 'pointer'}}>
+                                                                        <i className="bi bi-chat-left-text-fill" onClick={()=>{sendNotification(info._id)}}></i>
+                                                                        </span>
+                                                                    </div>
+                                                                 <div>
+                                                                    <span>
+                                                                        {info.fullname}
+                                                                    </span><br/>
 
-                                                                </td>
-                                                        </tr>
-                                                            )
-                                                })}</>
-                                            }
-                                        </tbody>
-                                    </table>
+                                                                    <span>
+                                                                        {info.phonenumber}
+                                                                    </span><br/>
+                                                                </div>
+                                                                {
+                                                                    info.approved != true ?  <div><span style={{color: 'grey', fontWeight: '700', fontSize: "1.5rem"}}></span>
+                                                                </div>
+                                                                        :
+                                                                 <div>
+                                                                    <span style={{color: 'grey', fontWeight: '700', fontSize: "2rem"}}>
+                                                                    {daysToROI(info.investment[0].dueDate) + ' Days' }
+                                                                    </span>
+                                                                </div>
+
+                                                                }
+                                                                <div>
+                                                                    <span style={{color: 'grey', fontWeight: '700', fontSize: "1.5rem"}}>
+                                                                       N{new Number(info.investment[0].amount * 10 / 100 + Number(info.investment[0].amount)).toLocaleString('en-US', {minimumFractionDigits: 0})}
+                                                                    </span>
+                                                                </div>
+                                                                <div className="invest-card-base">
+                                                                   <span style={{width: '70%'}}>
+                                                                   {info.approved != true ? <span style={{cursor: "pointer", padding: "5px", border: "1px solid #0263aa", borderRadius: "5px"}} onClick={()=>{approveInvestment(info._id)}}>Approve</span> : <><i className="bi bi-check2-all" style={{color: '#6bbe43', fontSize: "50px"}}></i></>}
+                                                                   </span>
+                                                                   <span style={{width: "30%"}}>
+                                                                   <span style={{color: 'red', padding: "5px", border: '1px solid red', margin:"5px", borderRadius: "5px", cursor: "pointer"}} onClick={()=>{deleteInvestor(info._id)}}>Delete</span>
+                                                                   </span>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                            </>
+                                                        )
+                                                    })}
+
+                                                    </>
+                                                }
+                                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                    </div>
 
-                                 <div style={{width: '100%', textAlign:'center'}}><br/>
+                                 {/* <div style={{width: '100%', textAlign:'center'}}><br/>
                                  <span style={{marginTop: '20px', backgroundColor: '#0263aa', color: 'white', padding: '10px', cursor: 'pointer'}}>Download Investors (.pdf)</span>
-                                 </div>
+                                 </div> */}
                     </div>
                         </div>
             </>

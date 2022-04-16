@@ -57,6 +57,11 @@
         width: 100%;
 
     }
+    .invest-card-wrapper{
+        display: grid;
+       grid-template-columns: auto !important;
+       gap: 50px;
+    }
     input{
         width: 100% !important;
         margin-left: 0px !important
@@ -72,6 +77,7 @@
       padding: 15px !important;
       width: 100% !important
 }
+.swal
 .inner-menu{
   background-color: white;
   padding: 20px;
@@ -594,6 +600,7 @@ flex: 1;
     line-height: 5rem;
     font-weight: 900;
   }
+  .investment-wrapper
 .btn-investment{
     background-color: #0263aa;
     color: white;
@@ -873,7 +880,7 @@ color: white !important;
     border-left: 2px solid #0263aa;
 
 }
-
+.logout
 .loader-wrapper{
     width: 100vw;
     height: 100vh;
@@ -887,7 +894,8 @@ color: white !important;
     background-color:#0263aa !important;
 }
 .swal2-html-container{
-    color: #6bbe43 !important;
+    /* color: #6bbe43 !important; */
+    text-align: left !important;
 }
 .swal2-title{
     color: #0263aa !important;
@@ -965,3 +973,37 @@ td{
   .harmbugger{
       display: none
   }
+  .wrap-invest{
+      margin:20px;
+  }
+
+  .invest-card-wrapper{
+    display: grid;
+   grid-template-columns: auto auto;
+   column-gap: 100px;
+}
+.invest-card{
+    background-color: white;
+    font-family: "Ubuntu";
+    color: #0263aa;
+    padding: 10px;
+    border-radius: 10px;
+    min-height: 40vh;
+    height: fit-content;
+}
+.invest-card-head{
+    color: grey;
+    font-weight: 700;
+    font-size: 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5vh;
+}
+.invest-card-base{
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
