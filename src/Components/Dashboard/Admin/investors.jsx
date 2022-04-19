@@ -111,7 +111,7 @@ const deleteInvestor = (id)=>{
         confirmButtonText: 'Yes, delete it!'
       }).then((result) => {
         if (result.isConfirmed) {
-            axios.post(`${api}/api/delete/${id}`)
+            axios.post(`${url}/api/delete/${id}`)
             .then(()=>{
                 Swal.fire({
                     icon: 'success',
