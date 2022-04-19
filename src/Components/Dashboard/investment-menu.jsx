@@ -35,6 +35,7 @@ const InvestmentMenu = ()=>{
                         }
                 }).then(async res=>{
                         let response = await res.json()
+                        console.log(response.data)
                         setUser(response.data._id)
                         setLoading(false)
                 })
@@ -46,8 +47,8 @@ const initiateInvestment=(val)=>{
                 title: `N${val.amount}, ${val.plan} plan `,
                 showDenyButton: true,
                 showCancelButton: true,
-                confirmButtonText: 'Continue',
-                denyButtonText: `Don't Continue`,
+                confirmButtonText: 'Proceed',
+                denyButtonText: `Don't Proceed`,
               }).then((result) => {
                 if (result.isConfirmed) {
                         setLoading(true)
@@ -106,10 +107,16 @@ const initiateInvestment=(val)=>{
 
                                           <span>
                                           <div style={{color: "#0263aa", textAlign: "center", marginBottom: "50px"}}>Make Your Investment</div>
-                                          NGN<input type="text" name="amount" placeholder='Enter Amount you wish to invest' value={amount} onChange={event=>setAmount(event.target.value)} />
+                                                <div style={{textAlign:"center"}}>
+                                                        <img src="/images/money.jpg" alt="money" height="100px" width="100px"/>
+                                                </div>
+                                                <p style={{textAlign: "center"}}>Enter the amount you wish to invest</p>
+                                                <span style={{display: 'flex', justifyContent: "space-between", alignItems: "center"}}>
+                                                <input type="text" name="amount" placeholder='NGN' value={amount} onChange={event=>setAmount(event.target.value)} />
+                                                </span>
                                           </span>
                                           <div style={{marginTop: "30px", width: "100%"}}>
-                                          <span style={{padding: "5px", color: "white", borderRadius: "5px", backgroundColor: "#0263aa", textAlign: "center", width: "50%"}} onClick={()=>{initiateInvestment({amount, plan:"Yearly", investmentDuration: 12, rate: "10% per annum"})}}>Ok</span>
+                                          <div style={{padding: "5px", color: "white", borderRadius: "5px", backgroundColor: "#0263aa", textAlign: "center", width: "100%"}} onClick={()=>{initiateInvestment({amount, plan:"Yearly", investmentDuration: 12, rate: "10% per annum"})}}>Proceed To Checkout!</div>
                                           </div>
                                     </div>
                                      </div>

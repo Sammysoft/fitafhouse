@@ -3,6 +3,7 @@ import AdminNav from "./adminnav";
 import { css } from "@emotion/react";
 import Swal from 'sweetalert2';
 import PulseLoader from 'react-spinners/PulseLoader';
+import Unauthorized from "../../unauthorized";
 import { useNavigate } from "react-router";
 import AdminHarmbugger from "./admin-harmuggernav";
 import axios from "axios";
@@ -12,17 +13,17 @@ const url = api.url;
 
 
 
+
+
 const Investors=()=>{
     const [value, setValue] = useState([])
     const [loading, setLoading] = useState(false);
+    const [role, setRole] = useState('');
     const Navigate= useNavigate();
     const override = css`
     display: block;
     z-index: 9999;
-    // padding-top: 50vh;
     margin: auto;
-    // padding-left: 40vw;
-    // background: white;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -127,94 +128,109 @@ const deleteInvestor = (id)=>{
 }
     useEffect(()=>{
         setLoading(true)
+        const token = localStorage.getItem('token')
+        fetch(`${url}/api/dashboard`, {
+                headers: {
+                        Authorization: token
+                }
+        }).then(async res=>{
+                let response = await res.json()
+                console.log(response.data)
+                setRole(response.data.role)
+                setLoading(false)
+        })
         fetch(`${url}/api/active-investors`)
         .then(async res=>{
             let response = await res.json()
-            console.log(response)
             setValue(response.investors)
             setLoading(false)
         })
+
     },[])
         return(
             <>
-                      <div className="dashboard-wrapper">
-                            <AdminHarmbugger />
-                            <AdminNav />
-                            <div className="menu-wrapper">
-                                            <div className="logout-div">
-                                                    <p ><span onClick={() => logout()}>Logout</span></p>
-                                            </div>
-                            <div>
+     {role == "Investor" ? <><Unauthorized /></> :
+                <>
+         <div className="dashboard-wrapper">
+             <AdminHarmbugger />
+             <AdminNav />
+             <div className="menu-wrapper">
+                             <div className="logout-div">
+                                     <p ><span onClick={() => logout()}>Logout</span></p>
+                             </div>
+             <div>
 
-                                        <div className="invest-card-wrapper" >
+     <div className="invest-card-wrapper" >
 
-                                            {loading?
-                                            <PulseLoader
-                                                    size={30}
-                                                    margin={2}
-                                                    css={override}
-                                                    loading={loading}
-                                                    color="#2377DA"
-                                            /> :
-                                                    <>
-                                                    {value.map((info, id)=>{
-                                                        return(
-                                                            <>
-                                                            <div className="wrap-invest">
-                                                            <div className="invest-card">
-                                                                    <div className="invest-card-head">
-                                                                       <span style={{width: "40%"}}>
-                                                                           @{info.username}
-                                                                       </span>
-                                                                        <span style={{width: "20%", cursor: 'pointer'}}>
-                                                                        <i className="bi bi-chat-left-text-fill" onClick={()=>{sendNotification(info._id)}}></i>
-                                                                        </span>
-                                                                    </div>
-                                                                 <div>
-                                                                    <span>
-                                                                        {info.fullname}
-                                                                    </span><br/>
+         {loading?
+         <PulseLoader
+                 size={30}
+                 margin={2}
+                 css={override}
+                 loading={loading}
+                 color="#2377DA"
+         /> :
+                 <>
+                 {value.map((info, id)=>{
+                     return(
+                         <>
+                         <div className="wrap-invest">
+                         <div className="invest-card">
+                                 <div className="invest-card-head">
+                                     <span style={{width: "40%"}}>
+                                         @{info.username}
+                                     </span>
+                                     <span style={{width: "20%", cursor: 'pointer'}}>
+                                     <i className="bi bi-chat-left-text-fill" onClick={()=>{sendNotification(info._id)}}></i>
+                                     </span>
+                                 </div>
+                                 <div>
+                                 <span>
+                                     {info.fullname}
+                                 </span><br/>
 
-                                                                    <span>
-                                                                        {info.phonenumber}
-                                                                    </span><br/>
-                                                                </div>
-                                                                {
-                                                                    info.approved != true ?  <div><span style={{color: 'grey', fontWeight: '700', fontSize: "1.5rem"}}></span>
-                                                                </div>
-                                                                        :
-                                                                 <div>
-                                                                    <span style={{color: 'grey', fontWeight: '700', fontSize: "2rem"}}>
-                                                                    {daysToROI(info.investment[0].dueDate) + ' Days' }
-                                                                    </span>
-                                                                </div>
+                                 <span>
+                                     {info.phonenumber}
+                                 </span><br/>
+                             </div>
+                             {
+                                 info.approved != true ?  <div><span style={{color: 'grey', fontWeight: '700', fontSize: "1.5rem"}}></span>
+                             </div>
+                                     :
+                                 <div>
+                                 <span style={{color: 'grey', fontWeight: '700', fontSize: "2rem"}}>
+                                 {daysToROI(info.investment[0].dueDate) + ' Days' }
+                                 </span>
+                             </div>
 
-                                                                }
-                                                                <div>
-                                                                    <span style={{color: 'grey', fontWeight: '700', fontSize: "1.5rem"}}>
-                                                                       N{new Number(info.investment[0].amount * 10 / 100 + Number(info.investment[0].amount)).toLocaleString('en-US', {minimumFractionDigits: 0})}
-                                                                    </span>
-                                                                </div>
-                                                                <div className="invest-card-base">
-                                                                   <span style={{width: '70%'}}>
-                                                                   {info.approved != true ? <span style={{cursor: "pointer", padding: "5px", border: "1px solid #0263aa", borderRadius: "5px"}} onClick={()=>{approveInvestment(info._id)}}>Approve</span> : <><i className="bi bi-check2-all" style={{color: '#6bbe43', fontSize: "50px"}}></i></>}
-                                                                   </span>
-                                                                   <span style={{width: "30%"}}>
-                                                                   <span style={{color: 'red', padding: "5px", border: '1px solid red', margin:"5px", borderRadius: "5px", cursor: "pointer"}} onClick={()=>{deleteInvestor(info._id)}}>Delete</span>
-                                                                   </span>
-                                                                </div>
-                                                              </div>
-                                                            </div>
-                                                            </>
-                                                        )
-                                                    })}
+                             }
+                             <div>
+                                 <span style={{color: 'grey', fontWeight: '700', fontSize: "1.5rem"}}>
+                                     N{new Number(info.investment[0].amount * 10 / 100 + Number(info.investment[0].amount)).toLocaleString('en-US', {minimumFractionDigits: 0})}
+                                 </span>
+                             </div>
+                             <div className="invest-card-base">
+                                 <span style={{width: '70%'}}>
+                                 {info.approved != true ? <span style={{cursor: "pointer", padding: "5px", border: "1px solid #0263aa", borderRadius: "5px"}} onClick={()=>{approveInvestment(info._id)}}>Approve</span> : <><i className="bi bi-check2-all" style={{color: '#6bbe43', fontSize: "50px"}}></i></>}
+                                 </span>
+                                 <span style={{width: "30%"}}>
+                                 <span style={{color: 'red', padding: "5px", border: '1px solid red', margin:"5px", borderRadius: "5px", cursor: "pointer"}} onClick={()=>{deleteInvestor(info._id)}}>Delete</span>
+                                 </span>
+                             </div>
+                             </div>
+                         </div>
+                         </>
+                     )
+                 })}
 
-                                                    </>
-                                                }
-                                        </div>
-                                   </div>
-                    </div>
-                        </div>
+                 </>
+             }
+     </div>
+ </div>
+     </div>
+         </div>
+             </>
+                }
             </>
         )
 }

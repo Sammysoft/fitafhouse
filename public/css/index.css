@@ -626,11 +626,7 @@ flex: 1;
 #inv-change:hover{
 color: white !important;
 }
-.investment-wrapper:hover{
 
-    cursor: pointer;
-    color: white !important;
-}
 .logout-div{
     width: 100%;
     padding: 15vh 25vh 15vh;
@@ -854,7 +850,7 @@ color: white !important;
     height: 80px;
     border-radius: 50%;
 }
-
+.swal2-confirm
 .news-feed{
     display: flex;
     flex-direction: 'row';
@@ -894,13 +890,13 @@ color: white !important;
     background-color:#0263aa !important;
 }
 .swal2-html-container{
-    /* color: #6bbe43 !important; */
-    text-align: left !important;
+    color: #6bbe43 !important;
+    text-align: justify !important;
 }
 .swal2-title{
     color: #0263aa !important;
 }
-
+.investment-wrapper:hover
 table, td, th {
     text-align: left;
   }
