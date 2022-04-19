@@ -4,8 +4,10 @@ import axios from "axios";
 import { css } from "@emotion/react";
 import Swal from 'sweetalert2';
 import PulseLoader from 'react-spinners/PulseLoader';
-
 import { useNavigate } from 'react-router';
+import api from '../../config';
+const url = api.url;
+
 
 
 const SignInForm = ()=>{
@@ -32,7 +34,7 @@ const SignInForm = ()=>{
     const submit = (e)=>{
         e.preventDefault();
         setLoading(true)
-        axios.post('http://localhost:6069/api/auth', {username, password})
+        axios.post(`${url}/api/auth`, {username, password})
         .then(user=>{
             localStorage.setItem('token', user.data.token)
             setLoading(false)

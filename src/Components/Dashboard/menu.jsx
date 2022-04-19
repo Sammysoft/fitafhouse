@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { NavLink } from "react-router-dom";
 import Swal from 'sweetalert2';
+import api from '../../config';
+const url = api.url;
 
 const Menu = (props)=>{
         const [notification, setNotification] = useState();
@@ -35,7 +37,7 @@ const Menu = (props)=>{
         }
 
         useEffect(()=>{
-                fetch(`http://localhost:6069/api/notifications/${props.id}`)
+                fetch(`${url}/api/notifications/${props.id}`)
                         .then(async res=>{
                                 let response = await res.json();
                                 console.log(response)
@@ -50,12 +52,7 @@ const Menu = (props)=>{
                 })
         }
 
-        // const revealAmount =(value)=>{
 
-        //         return(
-        //                         finalDate
-        //         )
-        // }
 
     return(
 
@@ -71,7 +68,7 @@ const Menu = (props)=>{
                        <br/>
                        No investments yet!<br/>
                        Make an investment with us and get good offer! <br/>
-                        <NavLink to="/dashboard/investments"><span className="btn-investment">View Investment Plans</span></NavLink>
+                        <NavLink to="/dashboard/investments"><span className="btn-investment">Make An Investment</span></NavLink>
                </div>
         </div>  :
 

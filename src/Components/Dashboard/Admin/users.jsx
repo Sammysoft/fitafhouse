@@ -3,6 +3,8 @@ import AdminNav from "./adminnav";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router";
 import AdminHarmbugger from "./admin-harmuggernav";
+import api from '../../../config';
+const url = api.url;
 
 
 const Users=()=>{
@@ -19,7 +21,7 @@ const Users=()=>{
     }
 
 useEffect(()=>{
-    fetch('http://localhost:6069/api/users')
+    fetch(`${url}/api/users`)
     .then(async res=>{
         let response = await res.json()
         setValue(response.Investors)

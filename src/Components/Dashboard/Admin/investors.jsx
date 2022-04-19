@@ -6,6 +6,11 @@ import PulseLoader from 'react-spinners/PulseLoader';
 import { useNavigate } from "react-router";
 import AdminHarmbugger from "./admin-harmuggernav";
 import axios from "axios";
+import api from '../../../config';
+const url = api.url;
+
+
+
 
 const Investors=()=>{
     const [value, setValue] = useState([])
@@ -38,7 +43,7 @@ const sendNotification=(id)=>{
           const message = name.value;
         if (!name) throw null;
 
-        axios.post(`http://localhost:6069/api/notifications/${id}`,{
+        axios.post(`${url}/api/notifications/${id}`,{
             message
         })
       })
@@ -54,7 +59,7 @@ const sendNotification=(id)=>{
     const approveInvestment=(id)=>{
         console.log(id)
         setLoading(true)
-        axios.post(`http://localhost:6069/api/approve/${id}`)
+        axios.post(`${url}/api/approve/${id}`)
             .then(()=>{
                 Swal.fire({
                     icon: 'success',
@@ -105,7 +110,7 @@ const deleteInvestor = (id)=>{
         confirmButtonText: 'Yes, delete it!'
       }).then((result) => {
         if (result.isConfirmed) {
-            axios.post(`http://localhost:6069/api/delete/${id}`)
+            axios.post(`${api}/api/delete/${id}`)
             .then(()=>{
                 Swal.fire({
                     icon: 'success',
@@ -122,7 +127,7 @@ const deleteInvestor = (id)=>{
 }
     useEffect(()=>{
         setLoading(true)
-        fetch('http://localhost:6069/api/active-investors')
+        fetch(`${url}/api/active-investors`)
         .then(async res=>{
             let response = await res.json()
             console.log(response)
@@ -159,7 +164,7 @@ const deleteInvestor = (id)=>{
                                                             <div className="invest-card">
                                                                     <div className="invest-card-head">
                                                                        <span style={{width: "40%"}}>
-                                                                           @ {info.username}
+                                                                           @{info.username}
                                                                        </span>
                                                                         <span style={{width: "20%", cursor: 'pointer'}}>
                                                                         <i className="bi bi-chat-left-text-fill" onClick={()=>{sendNotification(info._id)}}></i>
@@ -207,28 +212,7 @@ const deleteInvestor = (id)=>{
                                                     </>
                                                 }
                                         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                                    </div>
-
-                                 {/* <div style={{width: '100%', textAlign:'center'}}><br/>
-                                 <span style={{marginTop: '20px', backgroundColor: '#0263aa', color: 'white', padding: '10px', cursor: 'pointer'}}>Download Investors (.pdf)</span>
-                                 </div> */}
                     </div>
                         </div>
             </>

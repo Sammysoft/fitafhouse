@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router';
 import { css } from "@emotion/react";
 import Swal from 'sweetalert2';
 import PulseLoader from 'react-spinners/PulseLoader';
+import api from '../../config';
+const url = api.url;
 
 
 
@@ -27,7 +29,7 @@ const InvestmentMenu = ()=>{
         const token = localStorage.getItem('token')
 
         useEffect(()=>{
-                fetch('http://localhost:6069/api/dashboard', {
+                fetch(`${url}/api/dashboard`, {
                         headers: {
                                 Authorization: token
                         }
@@ -49,7 +51,7 @@ const initiateInvestment=(val)=>{
               }).then((result) => {
                 if (result.isConfirmed) {
                         setLoading(true)
-                        axios.post(`http://localhost:6069/api/invest/${user}`, val)
+                        axios.post(`${url}/api/invest/${user}`, val)
                         .then(()=>{
                                 setLoading(false)
                                 Swal.fire({
@@ -57,7 +59,7 @@ const initiateInvestment=(val)=>{
                                         text: `You have made a placement for ${val.plan}
                                                   investment of N${val.amount} for
                                                    ${val.investmentDuration} Months you will recieve
-                                                   ${val.rate} at the end of each month, Thank You for using FITAFHOUSE!`,
+                                                   ${val.rate} at the end of the period, Thank You for using FITAFHOUSE!`,
                                         icon: 'success'
                                 })
                         }).catch((error)=>{
@@ -104,7 +106,7 @@ const initiateInvestment=(val)=>{
 
                                           <span>
                                           <div style={{color: "#0263aa", textAlign: "center", marginBottom: "50px"}}>Make Your Investment</div>
-                                          NGN<input type="text" name="amount" placeholder='Enter the amount you wish to invest' value={amount} onChange={event=>setAmount(event.target.value)} />
+                                          NGN<input type="text" name="amount" placeholder='Enter Amount you wish to invest' value={amount} onChange={event=>setAmount(event.target.value)} />
                                           </span>
                                           <div style={{marginTop: "30px", width: "100%"}}>
                                           <span style={{padding: "5px", color: "white", borderRadius: "5px", backgroundColor: "#0263aa", textAlign: "center", width: "50%"}} onClick={()=>{initiateInvestment({amount, plan:"Yearly", investmentDuration: 12, rate: "10% per annum"})}}>Ok</span>

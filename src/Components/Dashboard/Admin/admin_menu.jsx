@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from "react";
 import Swal from 'sweetalert2';
 import { useNavigate } from "react-router";
+import api from '../../../config';
+const url = api.url;
 
 const AdminMenu = (props)=>{
 
@@ -30,7 +32,7 @@ const AdminMenu = (props)=>{
 
 
     useEffect(()=>{
-                fetch('http://localhost:6069/api/stats')
+                fetch(`${url}/api/stats`)
                 .then(async res=>{
                         const response = await res.json();
                         console.log(response)

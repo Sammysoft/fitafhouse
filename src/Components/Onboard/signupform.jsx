@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import { Form } from "semantic-ui-react";
 import { useNavigate } from "react-router";
 import Swal from 'sweetalert2';
+import api from '../../config';
+const url = api.url;
 
 
 
@@ -64,7 +66,7 @@ const submit =(e)=>{
 e.preventDefault();
 
    setLoading(true)
-    axios.post('http://localhost:6069/api/onboarding', {fullname, email, username, phonenumber, password, accountnumber, bank})
+    axios.post(`${url}/api/onboarding`, {fullname, email, username, phonenumber, password, accountnumber, bank})
     .then(err=>{
             navigate('/auth')
             setLoading(false)

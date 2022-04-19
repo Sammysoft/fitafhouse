@@ -7,6 +7,8 @@ import PulseLoader from 'react-spinners/PulseLoader';
 import { useNavigate } from "react-router";
 import AdminDashboard from "./Admin/admin";
 import HarmbuggerNav from "./harmbugger-nav";
+import api from '../../config';
+const url = api.url;
 
 
 
@@ -38,7 +40,7 @@ const Dashboard = (props)=>{
 
     useEffect(()=>{
         setLoading(true)
-            fetch('http://localhost:6069/api/dashboard', {
+            fetch(`${url}/api/dashboard`, {
                 headers:{
                     Authorization: token
                 }
