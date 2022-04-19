@@ -3,8 +3,3 @@
     to = "/"
     status = 200
 
-[[redirects]]
-  from = "/*"
-  to = "https://fitafhouse-api.herokuapp.com"
-  status = 200
-  force = true
