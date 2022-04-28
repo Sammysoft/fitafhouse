@@ -5,6 +5,7 @@ import { css } from "@emotion/react";
 import Swal from 'sweetalert2';
 import PulseLoader from 'react-spinners/PulseLoader';
 import api from '../../config';
+import { Link } from 'react-router-dom';
 const url = api.url;
 
 
@@ -82,6 +83,9 @@ const initiateInvestment=(val)=>{
 }
 
 
+const day = new Date().getDay();
+const month = new Date().getMonth();
+
 
     return(
         <>
@@ -96,33 +100,53 @@ const initiateInvestment=(val)=>{
 
                  :
 
-                 <div className="menu-wrapper">
+               <>
+                 {day == (1 || 2 || 3 || 4 || 5 || 6 || 7) & month == (11 || 2 || 5 || 8) ?   <div className="menu-wrapper">
 
-                                 <div className="investment">
+                        <div className="investment">
 
-                                     <div className="investment-info1" >
+                        <div className="investment-info1" >
 
-                                     <br/>
-                                     <div className="investment-wrapper">
+                        <br/>
+                        <div className="investment-wrapper">
 
-                                          <span>
-                                          <div style={{color: "#0263aa", textAlign: "center", marginBottom: "50px"}}>Make Your Investment</div>
-                                                <div style={{textAlign:"center"}}>
-                                                        <img src="/images/money.jpg" alt="money" height="100px" width="100px"/>
-                                                </div>
-                                                <p style={{textAlign: "center"}}>Enter the amount you wish to invest</p>
-                                                <span style={{display: 'flex', justifyContent: "space-between", alignItems: "center"}}>
-                                                <input type="text" name="amount" placeholder='NGN' value={amount} onChange={event=>setAmount(event.target.value)} />
-                                                </span>
-                                          </span>
-                                          <div style={{marginTop: "30px", width: "100%"}}>
-                                          <div style={{padding: "5px", color: "white", borderRadius: "5px", backgroundColor: "#0263aa", textAlign: "center", width: "100%"}} onClick={()=>{initiateInvestment({amount, plan:"Yearly", investmentDuration: 12, rate: "10% per annum"})}}>Proceed To Checkout!</div>
-                                          </div>
-                                    </div>
-                                     </div>
-                                 </div>
+                                <span>
+                                <div style={{color: "#0263aa", textAlign: "center", marginBottom: "50px"}}>Make Your Investment</div>
+                                <div style={{textAlign:"center"}}>
+                                        <img src="/images/money.jpg" alt="money" height="100px" width="100px"/>
+                                </div>
+                                <p style={{textAlign: "center"}}>Enter the amount you wish to invest</p>
+                                <span style={{display: 'flex', justifyContent: "space-between", alignItems: "center"}}>
+                                <input type="text" name="amount" placeholder='NGN' value={amount} onChange={event=>setAmount(event.target.value)} />
+                                </span>
+                                </span>
+                                <div style={{marginTop: "30px", width: "100%"}}>
+                                <div style={{padding: "5px", color: "white", borderRadius: "5px", backgroundColor: "#0263aa", textAlign: "center", width: "100%"}} onClick={()=>{initiateInvestment({amount, plan:"Yearly", investmentDuration: 12, rate: "10% per annum"})}}>Proceed To Checkout!</div>
+                                </div>
+                        </div>
+                        </div>
+                        </div>
 
-                 </div>
+                        </div> :
+                        <div className="menu-wrapper">
+
+                        <div className="investment">
+
+                        <div className="investment-info1" >
+
+                        <br/>
+                        <div className="investment-wrapper">
+                        <div style={{color: "#0263aa", textAlign: "center", marginBottom: "50px"}}>You cannot make investments at this time, you can wait for the next window</div>
+                        </div>
+                        <div style={{marginTop: "30px", width: "100%"}}>
+                        <div style={{padding: "5px", color: "white", borderRadius: "5px", backgroundColor: "#0263aa", textAlign: "center", width: "100%"}}><Link style={{textDecoration: "none", color: "white"}} to="/onboarding" >Check Investment Windows!</Link></div>
+                                </div>
+                        </div>
+                        </div>
+                        </div>
+
+}
+               </>
                      }
         </>
     )
