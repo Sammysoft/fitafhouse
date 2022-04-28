@@ -1,6 +1,7 @@
 import React from "react";
 import HeaderImg from './HeaderImg';
 import AOS from 'aos';
+import { Link } from "react-router-dom";
  import 'aos/dist/aos.css';
 
 const Header = () =>{
@@ -21,7 +22,7 @@ const Header = () =>{
 
                                 <button style={{backgroundColor: "#0263aa", color: 'white', padding: "5% 15% 5% 15%", border: "none"}}>
                                 <span className="d-flex align-items-center">
-                                    <span id="btn" style={{fontSize: "14px", fontFamily: "ubuntu"}}> Learn More</span>
+                                  <Link style={{textDecoration : "none", textDecorationLine: "none", color: "white"}} to="/ourcompany" >  <span id="btn" style={{fontSize: "14px", fontFamily: "ubuntu"}}> Learn More</span></Link>
                                 </span>
                                 </button>
                             </div>

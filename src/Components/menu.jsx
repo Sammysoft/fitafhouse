@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 
 const  Menu = ()=>{
     return(
@@ -40,7 +40,7 @@ const  Menu = ()=>{
             <div  style={{alignItems: 'center'}}>
             <button style={{backgroundColor: "#0263aa", color: 'white', padding: "2% 5% 2% 5%", border: "none", float: 'center', padding: '10px 30px 10px 30px'}}>
                 <span className="align-items-center">
-                    <span style={{fontSize: "12px", textAlign: 'center', width: '100%'}}> Learn More</span>
+                    <Link style={{textDecoration:"none", textDecorationLine: "none", color: "white"}} to="/ourcompany"><span style={{fontSize: "12px", textAlign: 'center', width: '100%'}}> Learn More</span></Link>
                 </span>
                 </button>
             </div>

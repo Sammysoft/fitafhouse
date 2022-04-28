@@ -3,7 +3,7 @@ import React from "react";
 const ContactForm = () =>{
     return(
         <>
-          <div className="contact-form-wrapper">
+          <div id="form" className="contact-form-wrapper">
               <form>
                   <input id="input" type="text" name="fullname" placeholder="FullName" /><br/>
                   <input id="input" type="text" name="email" placeholder="Email" /><br/>

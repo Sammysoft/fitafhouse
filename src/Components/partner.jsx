@@ -11,7 +11,7 @@ const Partner= ()=>{
                                 century financing.
                                 </h2>
                                 <br /><br/>
-                                <a data-aos="flip-down" data-aos-duration="3000" className="btn btn-outline-light py-3 px-4" href="/" target="_blank" style={{fontFamily:"ubuntu"}}>Become Our partner</a>
+                                <a data-aos="flip-down" data-aos-duration="3000" className="btn btn-outline-light py-3 px-4" href="/contact#form" target="_blank" style={{fontFamily:"ubuntu"}}>Become Our partner</a>
                     </div>
                 </div>
         </>

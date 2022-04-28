@@ -1,6 +1,6 @@
 import React from "react";
 import HeaderImg from './HeaderImg3';
-
+import { Link } from "react-router-dom";
 
 const Header3 = () =>{
     return(
@@ -18,7 +18,7 @@ const Header3 = () =>{
 
                                 <button style={{backgroundColor: "#0263aa", color: 'white', padding: "5% 15% 5% 15%", border: "none"}}>
                                 <span className="d-flex align-items-center">
-                                    <span id="btn" style={{fontSize: "14px", fontFamily: "ubuntu"}}> Learn More</span>
+                                <Link style={{textDecoration : "none", textDecorationLine: "none", color: "white"}} to="/contact#form" >  <span id="btn" style={{fontSize: "14px", fontFamily: "ubuntu"}}> Learn More</span></Link>
                                 </span>
                                 </button>
                             </div>

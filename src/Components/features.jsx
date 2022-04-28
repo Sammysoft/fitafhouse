@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Features = ()=>{
     return(
@@ -17,7 +18,7 @@ const Features = ()=>{
                         of our operation will go down with corresponding increase in our profit. That means more returns will be made available to all investors at the end of the financial year</p>
                         <button style={{backgroundColor: "#0263aa", color: 'white', padding: "5% 15% 5% 15%", border: "none"}}>
                                 <span className="d-flex align-items-center">
-                                    <span style={{fontSize: "14px", fontFamily: "ubuntu"}}> Learn More</span>
+                                   <Link style={{color: "black", textDecoration: "none", textDecorationLine: "none", color: "white"}} to="/onboarding"> <span style={{fontSize: "14px", fontFamily: "ubuntu"}}> Learn More</span></Link>
                                 </span>
                                 </button>
                     </div>

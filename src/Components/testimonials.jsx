@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 
 const Testimonial =()=>{
     return(
@@ -17,7 +17,7 @@ const Testimonial =()=>{
                         or investment is viable or not. We raise money for qualified ones and appoint credible team for execution.</p>
                         <button style={{backgroundColor: "#0263aa", color: 'white', padding: "5% 15% 5% 15%", border: "none"}}>
                                 <span className="d-flex align-items-center">
-                                    <span style={{fontSize: "14px", fontFamily: "ubuntu"}}> Learn More</span>
+                                    <Link to="/contact#form" style={{textDecoration: "none", textDecorationLine: "none", color: "white"}}><span style={{fontSize: "14px", fontFamily: "ubuntu"}}> Learn More</span></Link>
                                 </span>
                                 </button>
                     </div>
