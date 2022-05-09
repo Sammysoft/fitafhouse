@@ -6,6 +6,7 @@
     .harmbugger{
         display: block !important
     }
+
 .sign-in-img{
     width: 100vw;
     height: 30vh;
@@ -547,6 +548,7 @@ flex: 1;
     text-align: justify;
     font-weight: 300;
     padding: 0 10% 0 10%;
+    padding: "10px 0px"
 }
 .partner-wrapper {
     position: relative;
