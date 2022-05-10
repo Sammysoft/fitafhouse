@@ -43,6 +43,7 @@ const SignInForm = ()=>{
         })
         .catch(error=>{
             setLoading(false)
+            console.log(error)
             Swal.fire({
                     title: "error",
                     icon:"error",

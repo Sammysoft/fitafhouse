@@ -1,17 +1,13 @@
-
-
-
 @media (max-width: 850px) {
-
-    .harmbugger{
-        display: block !important
-    }
-.about-wrapper
-.sign-in-img{
+  .harmbugger {
+    display: block !important;
+  }
+  .about-wrapper .sign-in-img {
     width: 100vw;
     height: 30vh;
     position: absolute;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/hand.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("../images/hand.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -20,575 +16,69 @@
     text-align: center;
     margin-top: 10vh;
     flex: 1;
-    }
-    .lead{
-        text-align: center !important;
-        font-size: 20px !important;
-    }
-    .flex-wrapper{
-        width: 80% !important;
-        top: 30%;
-        left: 5%;
-        position: absolute;
-        text-align: center;
-        margin:  auto;
-    }
-.header-content{
+  }
+  .lead {
+    text-align: center !important;
+    font-size: 20px !important;
+  }
+  .flex-wrapper {
+    width: 80% !important;
+    top: 30%;
+    left: 5%;
+    position: absolute;
     text-align: center;
-}
-.fitaf, .house{
+    margin: auto;
+  }
+  .header-content {
+    text-align: center;
+  }
+  .fitaf,
+  .house {
     color: white !important;
     font-size: 25px !important;
-}
+  }
 
-    .sign-in-content{
-        position: absolute;
-        font-family: 'ubuntu';
-        display: flex;
-        top: 50vh;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: #f3f3f3;
-        padding: 5px 20px 5px 20px;
-        width: 100vw;
-    }
-    .form-wrap{
-        top: 25vh;
-        width: 100%;
-
-    }
-    .invest-card-wrapper{
-        display: grid;
-       grid-template-columns: auto !important;
-       gap: 50px;
-    }
-    input{
-        width: 100% !important;
-        margin-left: 0px !important
-    }
-    .img-signin-content{
-        display: none !important;
-    }
-
-  .menu-wrapper{
-    font-family: "ubuntu";
-      overflow-y: scroll;
-      height: 100vh !important;
-      padding: 15px !important;
-      width: 100% !important
-}
-.swal
-.inner-menu{
-  background-color: white;
-  padding: 20px;
-  border-bottom-left-radius:10px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  width: 70%;
-  position: relative;
-  height: fit-content;
-  text-align: center;
-  margin: auto;
-  color: #0263aa;
-  line-height: 5rem;
-  font-weight: 900;
-}
-.btn-investment{
-  background-color: #0263aa;
-  color: white;
-  padding: 15px 25px 15px 25px !important;
-   border:none;
-   cursor: pointer;
-   margin: '100px' !important
-}
-.investment{
-  display: flex;
-  flex-direction: column !important;
-  width: 100%;
-  padding: 20px;
-  height: 80vh !important
-}
-.investment-info1, .investment-info2{
- width: 100% !important;
-}
-.logout-div{
-    width: 100%;
-    padding: 5vh 10vh 5vh !important;
-    font-weight: 900;
-    color: #808080;
-    text-align: right;
-    height: 10vh !important;
-    cursor: pointer;
-}
-.investment-wrapper{
-    margin: 0% !important;
-    border-bottom-left-radius:6px;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
-    background-color: white;
-    padding: 10%;
-    direction: ltr;
-}
-
-
-    .contact-form-wrapper{
-        width: 90% !important;
-        padding: 10px;
-        background-color: #f2f2f2;
-          align-items: center;
-          text-align: center;
-          margin: auto;
-    }
-
-    .dashboard-wrapper{
-        display: flex;
-        flex-direction: column !important;
-        justify-content: space-between;
-        align-items: flex-start;
-        font-family: "ubuntu";
-        width: 100%;
-        height: 100vh !important
-    }
-    .menu-wrapper{
-        font-family: "ubuntu";
-        width: 90% !important;
-        margin: auto
-    }
-    .nav-wrapper{
-        display: none !important
-
-    }
-
-    #input{
-        margin-top: 10px;
-        border: 2px solid #b4b4b4;
-        padding: 10px;
-        width: 90vw !important;
-    }
-
-    .drift-left{
-        flex: 1;
-
-    }
-    .drift-right{
-        flex: 4;
-        padding: 2%;
-        border-left: 2px solid #0263aa;
-
-    }
-    .right-menu-wrapper{
-        display: none !important;
-    }
-
-    .menu-wrapper{
-        font-family: "ubuntu";
-        flex: 4;
-    }
-    .inner-menu{
-      background-color: white;
-      /* padding: 10px !important; */
-      margin-left: 5px !important;
-      border-bottom-left-radius:10px;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-      border-bottom-right-radius: 10px;
-      width: 95% !important;
-      position: relative;
-      margin: auto;
-      overflow-y: scroll;
-      height: 90vh;
-    }
-    .btn-signin{
-        color: white;
-        background-color:#0263aa;
-        border: none;
-        padding: 0px 20px 0px 20px;
-        align-self: center;
-        margin-top: 10%;
-        font-size: 1.3rem !important;
-        float: center;
-    }
-
-    /* .sign-in-img{
-        display: none !important;
-    } */
-
-
-
-.cta{
-    height: 30vh;
-}
-.cta-content{
-        display: block;
-    }
-
-    .contact-card{
-        display: "flex" !important;
-        flex-direction: column !important;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-    }
-
-    .flex-wrapper{
-        width: 50% !important;
-        top: 30%;
-        left: 5%;
-        position: absolute;
-    }
-    .partner-wrapper {
-        position: relative;
-        height: 65vh !important;
-        padding: 10rem !important;
-        background-image: url("../images/info3.png");
-        background-position: center;
-        background-size: cover;
-        width: 100% !important;
-      }
-
-
-      .partner-wrapper:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-      }
-
-    .wrapper{
-        flex: 1;
-        width: 100% !important;
-    }
-    .contain-wrapp{
-        width: 100%;
-    }
-
-.masthead{
-    margin: 30px;
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('/images/head-img.jpg');
-    background-position:center;
-    background-repeat: no-repeat;
-    background-size: "100%";
-}
-
-.masthead2{
-    margin: 30px;
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('/images/hand.jpg');
-    background-position:center;
-    background-repeat: no-repeat;
-    background-size: "100%";
-}
-.masthead3{
-    margin: 30px;
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('/images/Man.jpg');
-    background-position:center;
-    background-repeat: no-repeat;
-    background-size: "100%";
-}
-.header-content{
-    margin: "10px"
-}
-
-.navbar{
-    position: relative !important
-}
-.lead{
-    font-size: 15px;
-    color: white !important;
-}
-.header-welcome{
-    color: white;
-}
-.header-img{
-    display: none;
-}
-button{
-    background-color: "#0263aa";
-    color: 'white';
-    padding: "5% 2% 5% 2%" !important;
-    border: "none";
-    font-size: 10px !important;
-    margin-top: 20px !important
-}
-#btn{
-    font-size: 10px !important;
-    font-family: "ubuntu" !important;
-
-
-}
-#fitaf-full{
-    font-size: 8px !important;
-    font-family: 'ubuntu' !important;
-    font-weight: lighter !important;
-    display: none
-}
-}
-
-
-
-.top-nav{
-    height: 10vh;
-    background-color: #f3f3f3;
-    padding: 3%;
-    font-family: "ubuntu";
-    text-align: left;
-    color: white;
-    background-color: #0263aa;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.left-top-nav{
-    display:flex;
-    flex: 1;
-    justify-content: flex-start;
-}
-.wrap{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.right-top-nav{
-    flex: 6;
-}
-.active{
-    text-decoration: 'none';
-    text-decoration-line: none;
-    color: #808080;
-    font-weight: 900
-}
-input{
-    margin-top: 10px;
-    border: 2px solid #b4b4b4;
-    padding: 10px;
-    margin-left: 10px;
-    width: 35vw;
-}
-
-.sign-in-wrapper{
-    height: 90vh;
-}
-.sign-up-content{
+  .sign-in-content {
     position: absolute;
-    font-family: 'ubuntu';
-    top: 50vh;
-    align-items: center;
-    text-align: center;
-    background-color: #f3f3f3;
-    padding: 5px 20px 5px 20px;
-    width: 100vw;
-}
-.sign-in-content{
-    position: absolute;
-    font-family: 'ubuntu';
+    font-family: "ubuntu";
     display: flex;
     top: 50vh;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background-color: #f3f3f3;
-    padding: 5px 20px 5px 20px;
-    width: 100vw;
-}
-
-.img-signin-content{
-    flex:1;
-    background-image: url("../images/logo.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 40%;
-    height: 50vh;
-}
-
-.btn-signin-wrapper{
-    position: relative;
-    width: "100%";
-    align-items: center;
-
-}
-
-.btn-signin{
-    color: white;
-    background-color:#0263aa;
-    border: none;
-    padding: 10px 20px 10px 20px;
-    align-self: center;
-    margin-top: 5%;
-    font-size: 1.2rem;
-    float: center;
-    width: 40%;
-}
-.bi
-.btn-signup{
-    color: white;
-    background-color:#0263aa;
-    border: none;
-    padding: 10px 20px 10px 20px;
-    align-self: center;
-    margin-top: 5%;
-    font-size: 1.2rem;
-    float: center;
-    width: 20%;
-}
-.link{
-    text-decoration: none;
-    text-decoration-line: none;
-    color: #0263aa;
-    font-weight: 800;
-    margin-left: '10px';
-}
-.sign-in-img{
-width: 100vw;
-height: 30vh;
-position: absolute;
-background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/hand.jpg");
-background-position: center;
-background-repeat: no-repeat;
-background-size: 100%;
-color: white;
-font-weight: 900;
-text-align: center;
-margin-top: 15vh;
-flex: 1;
-}
-
-.form-wrap{
-    flex: 1;
-    background-color: #f3f3f3;
-    top: 50vh;
-}
-
-.forgot-password{
-    text-align: center;
-    font-weight: 500;
-     padding-left: 20%;
-     text-decoration: none !important;
-     text-decoration-line: none !important;
-     text-decoration-style: none;
-     color: #6bbe43;
-}
- .new-text{
-     padding: 5%;
-
- }
-
-.fitaf-wrapp{
-    margin-top: 20% !important;
-}
-.text-center{
-    width: 100% !important
-}
-
-
-.icon-feature{
-    color: #0263aa;
-}
-
-.cta{
-    display: flex;
-    flex-direction: row;
-}
-
-
-.masthead{
-    background-color: #f3f3f3;
-}
-.masthead3{
-    background-color: #f3f3f3;
-}
-
-.nav-item{
-    text-decoration: none !important;
-
-}
-
-.form-wrapper{
-    background-color: whitesmoke;
-    font-family:"ubuntu";
-}
-
-.form-inputs{
-    display: "flex";
-    flex-direction: "column";
-    justify-content: center;
-    align-items: center;
-}
-
-.contact-card{
-    display: "flex" !important;
     flex-direction: column;
-    justify-content: space-between !important;
     align-items: center;
-    width: 100% !important;
-}
-
-.wrapper{
-    border-top: 5px solid #6bbe43 !important;
-    border-bottom: 5px solid #6bbe43!important;
-    box-shadow: "0px 5px 5px 0px #888888" !important;
-    padding: 10px !important;
-    text-align: center !important;
-    width: auto;
-}
-
-.texter{
-    text-align: center;
-    font-family: "ubuntu";
-    line-height: 4rem;
-}
-.about-wrapper{
-    font-family: 'ubuntu';
+    justify-content: center;
     background-color: #f3f3f3;
-    text-align: justify;
-    font-weight: 300;
-    padding: 5% 10% 5% 10%;
-}
-.partner-wrapper {
-    position: relative;
-    height: 30vh;
-    padding: 15rem;
-    background-image: url("../images/info3.png");
-    background-position: center;
-    background-size: cover;
-
+    padding: 5px 20px 5px 20px;
+    width: 100vw;
   }
-
-  .flex-wrapper{
-      width: 50% !important;
-      float: right;
-      top: 30%;
-      right: 5%;
-      position: absolute;
-
-
-  }
-  .partner-wrapper:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+  .form-wrap {
+    top: 25vh;
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+  }
+  .invest-card-wrapper {
+    display: grid;
+    grid-template-columns: auto !important;
+    gap: 50px;
+  }
+  input {
+    width: 100% !important;
+    margin-left: 0px !important;
+  }
+  .img-signin-content {
+    display: none !important;
   }
 
-  .menu-wrapper{
-      font-family: "ubuntu";
-      flex: 3;
-        overflow-y: scroll;
-        height: 90vh;
-        padding: '30px'
+  .menu-wrapper {
+    font-family: "ubuntu";
+    overflow-y: scroll;
+    height: 100vh !important;
+    padding: 15px !important;
+    width: 100% !important;
   }
-  .inner-menu{
+
+  .inner-menu {
     background-color: white;
     padding: 20px;
-    border-bottom-left-radius:10px;
+    border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -601,406 +91,897 @@ flex: 1;
     line-height: 5rem;
     font-weight: 900;
   }
-  .investment-wrapper
-.btn-investment{
-    background-color: #0263aa;
+  .btn-investment {
+    background-color: #0263aa !important;
     color: white;
     padding: 15px 25px 15px 25px !important;
-     border:none;
-     cursor: pointer;
-     margin: '100px' !important
-}
-.investment{
+    border: none;
+    cursor: pointer;
+    margin: "100px" !important;
+  }
+  .investment {
     display: flex;
-    flex-direction: row;
-    width: 90%;
-    padding: '20px'
-}
-.investment-info1, .investment-info2{
- flex: 1;
-}
-.info-desc{
-    color: #0263aa;
-    text-align: center;
-
-}
-#inv-change:hover{
-color: white !important;
-}
-
-.logout-div{
+    flex-direction: column !important;
     width: 100%;
-    padding: 15vh 25vh 15vh;
+    padding: 20px;
+    height: 80vh !important;
+  }
+  .investment-info1,
+  .investment-info2 {
+    width: 100% !important;
+  }
+  .logout-div {
+    width: 100%;
+    padding: 5vh 10vh 5vh !important;
     font-weight: 900;
     color: #808080;
     text-align: right;
-    height: 20vh;
+    height: 10vh !important;
     cursor: pointer;
-}
-.inner-menu-add {
-    padding: 10px;
-    height: 40vh;
-    text-align: center;
-    margin-top: 50vh;
-    border-top: 2px solid #888888;
-    width: 80%;
-    position: relative;
-    align-self: center;
-    margin: auto;
-}
-
-  .right-menu-wrapper{
-      font-family: "ubuntu";
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      flex: 2;
-      overflow-y: scroll;
-      height: 80vh;
-      direction: rtl;
   }
-  .nav-wrapper{
-    flex: 1;
-    width: 100%;
+  .investment-wrapper {
+    margin: 0% !important;
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
     background-color: white;
-    height: 100vh;
-    padding: 5px;
-    position: relative;
-    text-align: right;
-    font-size: '3rem';
-
-}
-
-  .dashboard-wrapper{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-start;
-      /* padding: 2%; */
-      font-family: "ubuntu";
-      width: 100%;
-      /* height: max-content; */
+    padding: 10%;
+    direction: ltr;
   }
 
-  .investment-wrapper, .amount-wrapper, .withdrawal-wrapper{
-        margin: 10%;
-        border-bottom-left-radius:6px;
-        border-top-left-radius: 6px;
-        border-top-right-radius: 6px;
-        border-bottom-right-radius: 6px;
-        background-color: white;
-        padding: 10%;
-        direction: ltr;
-  }
-
-
-  .icon-nav{
-      padding-top: 6vh;
-      display: block;
-  }
-
-  /* width */
-::-webkit-scrollbar {
-    width: 5px;
-  }
-
-  /* Track */
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px whitesmoke;
-    border-radius: 10px;
-  }
-
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #808080;
-    border-radius: 10px;
-  }
-
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #808080;
-  }
-
-
-  .icon-nav .nav-wrapper-text {
-    visibility: hidden;
-    width: 120px;
-    background-color: #0263aa;
-    color: #f3f3f3;
+  .contact-form-wrapper {
+    width: 90% !important;
+    padding: 10px;
+    background-color: #f2f2f2;
+    align-items: center;
     text-align: center;
-    padding: 5px 0;
-    border-radius: 6px;
-
-    /* Position the tooltip text - see examples below! */
-    position: absolute;
-    z-index: 1;
+    margin: auto;
   }
 
-  .flex-wrapper
-.bi{
-    color: #0263aa;
-}
-
-  .icon-nav:hover .nav-wrapper-text{
-      visibility: visible;
+  .dashboard-wrapper {
+    display: flex;
+    flex-direction: column !important;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-family: "ubuntu";
+    width: 100%;
+    height: 100vh !important;
+  }
+  .menu-wrapper {
+    font-family: "ubuntu";
+    width: 90% !important;
+    margin: auto;
+  }
+  .nav-wrapper {
+    display: none !important;
   }
 
-  .nav-wrapper-text{
-      margin-left: 0.8%;
-  }
-.nav-dash-link{
-    text-decoration: 'none';
-    text-decoration-line: none;
-    color: #808080;
-    font-weight: 900
-}
-
-.nav-dash-link:hover{
-    text-decoration: 'none';
-    text-decoration-line: none;
-    color: '#0263aa';
-    font-weight: 900
-}
-.brand-icon-wrapper{
-    height: 20vh;;
-}
-.nav-content-wrapper{
-    width: 70%;
-    margin: 'auto';
-    padding-top: 30px
-}
-  .icon-nav .nav-wrapper-text::after {
-    content: " ";
-    position: absolute;
-    top: 50%;
-    right: 100%; /* To the left of the tooltip */
-    margin-top: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent #0263aa transparent transparent;
+  #input {
+    margin-top: 10px;
+    border: 2px solid #b4b4b4;
+    padding: 10px;
+    width: 90vw !important;
   }
 
-  /* Show the tooltip text when you mouse over the tooltip container */
+  .drift-left {
+    flex: 1;
+  }
+  .drift-right {
+    flex: 4;
+    padding: 2%;
+    border-left: 2px solid #0263aa;
+  }
+  .right-menu-wrapper {
+    display: none !important;
+  }
 
-
-  .pie {
+  .menu-wrapper {
+    font-family: "ubuntu";
+    flex: 4;
+  }
+  .inner-menu {
+    background-color: white;
+    /* padding: 10px !important; */
+    margin-left: 5px !important;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 95% !important;
     position: relative;
-    width: 200px;
-    height: 200px;
-    background: orangered;
-    border-radius: 50%;
-    overflow: hidden;
-}
-.sides {
-    position: relative;
-    width: inherit;
-    height: inherit
-}
-.sides .left, .sides .right {
-    position: absolute;
-    top: 0;
+    margin: auto;
+    overflow-y: scroll;
+    height: 90vh;
+  }
+  .btn-signin {
+    color: white;
+    background-color: #0263aa;
+    border: none;
+    padding: 0px 20px 0px 20px;
+    align-self: center;
+    margin-top: 10%;
+    font-size: 1.3rem !important;
+    float: center;
+  }
+
+  /* .sign-in-img{
+        display: none !important;
+    } */
+
+  .cta {
+    height: 30vh;
+  }
+  .cta-content {
     display: block;
-    width: 200px;
-    height: 200px;
-    overflow: hidden;
-    transform: rotate(0);
-}
-.sides .left {
-    left: -100px
-}
-.sides .right {
-    left: 100px
-}
-.half {
-    width: 100px;
-    height: 200px;
-    transition: 0.4s;
-}
-.sides .left .half {
-    left: 100px;
+  }
+
+  .contact-card {
+    display: "flex" !important;
+    flex-direction: column !important;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .flex-wrapper {
+    width: 50% !important;
+    top: 30%;
+    left: 5%;
     position: absolute;
-    background: white;
-    transform-origin: 100px 100px
-}
-.sides .right .half {
-    position: absolute;
-    background: white;
-    transform-origin: 0 100px
-}
-.occluder {
+  }
+  .partner-wrapper {
+    position: relative;
+    height: 65vh !important;
+    padding: 10rem !important;
+    background-image: url("../images/info3.png");
+    background-position: center;
+    background-size: cover;
+    width: 100% !important;
+  }
+
+  .partner-wrapper:before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-}
-#circle-1, #circle-3, .circle-2{
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .wrapper {
+    flex: 1;
+    width: 100% !important;
+  }
+  .contain-wrapp {
+    width: 100%;
+  }
+
+  .masthead {
+    margin: 30px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+      url("/images/head-img.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: "100%";
+  }
+
+  .masthead2 {
+    margin: 30px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+      url("/images/hand.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: "100%";
+  }
+  .masthead3 {
+    margin: 30px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+      url("/images/Man.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: "100%";
+  }
+  .header-content {
+    margin: "10px";
+  }
+
+  .navbar {
+    position: relative !important;
+  }
+  .lead {
+    font-size: 15px;
+    color: white !important;
+  }
+  .header-welcome {
+    color: white;
+  }
+  .header-img {
     display: none;
+  }
+  button {
+    background-color: "#0263aa";
+    color: "white";
+    padding: "5% 2% 5% 2%" !important;
+    border: "none";
+    font-size: 10px !important;
+    margin-top: 20px !important;
+  }
+  #btn {
+    font-size: 10px !important;
+    font-family: "ubuntu" !important;
+  }
+  #fitaf-full {
+    font-size: 8px !important;
+    font-family: "ubuntu" !important;
+    font-weight: lighter !important;
+    display: none;
+  }
 }
-.circles-container{
-    background-color: white !important;
+
+.top-nav {
+  height: 10vh;
+  background-color: #f3f3f3;
+  padding: 3%;
+  font-family: "ubuntu";
+  text-align: left;
+  color: white;
+  background-color: #0263aa;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
-.page{
-    background-color: white !important;
+
+.left-top-nav {
+  display: flex;
+  flex: 1;
+  justify-content: flex-start;
+}
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right-top-nav {
+  flex: 6;
+}
+.active {
+  text-decoration: "none";
+  text-decoration-line: none;
+  color: #808080;
+  font-weight: 900;
+}
+input {
+  margin-top: 10px;
+  border: 2px solid #b4b4b4;
+  padding: 10px;
+  margin-left: 10px;
+  width: 35vw;
+}
+
+.sign-in-wrapper {
+  height: 90vh;
+}
+.sign-up-content {
+  position: absolute;
+  font-family: "ubuntu";
+  top: 50vh;
+  align-items: center;
+  text-align: center;
+  background-color: #f3f3f3;
+  padding: 5px 20px 5px 20px;
+  width: 100vw;
+}
+.sign-in-content {
+  position: absolute;
+  font-family: "ubuntu";
+  display: flex;
+  top: 50vh;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f3f3;
+  padding: 5px 20px 5px 20px;
+  width: 100vw;
+}
+
+.img-signin-content {
+  flex: 1;
+  background-image: url("../images/logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 40%;
+  height: 50vh;
+}
+
+.btn-signin-wrapper {
+  position: relative;
+  width: "100%";
+  align-items: center;
+}
+
+.btn-signin {
+  color: white;
+  background-color: #0263aa;
+  border: none;
+  padding: 10px 20px 10px 20px;
+  align-self: center;
+  margin-top: 5%;
+  font-size: 1.2rem;
+  float: center;
+  width: 40%;
+}
+
+.btn-signup {
+  color: white;
+  background-color: #0263aa;
+  border: none;
+  padding: 10px 20px 10px 20px;
+  align-self: center;
+  margin-top: 5%;
+  font-size: 1.2rem;
+  float: center;
+  width: 20%;
+}
+.link {
+  text-decoration: none;
+  text-decoration-line: none;
+  color: #0263aa;
+  font-weight: 800;
+  margin-left: "10px";
+}
+.sign-in-img {
+  width: 100vw;
+  height: 30vh;
+  position: absolute;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../images/hand.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: white;
+  font-weight: 900;
+  text-align: center;
+  margin-top: 15vh;
+  flex: 1;
+}
+
+.form-wrap {
+  flex: 1;
+  background-color: #f3f3f3;
+  top: 50vh;
+}
+
+.forgot-password {
+  text-align: center;
+  font-weight: 500;
+  padding-left: 20%;
+  text-decoration: none !important;
+  text-decoration-line: none !important;
+  text-decoration-style: none;
+  color: #6bbe43;
+}
+.new-text {
+  padding: 5%;
+}
+
+.fitaf-wrapp {
+  margin-top: 20% !important;
+}
+.text-center {
+  width: 100% !important;
+}
+
+.icon-feature {
+  color: #0263aa;
+}
+
+.cta {
+  display: flex;
+  flex-direction: row;
+}
+
+.masthead {
+  background-color: #f3f3f3;
+}
+.masthead3 {
+  background-color: #f3f3f3;
+}
+
+.nav-item {
+  text-decoration: none !important;
+}
+
+.form-wrapper {
+  background-color: whitesmoke;
+  font-family: "ubuntu";
+}
+
+.form-inputs {
+  display: "flex";
+  flex-direction: "column";
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-card {
+  display: "flex" !important;
+  flex-direction: column;
+  justify-content: space-between !important;
+  align-items: center;
+  width: 100% !important;
+}
+
+.wrapper {
+  border-top: 5px solid #6bbe43 !important;
+  border-bottom: 5px solid #6bbe43 !important;
+  box-shadow: "0px 5px 5px 0px #888888" !important;
+  padding: 10px !important;
+  text-align: center !important;
+  width: auto;
+}
+
+.texter {
+  text-align: center;
+  font-family: "ubuntu";
+  line-height: 4rem;
+}
+
+.about-wrapper {
+  font-family: "ubuntu";
+  background-color: #f3f3f3;
+  text-align: justify;
+  font-weight: 300;
+  padding: 5% 10% 5% 10%;
+}
+.partner-wrapper {
+  position: relative;
+  height: 30vh;
+  padding: 15rem;
+  background-image: url("../images/info3.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.flex-wrapper {
+  width: 50% !important;
+  float: right;
+  top: 30%;
+  right: 5%;
+  position: absolute;
+}
+.partner-wrapper:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.menu-wrapper {
+  font-family: "ubuntu";
+  flex: 3;
+  overflow-y: scroll;
+  height: 90vh;
+  padding: "30px";
+}
+.inner-menu {
+  background-color: white;
+  padding: 20px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 70%;
+  position: relative;
+  height: fit-content;
+  text-align: center;
+  margin: auto;
+  color: #0263aa;
+  line-height: 5rem;
+  font-weight: 900;
+}
+
+.btn-investment {
+  background-color: #0263aa !important;
+  color: white !important;
+  padding: 15px 25px 15px 25px !important;
+  border: none;
+  cursor: pointer;
+  margin: "100px" !important;
+}
+
+.investment {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  padding: "20px";
+}
+.investment-info1,
+.investment-info2 {
+  flex: 1;
+}
+.info-desc {
+  color: #0263aa;
+  text-align: center;
+}
+#inv-change:hover {
+  color: white !important;
+}
+
+.logout-div {
+  width: 100%;
+  padding: 15vh 25vh 15vh;
+  font-weight: 900;
+  color: #808080;
+  text-align: right;
+  height: 20vh;
+  cursor: pointer;
+}
+.inner-menu-add {
+  padding: 10px;
+  height: 40vh;
+  text-align: center;
+  margin-top: 50vh;
+  border-top: 2px solid #888888;
+  width: 80%;
+  position: relative;
+  align-self: center;
+  margin: auto;
+}
+
+.right-menu-wrapper {
+  font-family: "ubuntu";
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 2;
+  overflow-y: scroll;
+  height: 80vh;
+  direction: rtl;
+}
+.nav-wrapper {
+  flex: 1;
+  width: 100%;
+  background-color: white;
+  height: 100vh;
+  padding: 5px;
+  position: relative;
+  text-align: right;
+  font-size: "3rem";
+}
+
+.dashboard-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* padding: 2%; */
+  font-family: "ubuntu";
+  width: 100%;
+  /* height: max-content; */
+}
+
+.investment-wrapper,
+.amount-wrapper,
+.withdrawal-wrapper {
+  margin: 10%;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  background-color: white;
+  padding: 10%;
+  direction: ltr;
+}
+
+.icon-nav {
+  padding-top: 6vh;
+  display: block;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px whitesmoke;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #808080;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #808080;
+}
+
+.icon-nav .nav-wrapper-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: #0263aa;
+  color: #f3f3f3;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+.bi {
+  color: #0263aa;
+}
+
+.icon-nav:hover .nav-wrapper-text {
+  visibility: visible;
+}
+
+.nav-wrapper-text {
+  margin-left: 0.8%;
+}
+.nav-dash-link {
+  text-decoration: "none";
+  text-decoration-line: none;
+  color: #808080;
+  font-weight: 900;
+}
+
+.nav-dash-link:hover {
+  text-decoration: "none";
+  text-decoration-line: none;
+  color: "#0263aa";
+  font-weight: 900;
+}
+.brand-icon-wrapper {
+  height: 20vh;
+}
+.nav-content-wrapper {
+  width: 70%;
+  margin: "auto";
+  padding-top: 30px;
+}
+.icon-nav .nav-wrapper-text::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 100%; /* To the left of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent #0263aa transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+
+.pie {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: orangered;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.sides {
+  position: relative;
+  width: inherit;
+  height: inherit;
+}
+.sides .left,
+.sides .right {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  transform: rotate(0);
+}
+.sides .left {
+  left: -100px;
+}
+.sides .right {
+  left: 100px;
+}
+.half {
+  width: 100px;
+  height: 200px;
+  transition: 0.4s;
+}
+.sides .left .half {
+  left: 100px;
+  position: absolute;
+  background: white;
+  transform-origin: 100px 100px;
+}
+.sides .right .half {
+  position: absolute;
+  background: white;
+  transform-origin: 0 100px;
+}
+.occluder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#circle-1,
+#circle-3,
+.circle-2 {
+  display: none;
+}
+.circles-container {
+  background-color: white !important;
+}
+.page {
+  background-color: white !important;
 }
 .occlusion {
-    position: relative;
-    display: block;
-    background: white;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-}
-.swal2-confirm
-.news-feed{
-    display: flex;
-    flex-direction: 'row';
-    justify-content: center;
-    align-items: flex-start;
-    margin: 5%;
-    padding: 2%;
-    background-color: #888888;
-    border-bottom-left-radius:6px;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
-
+  position: relative;
+  display: block;
+  background: white;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
 }
 
-.drift-left{
-    flex: 1;
-
+.news-feed {
+  display: flex;
+  flex-direction: "row";
+  justify-content: center;
+  align-items: flex-start;
+  margin: 5%;
+  padding: 2%;
+  background-color: #888888;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
-.drift-right{
-    flex: 4;
-    padding: 5%;
-    border-left: 2px solid #0263aa;
 
+.drift-left {
+  flex: 1;
 }
-.logout
-.loader-wrapper{
-    width: 100vw;
-    height: 100vh;
-    /* position: absolute; */
-    z-index: 9999;
+.drift-right {
+  flex: 4;
+  padding: 5%;
+  border-left: 2px solid #0263aa;
+}
+
+.loader-wrapper {
+  width: 100vw;
+  height: 100vh;
+  /* position: absolute; */
+  z-index: 9999;
 }
 /* .swal2-icon{
     color: #6bbe43 !important;
 } */
-.swal2-confirm{
-    background-color:#0263aa !important;
+.swal2-confirm {
+  background-color: #0263aa !important;
 }
-.swal2-html-container{
-    color: #6bbe43 !important;
-    text-align: justify !important;
+.swal2-html-container {
+  color: #6bbe43 !important;
+  text-align: center !important;
 }
-.swal2-title{
-    color: #0263aa !important;
-}
-.investment-wrapper:hover
-table, td, th {
-    text-align: left;
-  }
-
-  table {
-    border-collapse: collapse;
-    width: 100%;
-    min-width: 120%;
-    min-height: '60vh' !important;
-    overflow-y: scroll;
-    overflow-x: scroll;
-  }
-
-  th, td {
-    padding: 10px;
-  }
-  th{
-      color: #0263aa;
-  }
-td{
-    color: #808080;
+.swal2-title {
+  color: #0263aa !important;
 }
 
-
-
-  .contact-form-wrapper{
-      width: 65%;
-      padding: 10px;
-      background-color: #f2f2f2;
-        align-items: center;
-        text-align: center;
-        margin: auto;
-  }
-  textarea{
-      width: 35vw;
-      height: 40vh;
-      margin-top: 5vh;
-      padding: 10px;
-      border: 2px solid #b4b4b4;
-  }
-
-  .send-msg{
-      background-color: #0263aa;
-      color: white;
-      text-align: center;
-      font-weight: 500;
-      padding: 5px 20px 5px 20px;
-      margin : auto;
-      width: 60%;
-      position: relative;
-      font-family:'ubuntu';
-  }
-  .send-msg:hover{
-      cursor: pointer;
-  }
-
-  .nav-link{
-      text-decoration: none;
-      text-decoration-line: none;
-      color: #0263aa;
-      font-size: '36px'
-  }
-  .unselected{
-    text-decoration: none;
-    text-decoration-line: none;
-    color: #808080
-  }
-
-
-  .harmbugger{
-      display: none
-  }
-  .wrap-invest{
-      margin:20px;
-  }
-
-  .invest-card-wrapper{
-    display: grid;
-   grid-template-columns: auto auto;
-   column-gap: 100px;
+table,
+td,
+th {
+  text-align: left;
 }
-.invest-card{
-    background-color: white;
-    font-family: "Ubuntu";
-    color: #0263aa;
-    padding: 10px;
-    border-radius: 10px;
-    min-height: 40vh;
-    height: fit-content;
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 120%;
+  min-height: "60vh" !important;
+  overflow-y: scroll;
+  overflow-x: scroll;
 }
-.invest-card-head{
-    color: grey;
-    font-weight: 700;
-    font-size: 1.5rem;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 5vh;
+
+th,
+td {
+  padding: 10px;
 }
-.invest-card-base{
-    margin-top: 5vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+th {
+  color: #0263aa;
+}
+td {
+  color: #808080;
+}
+
+.contact-form-wrapper {
+  width: 65%;
+  padding: 10px;
+  background-color: #f2f2f2;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+}
+textarea {
+  width: 35vw;
+  height: 40vh;
+  margin-top: 5vh;
+  padding: 10px;
+  border: 2px solid #b4b4b4;
+}
+
+.send-msg {
+  background-color: #0263aa;
+  color: white;
+  text-align: center;
+  font-weight: 500;
+  padding: 5px 20px 5px 20px;
+  margin: auto;
+  width: 60%;
+  position: relative;
+  font-family: "ubuntu";
+}
+.send-msg:hover {
+  cursor: pointer;
+}
+
+.nav-link {
+  text-decoration: none;
+  text-decoration-line: none;
+  color: #0263aa;
+  font-size: "36px";
+}
+.unselected {
+  text-decoration: none;
+  text-decoration-line: none;
+  color: #808080;
+}
+
+.harmbugger {
+  display: none;
+}
+.wrap-invest {
+  margin: 20px;
+}
+
+.invest-card-wrapper {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 100px;
+}
+.invest-card {
+  background-color: white;
+  font-family: "Ubuntu";
+  color: #0263aa;
+  padding: 10px;
+  border-radius: 10px;
+  min-height: 40vh;
+  height: fit-content;
+}
+.invest-card-head {
+  color: grey;
+  font-weight: 700;
+  font-size: 1.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 5vh;
+}
+.invest-card-base {
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
