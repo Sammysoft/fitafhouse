@@ -45,19 +45,27 @@ const InvestmentMenu = () => {
       setUserPhoneNumber(response.data.phonenumber);
       setUserName(response.data.fullname);
       setLoading(false);
-       const status = searchParams.get("status");
-       console.log(status);
-       if (status === "successful") {
-         setLoading(false);
-         Swal.fire({
-           title: `${response.data.investment[0].plan} plan`,
-           text: `You have made a placement for ${response.data.investment[0].plan}
+      const status = searchParams.get("status");
+      console.log(status);
+      if (status === "successful") {
+        setLoading(false);
+        axios.post(`${url}/api/invest/${user}`, val).then(() => {
+          Swal.fire({
+            title: `${response.data.investment[0].plan} plan`,
+            text: `You have made a placement for ${response.data.investment[0].plan}
                                                     investment of N${response.data.investment[0].amount} for
                                                      ${response.data.investment[0].investmentDuration} Months you will recieve
                                                      ${response.data.investment[0].rate} at the end of the period, Thank You for using FITAFHOUSE!`,
-           icon: "success",
-         });
-       }
+            icon: "success",
+          });
+        });
+      } else if (status === "cancelled") {
+        Swal.fire({
+          icon: "warning",
+          title: "Cancelled",
+          text: "Your request may have been cancelled, due to issues with your bank account",
+        });
+      }
     });
   }, []);
 
@@ -74,13 +82,10 @@ const InvestmentMenu = () => {
         setLoading(true);
 
         axios
-          .post(`${url}/api/invest/${user}`, val)
-          .then(() => {
-            axios.post(`${url}/api/payments`, val).then((res) => {
-              const raveLink = res.data.data.data.link;
-              window.location.replace(raveLink);
-             
-            });
+          .post(`${url}/api/payments`, val)
+          .then((res) => {
+            const raveLink = res.data.data.data.link;
+            window.location.replace(raveLink);
           })
           .catch((error) => {
             setLoading(false);

@@ -56,10 +56,12 @@ const Investors = () => {
     console.log(id);
     setLoading(true);
     axios.post(`${url}/api/approve/${id}`).then(() => {
-      Swal.fire({
-        icon: "success",
-        text: "Investment is now Approved!",
-        title: "Approved",
+      window.location.reload(false).then(() => {
+        Swal.fire({
+          icon: "success",
+          text: "Investment is now Approved!",
+          title: "Approved",
+        });
       });
     });
     setLoading(false);
@@ -101,10 +103,12 @@ const Investors = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios.post(`${url}/api/delete/${id}`).then(() => {
-          Swal.fire({
-            icon: "success",
-            text: "Investment is now Approved!",
-            title: "Deleted",
+          window.location.reload(false).then(() => {
+            Swal.fire({
+              icon: "success",
+              text: "Investment is now Approved!",
+              title: "Deleted",
+            });
           });
         });
       }
@@ -128,7 +132,7 @@ const Investors = () => {
       setValue(response.investors);
       setLoading(false);
     });
-  }, [value]);
+  }, []);
   return (
     <>
       {role == "Investor" ? (
