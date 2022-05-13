@@ -129,6 +129,7 @@ const Investors = () => {
     });
     fetch(`${url}/api/active-investors`).then(async (res) => {
       let response = await res.json();
+      console.log(response.investors);
       setValue(response.investors);
       setLoading(false);
     });
@@ -141,152 +142,182 @@ const Investors = () => {
         </>
       ) : (
         <>
-          <div className="dashboard-wrapper">
-            <AdminHarmbugger />
-            <AdminNav />
-            <div className="menu-wrapper">
-              <div className="logout-div">
-                <p>
-                  <span onClick={() => logout()}>Logout</span>
-                </p>
-              </div>
-              <div>
-                <div className="invest-card-wrapper">
-                  {loading ? (
-                    <PulseLoader
-                      size={30}
-                      margin={2}
-                      css={override}
-                      loading={loading}
-                      color="#2377DA"
-                    />
-                  ) : (
-                    <>
-                      {value.map((info, id) => {
-                        return (
-                          <>
-                            <div className="wrap-invest">
-                              <div className="invest-card">
-                                <div className="invest-card-head">
-                                  <span style={{ width: "40%" }}>
-                                    @{info.username}
-                                  </span>
-                                  <span
-                                    style={{ width: "20%", cursor: "pointer" }}
-                                  >
-                                    <i
-                                      className="bi bi-chat-left-text-fill"
-                                      onClick={() => {
-                                        sendNotification(info._id);
-                                      }}
-                                    ></i>
-                                  </span>
-                                </div>
-                                <div>
-                                  <span>{info.fullname}</span>
-                                  <br />
-
-                                  <span>{info.phonenumber}</span>
-                                  <br />
-                                </div>
-                                {info.approved != true ? (
-                                  <div>
-                                    <span
-                                      style={{
-                                        color: "grey",
-                                        fontWeight: "700",
-                                        fontSize: "1.5rem",
-                                      }}
-                                    ></span>
-                                  </div>
-                                ) : (
-                                  <div>
-                                    <span
-                                      style={{
-                                        color: "grey",
-                                        fontWeight: "700",
-                                        fontSize: "2rem",
-                                      }}
-                                    >
-                                      {daysToROI(info.investment[0].dueDate) +
-                                        " Days"}
-                                    </span>
-                                  </div>
-                                )}
-                                <div>
-                                  <span
-                                    style={{
-                                      color: "grey",
-                                      fontWeight: "700",
-                                      fontSize: "1.5rem",
-                                    }}
-                                  >
-                                    N
-                                    {new Number(
-                                      (info.investment[0].amount * 10) / 100 +
-                                        Number(info.investment[0].amount)
-                                    ).toLocaleString("en-US", {
-                                      minimumFractionDigits: 0,
-                                    })}
-                                  </span>
-                                </div>
-                                <div className="invest-card-base">
-                                  <span style={{ width: "70%" }}>
-                                    {info.approved != true ? (
-                                      <span
-                                        style={{
-                                          cursor: "pointer",
-                                          padding: "5px",
-                                          border: "1px solid #0263aa",
-                                          borderRadius: "5px",
-                                        }}
-                                        onClick={() => {
-                                          approveInvestment(info._id);
-                                        }}
-                                      >
-                                        Approve
-                                      </span>
-                                    ) : (
-                                      <>
-                                        <i
-                                          className="bi bi-check2-all"
-                                          style={{
-                                            color: "#6bbe43",
-                                            fontSize: "50px",
-                                          }}
-                                        ></i>
-                                      </>
-                                    )}
-                                  </span>
-                                  <span style={{ width: "30%" }}>
-                                    <span
-                                      style={{
-                                        color: "red",
-                                        padding: "5px",
-                                        border: "1px solid red",
-                                        margin: "5px",
-                                        borderRadius: "5px",
-                                        cursor: "pointer",
-                                      }}
-                                      onClick={() => {
-                                        deleteInvestor(info._id);
-                                      }}
-                                    >
-                                      Delete
-                                    </span>
-                                  </span>
-                                </div>
-                              </div>
-                            </div>
-                          </>
-                        );
-                      })}
-                    </>
-                  )}
+          {value[0] == null ? (
+            <>
+              <div className="dashboard-wrapper">
+                <AdminHarmbugger />
+                <AdminNav />
+                <div className="menu-wrapper">
+                  <div className="logout-div">
+                    <p>
+                      <span onClick={() => logout()}>Logout</span>
+                    </p>
+                  </div>
+                  <div>
+                    <div className="menu-wrapper">
+                      <div className="investment-wrapper">
+                        <div className="inner-menu">No Investors Yet!</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
+            </>
+          ) : (
+            <>
+              <div className="dashboard-wrapper">
+                <AdminHarmbugger />
+                <AdminNav />
+                <div className="menu-wrapper">
+                  <div className="logout-div">
+                    <p>
+                      <span onClick={() => logout()}>Logout</span>
+                    </p>
+                  </div>
+                  <div>
+                    <div className="invest-card-wrapper">
+                      {loading ? (
+                        <PulseLoader
+                          size={30}
+                          margin={2}
+                          css={override}
+                          loading={loading}
+                          color="#2377DA"
+                        />
+                      ) : (
+                        <>
+                          {value.map((info, id) => {
+                            return (
+                              <>
+                                <div className="wrap-invest">
+                                  <div className="invest-card">
+                                    <div className="invest-card-head">
+                                      <span style={{ width: "40%" }}>
+                                        @{info.username}
+                                      </span>
+                                      <span
+                                        style={{
+                                          width: "20%",
+                                          cursor: "pointer",
+                                        }}
+                                      >
+                                        <i
+                                          className="bi bi-chat-left-text-fill"
+                                          onClick={() => {
+                                            sendNotification(info._id);
+                                          }}
+                                        ></i>
+                                      </span>
+                                    </div>
+                                    <div>
+                                      <span>{info.fullname}</span>
+                                      <br />
+
+                                      <span>{info.phonenumber}</span>
+                                      <br />
+                                    </div>
+                                    {info.approved != true ? (
+                                      <div>
+                                        <span
+                                          style={{
+                                            color: "grey",
+                                            fontWeight: "700",
+                                            fontSize: "1.5rem",
+                                          }}
+                                        ></span>
+                                      </div>
+                                    ) : (
+                                      <div>
+                                        <span
+                                          style={{
+                                            color: "grey",
+                                            fontWeight: "700",
+                                            fontSize: "2rem",
+                                          }}
+                                        >
+                                          {daysToROI(
+                                            info.investment[0].dueDate
+                                          ) + " Days"}
+                                        </span>
+                                      </div>
+                                    )}
+                                    <div>
+                                      <span
+                                        style={{
+                                          color: "grey",
+                                          fontWeight: "700",
+                                          fontSize: "1.5rem",
+                                        }}
+                                      >
+                                        N
+                                        {new Number(
+                                          (info.investment[0].amount * 10) /
+                                            100 +
+                                            Number(info.investment[0].amount)
+                                        ).toLocaleString("en-US", {
+                                          minimumFractionDigits: 0,
+                                        })}
+                                      </span>
+                                    </div>
+                                    <div className="invest-card-base">
+                                      <span style={{ width: "70%" }}>
+                                        {info.approved != true ? (
+                                          <span
+                                            style={{
+                                              cursor: "pointer",
+                                              padding: "5px",
+                                              border: "1px solid #0263aa",
+                                              borderRadius: "5px",
+                                            }}
+                                            onClick={() => {
+                                              approveInvestment(info._id);
+                                            }}
+                                          >
+                                            Approve
+                                          </span>
+                                        ) : (
+                                          <>
+                                            <i
+                                              className="bi bi-check2-all"
+                                              style={{
+                                                color: "#6bbe43",
+                                                fontSize: "50px",
+                                              }}
+                                            ></i>
+                                          </>
+                                        )}
+                                      </span>
+                                      <span style={{ width: "30%" }}>
+                                        <span
+                                          style={{
+                                            color: "red",
+                                            padding: "5px",
+                                            border: "1px solid red",
+                                            margin: "5px",
+                                            borderRadius: "5px",
+                                            cursor: "pointer",
+                                          }}
+                                          onClick={() => {
+                                            deleteInvestor(info._id);
+                                          }}
+                                        >
+                                          Delete
+                                        </span>
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </>
+                            );
+                          })}
+                        </>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </>
+          )}
         </>
       )}
     </>

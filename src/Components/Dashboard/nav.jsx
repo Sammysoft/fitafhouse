@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 import Swal from "sweetalert2";
 import { NavLink } from "react-router-dom";
 
@@ -14,6 +14,8 @@ const Nav = (props) => {
       text: "Thanks for Using FITAFHouse!",
     });
   };
+
+  const thisRoute = useLocation().pathname;
   return (
     <>
       <div className="nav-wrapper">
@@ -41,25 +43,90 @@ const Nav = (props) => {
             <NavLink
               to="/dashboard"
               activeClassName="active"
-              className="navlink"
+              style={
+                thisRoute === "/dashboard"
+                  ? {
+                      color: "#0263aa",
+                      textDecoration: "none",
+                      textDecorationLine: "none",
+                      fontWeight: "700",
+                    }
+                  : {
+                      color: "#808080",
+                      textDecoration: "none",
+                      textDecorationLine: "none",
+                      fontWeight: "500",
+                    }
+              }
             >
               Dashboard
             </NavLink>
           </span>
           <span className="icon-nav">
-            <a className="nav-dash-link" href="/dashboard/investments">
+            <NavLink
+              to="/dashboard/investments"
+              style={
+                thisRoute === "/dashboard/investments"
+                  ? {
+                      color: "#0263aa",
+                      textDecoration: "none",
+                      textDecorationLine: "none",
+                      fontWeight: "700",
+                    }
+                  : {
+                      color: "#808080",
+                      textDecoration: "none",
+                      textDecorationLine: "none",
+                      fontWeight: "500",
+                    }
+              }
+            >
               Investment
-            </a>
+            </NavLink>
           </span>
           <span className="icon-nav">
-            <a className="nav-dash-link" href="">
+            <NavLink
+              to="/dashboard/profile"
+              style={
+                thisRoute === "/dashboard/profile"
+                  ? {
+                      color: "#0263aa",
+                      textDecoration: "none",
+                      textDecorationLine: "none",
+                      fontWeight: "700",
+                    }
+                  : {
+                      color: "#808080",
+                      textDecoration: "none",
+                      textDecorationLine: "none",
+                      fontWeight: "500",
+                    }
+              }
+            >
               Profile
-            </a>
+            </NavLink>
           </span>
           <span className="icon-nav">
-            <a className="nav-dash-link" href="">
+            <NavLink
+              to="/dashboard/support"
+              style={
+                thisRoute === "/dashboard/support"
+                  ? {
+                      color: "#0263aa",
+                      textDecoration: "none",
+                      textDecorationLine: "none",
+                      fontWeight: "700",
+                    }
+                  : {
+                      color: "#808080",
+                      textDecoration: "none",
+                      textDecorationLine: "none",
+                      fontWeight: "500",
+                    }
+              }
+            >
               Support
-            </a>
+            </NavLink>
           </span>
           <span className="icon-nav">
             <a className="nav-dash-link" href="" onClick={() => logout()}>

@@ -1,7 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { useLocation } from "react-router";
 
 const AdminNav = (props) => {
+  const thisRoute = useLocation().pathname;
   return (
     <>
       <div className="nav-wrapper">
@@ -26,27 +28,90 @@ const AdminNav = (props) => {
           <span className="icon-nav">
             <NavLink
               to="/dashboard"
-              className={(isActive) =>
-                "nav-link" + (!isActive ? " unselected" : "")
+              style={
+                thisRoute === "/dashboard"
+                  ? {
+                      color: "#0263aa",
+                      textDecoration: "none",
+                      textDecorationLine: "none",
+                      fontWeight: "700",
+                    }
+                  : {
+                      color: "#808080",
+                      textDecoration: "none",
+                      textDecorationLine: "none",
+                      fontWeight: "500",
+                    }
               }
             >
               Overview
             </NavLink>
           </span>
           <span className="icon-nav">
-            <a className="nav-dash-link" href="/investors">
+            <NavLink
+              to="/investors"
+              style={
+                thisRoute === "/investors"
+                  ? {
+                      color: "#0263aa",
+                      textDecoration: "none",
+                      textDecorationLine: "none",
+                      fontWeight: "700",
+                    }
+                  : {
+                      color: "#808080",
+                      textDecoration: "none",
+                      textDecorationLine: "none",
+                      fontWeight: "500",
+                    }
+              }
+            >
               Investments
-            </a>
+            </NavLink>
           </span>
           <span className="icon-nav">
-            <a className="nav-dash-link" href="/users">
+            <NavLink
+              to="/users"
+              style={
+                thisRoute === "/users"
+                  ? {
+                      color: "#0263aa",
+                      textDecoration: "none",
+                      textDecorationLine: "none",
+                      fontWeight: "700",
+                    }
+                  : {
+                      color: "#808080",
+                      textDecoration: "none",
+                      textDecorationLine: "none",
+                      fontWeight: "500",
+                    }
+              }
+            >
               Users
-            </a>
+            </NavLink>
           </span>
           <span className="icon-nav">
-            <a className="nav-dash-link" href="">
+            <NavLink
+              to="/support"
+              style={
+                thisRoute === "/support"
+                  ? {
+                      color: "#0263aa",
+                      textDecoration: "none",
+                      textDecorationLine: "none",
+                      fontWeight: "700",
+                    }
+                  : {
+                      color: "#808080",
+                      textDecoration: "none",
+                      textDecorationLine: "none",
+                      fontWeight: "500",
+                    }
+              }
+            >
               Support
-            </a>
+            </NavLink>
           </span>
         </div>
       </div>

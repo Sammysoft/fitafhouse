@@ -1,5 +1,5 @@
 const api = {
-  url: "https://fitafhouse-api.herokuapp.com",
+  url: "http://localhost:8089",
 };
 
 export default api;

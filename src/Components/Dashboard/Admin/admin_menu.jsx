@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Swal from "sweetalert2";
-import { useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 import api from "../../../config";
 const url = api.url;
 
@@ -17,6 +17,7 @@ const AdminMenu = (props) => {
   };
   const logout = () => {
     localStorage.removeItem("token");
+    localStorage.removeItem("loginCounter");
     Navigate("/auth");
     Swal.fire({
       title: "Logged Out",
@@ -33,6 +34,8 @@ const AdminMenu = (props) => {
       setUsers(response.numberOfUsers);
     });
   }, []);
+
+
   return (
     <>
       <div className="menu-wrapper">

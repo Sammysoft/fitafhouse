@@ -47,7 +47,7 @@
     align-items: center;
     justify-content: center;
     background-color: #f3f3f3;
-    padding: 5px 20px 5px 20px;
+    padding: 10px 0px 0px 0px;
     width: 100vw;
   }
   .form-wrap {
@@ -363,6 +363,7 @@ input {
 .sign-in-wrapper {
   height: 90vh;
 }
+
 .sign-up-content {
   position: absolute;
   font-family: "ubuntu";
@@ -370,9 +371,17 @@ input {
   align-items: center;
   text-align: center;
   background-color: #f3f3f3;
-  padding: 5px 20px 5px 20px;
+  padding: 10px 0px 0px 0px;
   width: 100vw;
 }
+.content{
+  position: absolute;
+  bottom: 0;
+  order: 2;
+  top: 100vh;
+  width: 100vw
+}
+
 .sign-in-content {
   position: absolute;
   font-family: "ubuntu";
@@ -382,7 +391,7 @@ input {
   align-items: center;
   justify-content: center;
   background-color: #f3f3f3;
-  padding: 5px 20px 5px 20px;
+  padding: 10px 0px 0px 0px;
   width: 100vw;
 }
 
@@ -969,6 +978,7 @@ textarea {
   min-height: 40vh;
   height: fit-content;
 }
+.sign-in-content
 .invest-card-head {
   color: grey;
   font-weight: 700;

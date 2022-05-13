@@ -57,14 +57,19 @@ const Dashboard = (props) => {
             text: "Please Login",
           });
         } else {
-          console.log(response.data);
-          Swal.fire({
-            position: "top-end",
-            icon: "success",
-            title: `Logged In Succesfully ${response.data.username}`,
-            showConfirmButton: false,
-            timer: 1500,
-          });
+          if (!localStorage.getItem("loginCounter")) {
+            localStorage.setItem("loginCounter", 0);
+            console.log(response.data);
+            Swal.fire({
+              position: "top-end",
+              icon: "success",
+              title: `Logged In Successfully ${response.data.username}`,
+              showConfirmButton: false,
+              timer: 1500,
+            });
+          } else {
+            return null
+          }
         }
       })
       .catch((error) => {

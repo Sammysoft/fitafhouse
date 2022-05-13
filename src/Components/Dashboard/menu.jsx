@@ -12,6 +12,7 @@ const Menu = (props) => {
   const navigate = useNavigate();
   const logout = () => {
     localStorage.removeItem("token");
+    localStorage.removeItem("loginCounter")
     navigate("/auth");
     Swal.fire({
       icon: "info",
@@ -62,7 +63,7 @@ const Menu = (props) => {
             <br />
             No investments yet!
             <br />
-            Make an investment with us and get good offer! <br />
+            Step into our world of assured financing <br />
             <a
               href="/dashboard/investments"
               style={{
