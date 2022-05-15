@@ -5,8 +5,6 @@ import api from "../config";
 let url = api.url;
 
 const ContactForm = ({ id, username, email }) => {
-  // const [yourusername, setUsername] = useState(username);
-  // const [youremail, setEmail] = useState(email);
   const [message, setMessage] = useState("");
 
   const _sendMessage = (e) => {

@@ -12,6 +12,7 @@ import InvestmentPage from "./Pages/InvestmentPage";
 import Users from "./Components/Dashboard/Admin/users";
 import Investors from "./Components/Dashboard/Admin/investors";
 import ProfilePage from "./Pages/ProfilePage";
+import AdminSupport from './Components/Dashboard/Admin/support'
 // import Developing from "./Pages/Developing";
 
 import AOS from "aos";
@@ -31,7 +32,8 @@ const App = () => {
         <Route path="/onboarding" element={<Onboarding />} />
         <Route path="/dashboard/investments" element={<InvestmentPage />} />
         <Route path="/dashboard/profile" element={<ProfilePage />} />
-        <Route path="/dashboard/support" element={<SupportPage />}/>
+        <Route path="/dashboard/support" element={<SupportPage />} />
+        <Route path="/support" element={<AdminSupport />}/>
         <Route path="/auth" element={<SignInPage />} />
         <Route path="/users" element={<Users />} />
         <Route path="/investors" element={<Investors />} />
