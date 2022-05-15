@@ -12,7 +12,7 @@ const Menu = (props) => {
   const navigate = useNavigate();
   const logout = () => {
     localStorage.removeItem("token");
-    localStorage.removeItem("loginCounter")
+    localStorage.removeItem("loginCounter");
     navigate("/auth");
     Swal.fire({
       icon: "info",
@@ -217,7 +217,6 @@ const Menu = (props) => {
                           style={{
                             color: "#0263aa",
                             fontWeight: "800",
-                            // textTransform: "lowercase",
                             textAlign: "center",
                           }}
                         >

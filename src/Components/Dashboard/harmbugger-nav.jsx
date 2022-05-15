@@ -63,7 +63,7 @@ const HarmbuggerNav = () => {
                 <li className="nav-item">
                   <a
                     className="nav-link me-lg-3"
-                    href="/profile"
+                    href="/dashboard/profile"
                     style={{ padding: "20px", fontFamily: "ubuntu" }}
                   >
                     Profile
@@ -72,7 +72,7 @@ const HarmbuggerNav = () => {
                 <li className="nav-item">
                   <a
                     className="nav-link me-lg-3"
-                    href="/support"
+                    href="/dashboard/support"
                     style={{ padding: "20px", fontFamily: "ubuntu" }}
                   >
                     Support

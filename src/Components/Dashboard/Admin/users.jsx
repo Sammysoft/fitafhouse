@@ -15,9 +15,9 @@ const Users = () => {
     localStorage.removeItem("token");
     Navigate("/auth");
     Swal.fire({
-      title: "Loged Out",
+      title: "Logged Out",
       icon: "info",
-      text: "Thank You for using FITAFHouse",
+      text: "Thank You for using FITAFHOUSE",
     });
   };
 

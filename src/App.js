@@ -11,10 +11,12 @@ import PasswordAuthPage from "./Pages/PasswordAuthPage";
 import InvestmentPage from "./Pages/InvestmentPage";
 import Users from "./Components/Dashboard/Admin/users";
 import Investors from "./Components/Dashboard/Admin/investors";
+import ProfilePage from "./Pages/ProfilePage";
 // import Developing from "./Pages/Developing";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import SupportPage from "./Pages/SupportPage";
 
 const App = () => {
   AOS.init();
@@ -28,6 +30,8 @@ const App = () => {
         <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="/onboarding" element={<Onboarding />} />
         <Route path="/dashboard/investments" element={<InvestmentPage />} />
+        <Route path="/dashboard/profile" element={<ProfilePage />} />
+        <Route path="/dashboard/support" element={<SupportPage />}/>
         <Route path="/auth" element={<SignInPage />} />
         <Route path="/users" element={<Users />} />
         <Route path="/investors" element={<Investors />} />
