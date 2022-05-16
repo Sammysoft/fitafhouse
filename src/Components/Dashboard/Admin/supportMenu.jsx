@@ -59,12 +59,12 @@ const SupportMenu = () => {
                         gridTemplateColumns: "auto auto",
                       }}
                     >
-                      <div>
+                      <div style={{textAlign: "left"}}>
                         @{value.username}
                         <br />
                         {value.email}
                       </div>
-                      <div>{value.message}</div>
+                      <div style={{textAlign: "left"}}>{value.message}</div>
                     </div>
                   </>
                 );
