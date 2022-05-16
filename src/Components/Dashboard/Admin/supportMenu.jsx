@@ -57,14 +57,17 @@ const SupportMenu = () => {
                       style={{
                         display: "grid",
                         gridTemplateColumns: "auto auto",
+                        margin: "20px",
+                        padding: "5px",
+                        backgroundColor: "white",
                       }}
                     >
-                      <div style={{textAlign: "left"}}>
+                      <div style={{ textAlign: "left" }}>
                         @{value.username}
                         <br />
                         {value.email}
                       </div>
-                      <div style={{textAlign: "left"}}>{value.message}</div>
+                      <div style={{ textAlign: "left" }}>{value.message}</div>
                     </div>
                   </>
                 );
