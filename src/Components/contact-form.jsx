@@ -4,9 +4,10 @@ import Swal from "sweetalert2";
 import api from "../config";
 let url = api.url;
 
-const ContactForm = ({ id, username, email }) => {
+const ContactForm = () => {
   const [message, setMessage] = useState("");
-
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState("")
   const _sendMessage = (e) => {
     const payload = {
       username,
@@ -40,7 +41,7 @@ const ContactForm = ({ id, username, email }) => {
             id="input"
             type="text"
             name="fullname"
-            value={`@${username}`}
+            value={username}
             placeholder="FullName"
             onChange={(e) => setUsername(e.target.value)}
           />
