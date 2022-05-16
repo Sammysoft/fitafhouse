@@ -57,6 +57,7 @@ const SupportMenu = () => {
                       style={{
                         display: "grid",
                         gridTemplateColumns: "auto auto",
+                        gap: "10px",
                         margin: "20px",
                         padding: "5px",
                         backgroundColor: "white",
