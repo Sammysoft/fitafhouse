@@ -16,6 +16,12 @@ const ContactForm = () => {
         text: "Please Enter your email and a username",
         title: "You should be Identified!",
       });
+    } else if (message == null) {
+      Swal.fire({
+        icon: "info",
+        text: "There is nothing in the body of your message",
+        title: "Please type something!",
+      });
     } else if (username != null && email != null && message != null) {
       const payload = {
         username,
