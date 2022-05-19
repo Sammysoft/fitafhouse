@@ -6,32 +6,41 @@ let url = api.url;
 
 const ContactForm = () => {
   const [message, setMessage] = useState("");
-  const [username, setUsername] = useState('');
-  const [email, setEmail] = useState("")
-  const _sendMessage = (e) => {
-    const payload = {
-      username,
-      email,
-      message
-    };
+  const [username, setUsername] = useState(null);
+  const [email, setEmail] = useState(null);
 
-    axios
-      .post(`${url}/api/support/`, payload)
-      .then((res) => {
-        console.log(res.data)
-        Swal.fire({
-          icon: "success",
-          text: res.data.msg,
-          title: "Message Sent!",
-        });
-      })
-      .catch((error) => {
-        Swal.fire({
-          icon: "error",
-          title: "Something Went Wrong!",
-          text: error.response.data.msg,
-        });
+  const _sendMessage = (e) => {
+    if (username == null || email == null || message == null) {
+      Swal.fire({
+        icon: "info",
+        text: "Please Enter your email and a username",
+        title: "You should be Identified!",
       });
+    } else if (username != null && email != null && message != null) {
+      const payload = {
+        username,
+        email,
+        message,
+      };
+
+      axios
+        .post(`${url}/api/support/`, payload)
+        .then((res) => {
+          console.log(res.data);
+          Swal.fire({
+            icon: "success",
+            text: res.data.msg,
+            title: "Message Sent!",
+          });
+        })
+        .catch((error) => {
+          Swal.fire({
+            icon: "error",
+            title: "Something Went Wrong!",
+            text: error.response.data.msg,
+          });
+        });
+    }
   };
   return (
     <>

@@ -55,20 +55,47 @@ const SupportMenu = () => {
                   <>
                     <div
                       style={{
-                        display: "grid",
-                        gridTemplateColumns: "auto auto",
-                        gap: "10px",
                         margin: "20px",
                         padding: "5px",
                         backgroundColor: "white",
                       }}
                     >
-                      <div style={{ textAlign: "left" }}>
-                        @{value.username}
+                      <div
+                        style={{
+                          textAlign: "left",
+                          width: "100%",
+                          height: "fit-content",
+                        }}
+                      >
+                        <span style={{ fontWeight: "600", fontSize: "1.5rem" }}>
+                          {" "}
+                          @{value.username}
+                        </span>
                         <br />
                         {value.email}
                       </div>
-                      <div style={{ textAlign: "left" }}>{value.message}</div>
+                      <div
+                        style={{
+                          textAlign: "left",
+                          height: "fit-content",
+                          maxHeight: "fit-content",
+                          padding: "10px",
+                        }}
+                      >
+                        <blockquote
+                          style={{
+                            backgroundColor: "#f2f2f2",
+                            borderRadius: "5px",
+                            padding: "10px",
+                            fontWeight: "200",
+                            borderLeft: "2px solid black"
+                          }}
+                        >
+                          <q>
+                            <i>{value.message}</i>
+                          </q>
+                        </blockquote>
+                      </div>
                     </div>
                   </>
                 );

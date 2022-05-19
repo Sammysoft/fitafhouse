@@ -19,7 +19,8 @@ const Support = ({ username, email }) => {
   };
 
   const [message, setMessage] = useState("");
- 
+
+
   const _sendMessage = (e) => {
     const payload = {
       username,
