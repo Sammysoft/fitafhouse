@@ -46,20 +46,35 @@ const InvestmentMenu = () => {
       setUserName(response.data.fullname);
       setLoading(false);
       const status = searchParams.get("status");
+      const val = {
+        amount: searchParams.get("amount"),
+        email: searchParams.get("email"),
+        phonenumber: searchParams.get("phonenumber"),
+        investmentDuration: searchParams.get('duration'),
+        rate: searchParams.get("rate"),
+        username: response.data.fullname
+      }
       console.log(status);
       if (status === "successful") {
         setLoading(false);
-        axios.post(`${url}/api/invest/${user}`, val).then(() => {
+        axios.post(`${url}/api/invest/${response.data._id}`, val).then(() => {
           Swal.fire({
-            title: `${response.data.investment[0].plan} plan`,
-            text: `You have made a placement for ${response.data.investment[0].plan}
-                                                    investment of N${response.data.investment[0].amount} for
-                                                     ${response.data.investment[0].investmentDuration} Months you will recieve
-                                                     ${response.data.investment[0].rate} at the end of the period, Thank You for using FITAFHOUSE!`,
+            title: `${val.plan} plan`,
+            text: `You have made a placement for ${val.plan}
+                                                    investment of N${val.amount} for
+                                                     ${val.investmentDuration} Months you will recieve
+                                                     ${val.rate} at the end of the period, Thank You for using FITAFHOUSE!`,
             icon: "success",
-          });
+          })
+          }).catch(error =>{
+            console.log(error)
+            Swal.fire({
+              icon: "error",
+              title:"Oops!",
+              text: error.response.data.msg
+            })
         });
-      } else if (status === "cancelled") {
+    } else if (status === "cancelled") {
         Swal.fire({
           icon: "warning",
           title: "Cancelled",
@@ -80,23 +95,11 @@ const InvestmentMenu = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         setLoading(true);
-
-        // axios
-        //   .post(`${url}/api/payments`, val)
-        //   .then((res) => {
-            // const raveLink = res.data.data.data.link;
-            // window.location.replace(raveLink).then(() => {
-              axios.post(`${url}/api/invest/${user}`, val).then(() => {
-                Swal.fire({
-                  title: `${response.data.investment[0].plan} plan`,
-                  text: `You have made a placement for ${response.data.investment[0].plan}
-                                                          investment of N${response.data.investment[0].amount} for
-                                                           ${response.data.investment[0].investmentDuration} Months you will recieve
-                                                           ${response.data.investment[0].rate} at the end of the period, Thank You for using FITAFHOUSE!`,
-                  icon: "success",
-                });
-              // });
-            // });
+        axios
+          .post(`${url}/api/payments`, val)
+          .then((res) => {
+            const raveLink = res.data.data.data.link;
+            window.location.replace(raveLink)
           })
           .catch((error) => {
             setLoading(false);
