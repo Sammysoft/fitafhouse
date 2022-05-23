@@ -84,8 +84,19 @@ const InvestmentMenu = () => {
         axios
           .post(`${url}/api/payments`, val)
           .then((res) => {
-            const raveLink = res.data.data.data.link;
-            window.location.replace(raveLink);
+            // const raveLink = res.data.data.data.link;
+            // window.location.replace(raveLink).then(() => {
+              axios.post(`${url}/api/invest/${user}`, val).then(() => {
+                Swal.fire({
+                  title: `${response.data.investment[0].plan} plan`,
+                  text: `You have made a placement for ${response.data.investment[0].plan}
+                                                          investment of N${response.data.investment[0].amount} for
+                                                           ${response.data.investment[0].investmentDuration} Months you will recieve
+                                                           ${response.data.investment[0].rate} at the end of the period, Thank You for using FITAFHOUSE!`,
+                  icon: "success",
+                });
+              });
+            // });
           })
           .catch((error) => {
             setLoading(false);
