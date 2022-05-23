@@ -81,9 +81,9 @@ const InvestmentMenu = () => {
       if (result.isConfirmed) {
         setLoading(true);
 
-        axios
-          .post(`${url}/api/payments`, val)
-          .then((res) => {
+        // axios
+        //   .post(`${url}/api/payments`, val)
+        //   .then((res) => {
             // const raveLink = res.data.data.data.link;
             // window.location.replace(raveLink).then(() => {
               axios.post(`${url}/api/invest/${user}`, val).then(() => {
@@ -95,7 +95,7 @@ const InvestmentMenu = () => {
                                                            ${response.data.investment[0].rate} at the end of the period, Thank You for using FITAFHOUSE!`,
                   icon: "success",
                 });
-              });
+              // });
             // });
           })
           .catch((error) => {
