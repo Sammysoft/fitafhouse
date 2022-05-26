@@ -14,16 +14,16 @@ const Footer = () => {
               className="col-lg-4 my-3 my-lg-0"
               style={{ flex: "1", padding: "20px", textAlign: "center" }}
             >
-              <a className="btn btn-dark btn-social mx-2" href="#!">
+              <a className="btn btn-dark btn-social mx-2" href="https://twitter.com/FitafhouseL" target="_blank">
                 <i class="bi bi-twitter"></i>
               </a>
-              <a className="btn btn-dark btn-social mx-2" href="#!">
+              <a className="btn btn-dark btn-social mx-2" href="https://instagram.com/fitafhouse_limited/" target="_blank">
                 <i class="bi bi-instagram"></i>
               </a>
-              <a className="btn btn-dark btn-social mx-2" href="#!">
+              <a className="btn btn-dark btn-social mx-2" href="https://web.facebook.com/fitafhouse1/?ref=page_internal" target="_blank">
                 <i class="bi bi-facebook"></i>
               </a>
-              <a className="btn btn-dark btn-social mx-2" href="#!">
+              <a className="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/fitafhouse-limited-1a9135240/" target="_blank">
                 <i class="bi bi-linkedin"></i>
               </a>
             </div>
