@@ -1,6 +1,18 @@
-@media (max-width: 850px) {
+@media (max-width: 1080px) {
+  .image-feature{
+    width: 200% !important
+  }
   .harmbugger {
     display: block !important;
+  }
+  .section1{
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .section1-item{
+    width: 50% !important
   }
   .about-wrapper .sign-in-img {
     width: 100vw;
@@ -978,7 +990,7 @@ textarea {
   min-height: 40vh;
   height: fit-content;
 }
-.sign-in-content
+
 .invest-card-head {
   color: grey;
   font-weight: 700;
@@ -994,4 +1006,16 @@ textarea {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.section1{
+  display: grid;
+ grid-template-columns: 20% 20% 20% 20%;
+  justify-content: space-around;
+  align-items: center;
+  height: "auto";
+  width: "100vw" !important
+}
+.section1-item{
+  width: "fit-content"
 }

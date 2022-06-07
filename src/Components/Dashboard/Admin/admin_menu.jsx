@@ -98,7 +98,7 @@ const AdminMenu = (props) => {
                     fontSize: "2.5rem",
                   }}
                 >
-                  {investors + " Invests"}
+                  {investors + " Investments"}
                 </span>
               </div>
               <div className="duration-investment"></div>

@@ -16,7 +16,8 @@ const InvestmentMenu = () => {
   const [amount, setAmount] = useState("");
   const [phonenumber, setUserPhoneNumber] = useState("");
   const [email, setUserEmail] = useState("");
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
+  const [investment, setInvestments] = useState([])
   const Navigate = useNavigate();
   const override = css`
     display: block;
@@ -29,6 +30,8 @@ const InvestmentMenu = () => {
     height: 100%;
     position: absolute;
   `;
+
+
 
   const token = localStorage.getItem("token");
 
@@ -51,11 +54,13 @@ const InvestmentMenu = () => {
         email: searchParams.get("email"),
         phonenumber: searchParams.get("phonenumber"),
         investmentDuration: searchParams.get('duration'),
+        plan: searchParams.get("plan"),
         rate: searchParams.get("rate"),
-        username: response.data.fullname
+        username: response.data.fullname,
+        investorID: response.data._id
       }
       console.log(status);
-      if (status === "successful") {
+      if (status ===  "cancelled") {
         setLoading(false);
         axios.post(`${url}/api/invest/${response.data._id}`, val).then(() => {
           Swal.fire({
@@ -74,7 +79,7 @@ const InvestmentMenu = () => {
               text: error.response.data.msg
             })
         });
-    } else if (status === "cancelled") {
+    } else if (status ==="successful") {
         Swal.fire({
           icon: "warning",
           title: "Cancelled",
@@ -83,6 +88,16 @@ const InvestmentMenu = () => {
       }
     });
   }, []);
+
+  useEffect(()=>{
+    fetch(`${url}/api/investments/${user}`).then(async (res) => {
+      const response = await res.json()
+      console.log(response.result);
+      setInvestments(response.result.filter(el => el.investments.isActive == false));
+    });
+  }, [user])
+
+
 
   const initiateInvestment = (val) => {
     console.log(val);
@@ -121,7 +136,7 @@ const InvestmentMenu = () => {
 
   return (
     <>
-      {loading ? (
+      {loading == true ? (
         <PulseLoader
           size={30}
           margin={2}
@@ -131,10 +146,8 @@ const InvestmentMenu = () => {
         />
       ) : (
         <>
-          {(day <= 10 && month == 11) ||
-          month == 2 ||
-          month == 4 ||
-          month == 9 ? (
+          {investment.length == 0 ? (
+
             <div className="menu-wrapper">
               <div className="investment">
                 <div className="investment-info1">
@@ -206,11 +219,11 @@ const InvestmentMenu = () => {
                 </div>
               </div>
             </div>
-          ) : (
+) : (
             <div className="menu-wrapper">
               <div className="investment-wrapper">
                 <div className="inner-menu">
-                  You can not make investments now, wait for next window
+                  Sorry, You have a pending approval.<br/> Wait for your investments to be approved
                   <br />
                   <Link
                     style={{
@@ -218,9 +231,9 @@ const InvestmentMenu = () => {
                       textDecorationLine: "none",
                       color: "white",
                     }}
-                    to="/onboarding"
+                    to="/dashboard"
                   >
-                    <span className="btn-investment"> Check Windows!</span>
+                    <span className="btn-investment">Investment Status!</span>
                   </Link>
                 </div>
               </div>

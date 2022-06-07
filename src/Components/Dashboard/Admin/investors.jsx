@@ -11,7 +11,7 @@ import api from "../../../config";
 const url = api.url;
 
 const Investors = () => {
-  const [value, setValue] = useState([]);
+  const [investors, setInvestors] = useState([]);
   const [loading, setLoading] = useState(false);
   const [role, setRole] = useState("");
   const Navigate = useNavigate();
@@ -130,7 +130,7 @@ const Investors = () => {
     fetch(`${url}/api/active-investors`).then(async (res) => {
       let response = await res.json();
       console.log(response.investors);
-      setValue(response.investors);
+      setInvestors(response.investors);
       setLoading(false);
     });
   }, []);
@@ -142,7 +142,7 @@ const Investors = () => {
         </>
       ) : (
         <>
-          {value[0] == null ? (
+          {investors.length == 0 ? (
             <>
               <div className="dashboard-wrapper">
                 <AdminHarmbugger />
@@ -186,82 +186,159 @@ const Investors = () => {
                         />
                       ) : (
                         <>
-                          {value.map((info, id) => {
+                          {investors.map((info, id) => {
                             return (
                               <>
                                 <div className="wrap-invest">
                                   <div className="invest-card">
                                     <div className="invest-card-head">
                                       <span style={{ width: "40%" }}>
-                                        @{info.username}
+                                        @{info.investor.username}
                                       </span>
                                       <span
                                         style={{
                                           width: "20%",
                                           cursor: "pointer",
+                                          float: "right",
                                         }}
                                       >
                                         <i
                                           className="bi bi-chat-left-text-fill"
                                           onClick={() => {
-                                            sendNotification(info._id);
+                                            sendNotification(info.investor.id);
                                           }}
                                         ></i>
                                       </span>
                                     </div>
                                     <div>
-                                      <span>{info.fullname}</span>
+                                      <span>{info.investor.fullname}</span>
                                       <br />
 
-                                      <span>{info.phonenumber}</span>
+                                      <span>{info.investor.phonenumber}</span>
+                                      <br />
+
+                                      <span>{info.investor.email}</span>
                                       <br />
                                     </div>
-                                    {info.approved != true ? (
-                                      <div>
-                                        <span
-                                          style={{
-                                            color: "grey",
-                                            fontWeight: "700",
-                                            fontSize: "1.5rem",
-                                          }}
-                                        ></span>
-                                      </div>
+                                    {info.investments.isActive != true ? (
+                                      <>
+                                        <div>
+                                          <span
+                                            style={{
+                                              color: "grey",
+                                              fontWeight: "700",
+                                              fontSize: "1rem",
+                                            }}
+                                          ></span>
+                                        </div>
+
+                                        <div>
+                                          <span
+                                            style={{
+                                              color: "#0263aa",
+                                              fontWeight: "700",
+                                              fontSize: "1rem",
+                                            }}
+                                          >
+                                            {info.investments.created_at}
+                                          </span>
+                                        </div>
+                                        <div>
+                                          <span
+                                            style={{
+                                              color: "grey",
+                                              fontWeight: "700",
+                                              fontSize: "2rem",
+                                            }}
+                                          >
+                                            {"N" +
+                                              info.investments.amount.toLocaleString(
+                                                "en-US",
+                                                {
+                                                  minimumFractionDigits: 0,
+                                                }
+                                              )}
+                                          </span>
+                                        </div>
+                                      </>
                                     ) : (
-                                      <div>
-                                        <span
-                                          style={{
-                                            color: "grey",
-                                            fontWeight: "700",
-                                            fontSize: "2rem",
-                                          }}
-                                        >
-                                          {daysToROI(
-                                            info.investment[0].dueDate
-                                          ) + " Days"}
-                                        </span>
-                                      </div>
+                                      <>
+                                                  <div>
+                                          <span
+                                            style={{
+                                              color: "#0263aa",
+                                              fontWeight: "700",
+                                              fontSize: "1rem",
+                                            }}
+                                          >
+                                            {info.investments.created_at}
+                                          </span>
+                                        </div>
+                                        <div>
+                                          <span
+                                            style={{
+                                              color: "grey",
+                                              fontWeight: "700",
+                                              fontSize: "2rem",
+                                            }}
+                                          >
+                                            {"N" +
+                                              info.investments.amount.toLocaleString(
+                                                "en-US",
+                                                {
+                                                  minimumFractionDigits: 0,
+                                                }
+                                              )}
+                                          </span>
+                                        </div>
+                                        <div>
+                                          <span
+                                            style={{
+                                              color: "#0263aa",
+                                              fontWeight: "700",
+                                              fontSize: "1rem",
+                                            }}
+                                          >
+                                            {info.investments.dueDate}
+                                          </span>
+                                        </div>
+                                        <div>
+                                          <span
+                                            style={{
+                                              color: "grey",
+                                              fontWeight: "700",
+                                              fontSize: "2rem",
+                                            }}
+                                          >
+                                            N
+                                            {new Number(
+                                              (info.investments.amount * 10) /
+                                                100 +
+                                                Number(info.investments.amount)
+                                            ).toLocaleString("en-US", {
+                                              minimumFractionDigits: 0,
+                                            })}
+                                          </span>
+                                        </div>
+                                        <div>
+                                          <span
+                                            style={{
+                                              color: "grey",
+                                              fontWeight: "700",
+                                              fontSize: "2rem",
+                                            }}
+                                          >
+                                            {daysToROI(
+                                              info.investments.dueDate
+                                            ) + " Days"}
+                                          </span>
+                                        </div>
+                                      </>
                                     )}
-                                    <div>
-                                      <span
-                                        style={{
-                                          color: "grey",
-                                          fontWeight: "700",
-                                          fontSize: "1.5rem",
-                                        }}
-                                      >
-                                        N
-                                        {new Number(
-                                          (info.investment[0].amount * 10) /
-                                            100 +
-                                            Number(info.investment[0].amount)
-                                        ).toLocaleString("en-US", {
-                                          minimumFractionDigits: 0,
-                                        })}
-                                      </span>
-                                    </div>
+
                                     <div className="invest-card-base">
                                       <span style={{ width: "70%" }}>
-                                        {info.approved != true ? (
+                                        {info.investments.isActive != true ? (
                                           <span
                                             style={{
                                               cursor: "pointer",

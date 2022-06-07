@@ -63,7 +63,7 @@
   --bs-body-color: #212529;
   --bs-body-bg: #f3f3f3;
 }
-
+.row
 *,
 *::before,
 *::after {

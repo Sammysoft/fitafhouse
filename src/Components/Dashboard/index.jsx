@@ -15,8 +15,6 @@ const Dashboard = (props) => {
   const [fullname, setFullname] = useState("");
   const [role, setRole] = useState("");
   const [id, setId] = useState("");
-  const [approved, setApproved] = useState(Boolean);
-  const [investment, setInvestment] = useState([]);
   const [loading, setLoading] = useState(false);
   let token = localStorage.getItem("token");
   let navigate = useNavigate();
@@ -45,9 +43,6 @@ const Dashboard = (props) => {
         setFullname(response.data.fullname);
         setId(response.data._id);
         setRole(response.data.role);
-        setInvestment(response.data.investment);
-        setApproved(response.data.approved);
-        console.log(investment);
         setLoading(false);
         if (!response.data) {
           navigate("/auth");
@@ -115,8 +110,6 @@ const Dashboard = (props) => {
               <Menu
                 name={username}
                 fullname={fullname}
-                investment={investment}
-                approved={approved}
                 id={id}
               />
             </div>

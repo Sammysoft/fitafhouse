@@ -18,6 +18,7 @@ import AdminSupport from './Components/Dashboard/Admin/support'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import SupportPage from "./Pages/SupportPage";
+import ResetPassword from "./Pages/ResetPasswordPage";
 
 const App = () => {
   AOS.init();
@@ -38,6 +39,7 @@ const App = () => {
         <Route path="/users" element={<Users />} />
         <Route path="/investors" element={<Investors />} />
         <Route path="/forgot-password" element={<PasswordAuthPage />} />
+        <Route path="/password-reset/*" element={<ResetPassword />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </>

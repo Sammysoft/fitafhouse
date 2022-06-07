@@ -9,24 +9,6 @@ const url = api.url;
 const SignUpForm = ({ load }) => {
   const plans = ` <div style={{color: "grey", textAlign:"left"}}>
     <p>
-    <b>Investment windows:</b>
-    <ul>
-        <li>
-            <b>Winter</b> :<br/>Dec 1 - Feb 28/29
-        </li><br/>
-        <li>
-            <b>Spring</b> :<br/>March 1 - May 31
-        </li><br/>
-        <li>
-            <b>Summer</b> :<br/>June 1 - Aug 31
-        </li><br/>
-        <li>
-            <b>Autumn</b> :<br/>Sept 1 - Nov 30
-        </li>
-    </ul><br/><br/>
-    </p>
-    <p>
-        Investment portal is opened at the beginning of new season for one month and closed after till the next season.<br/>
         ROI is in two folds, One is fixed and the other is varied. The fixed is 10% per annum while the varied is according to
         business performance during the year under review.<br/>
         In summary your investment ripes after 12 months.
@@ -54,37 +36,64 @@ const SignUpForm = ({ load }) => {
     });
   }, []);
 
-  const submit = (e) => {
-    e.preventDefault();
 
-    setLoading(true);
-    axios
-      .post(`${url}/api/onboarding`, {
-        fullname,
-        email,
-        username,
-        phonenumber,
-        password,
-        accountnumber,
-        bank,
-      })
-      .then((err) => {
-        navigate("/auth");
-        setLoading(false);
+
+
+
+
+
+  const submit = (e) => {
+    const checkForNumber =(password)=>{
+      return /\d/.test(password)
+    }
+
+      if(password.length < 6){
         Swal.fire({
-          title: "Success",
-          icon: "success",
-          text: "Account Created Succesfully, Login",
-        });
-      })
-      .catch((error) => {
-        setLoading(false);
-        Swal.fire({
-          title: "Oops!",
-          icon: "error",
-          text: error.response.data.msg,
-        });
-      });
+          icon: "warning",
+          text: "Choose a password with more than 6 characters and at least a number",
+          title:"Password is too weak"
+        })
+      }else{
+        const passwordCheck = checkForNumber(password);
+        console.log(passwordCheck)
+        if(passwordCheck == true){
+          e.preventDefault();
+          setLoading(true);
+          axios
+            .post(`${url}/api/onboarding`, {
+              fullname,
+              email,
+              username,
+              phonenumber,
+              password,
+              accountnumber,
+              bank,
+            })
+            .then((err) => {
+              navigate("/auth");
+              setLoading(false);
+              Swal.fire({
+                title: "Success",
+                icon: "success",
+                text: "Account Created Succesfully, Login",
+              });
+            })
+            .catch((error) => {
+              setLoading(false);
+              Swal.fire({
+                title: "Oops!",
+                icon: "error",
+                text: error.response.data.msg,
+              });
+            });
+        }else{
+          Swal.fire({
+            icon: "warning",
+            text: "Password must contain at least a number",
+            title: "Password is weak!"
+          })
+        }
+      }
   };
 
   return (
