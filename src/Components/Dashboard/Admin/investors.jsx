@@ -263,7 +263,7 @@ const Investors = () => {
                                       </>
                                     ) : (
                                       <>
-                                                  <div>
+                                          <div>
                                           <span
                                             style={{
                                               color: "#0263aa",
@@ -271,7 +271,7 @@ const Investors = () => {
                                               fontSize: "1rem",
                                             }}
                                           >
-                                            {info.investments.created_at}
+                                            {info.investments.created_at} -  {info.investments.dueDate}
                                           </span>
                                         </div>
                                         <div>
@@ -302,7 +302,7 @@ const Investors = () => {
                                             {info.investments.dueDate}
                                           </span>
                                         </div>
-                                        <div>
+                                        {/* <div>
                                           <span
                                             style={{
                                               color: "grey",
@@ -319,7 +319,7 @@ const Investors = () => {
                                               minimumFractionDigits: 0,
                                             })}
                                           </span>
-                                        </div>
+                                        </div> */}
                                         <div>
                                           <span
                                             style={{
