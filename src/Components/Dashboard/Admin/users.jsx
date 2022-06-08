@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useEffect, useState } from "react";
 import AdminNav from "./adminnav";
 import Swal from "sweetalert2";
@@ -43,6 +45,7 @@ const Users = () => {
       {role == "Investor" ? (
         <Unauthorized />
       ) : (
+
         <div className="dashboard-wrapper">
           <AdminHarmbugger />
           <AdminNav />

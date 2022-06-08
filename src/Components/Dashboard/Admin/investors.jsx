@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useState, useEffect } from "react";
 import AdminNav from "./adminnav";
 import { css } from "@emotion/react";

@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router";
@@ -60,7 +62,7 @@ const InvestmentMenu = () => {
         investorID: response.data._id
       }
       console.log(status);
-      if (status ===  "cancelled") {
+      if (status ===  "successful") {
         setLoading(false);
         axios.post(`${url}/api/invest/${response.data._id}`, val).then(() => {
           Swal.fire({
@@ -79,7 +81,7 @@ const InvestmentMenu = () => {
               text: error.response.data.msg
             })
         });
-    } else if (status ==="successful") {
+    } else if (status ==="cancelled") {
         Swal.fire({
           icon: "warning",
           title: "Cancelled",

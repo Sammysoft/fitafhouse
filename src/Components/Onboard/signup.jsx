@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useEffect } from "react";
 import Navbar from "../navbar";
 import SignUpForm from "./signupform";

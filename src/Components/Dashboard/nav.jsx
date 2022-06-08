@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React from "react";
 import { useLocation, useNavigate } from "react-router";
 import Swal from "sweetalert2";

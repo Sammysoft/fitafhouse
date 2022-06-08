@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useEffect, useState } from "react";
 import { Form } from "semantic-ui-react";
 import { Link } from "react-router-dom";
@@ -5,7 +7,7 @@ import axios from "axios";
 import { css } from "@emotion/react";
 import Swal from "sweetalert2";
 import PulseLoader from "react-spinners/PulseLoader";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 import api from "../../config";
 const url = api.url;
 

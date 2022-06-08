@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState, useEffect } from "react";
 import Nav from "../Components/Dashboard/nav";
 import HarmbuggerNav from "../Components/Dashboard/harmbugger-nav";
