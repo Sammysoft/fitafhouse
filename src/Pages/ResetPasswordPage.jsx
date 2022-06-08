@@ -1,9 +1,9 @@
 /* eslint-disable */
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useLocation } from "react-router";
+import { useLocation } from "react-router-dom";
 import Swal from "sweetalert2";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 import api from "../config";
 let url = api.url;
 

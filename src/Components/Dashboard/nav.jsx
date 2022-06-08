@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import React from "react";
-import { useLocation, useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { NavLink } from "react-router-dom";
 

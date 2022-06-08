@@ -4,7 +4,7 @@ import Nav from "./nav";
 import { css } from "@emotion/react";
 import Swal from "sweetalert2";
 import PulseLoader from "react-spinners/PulseLoader";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 import AdminDashboard from "./Admin/admin";
 import HarmbuggerNav from "./harmbugger-nav";
 import api from "../../config";

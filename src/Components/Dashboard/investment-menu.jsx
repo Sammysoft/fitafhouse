@@ -2,7 +2,7 @@
 
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useNavigate, useLocation } from "react-router";
+import { useNavigate, useLocation } from "react-router-dom";
 import { css } from "@emotion/react";
 import Swal from "sweetalert2";
 import PulseLoader from "react-spinners/PulseLoader";
@@ -11,7 +11,7 @@ import { Link, useSearchParams } from "react-router-dom";
 const url = api.url;
 
 const InvestmentMenu = () => {
-  const location = useLocation;
+  const location = useLocation();
   const [searchParams] = useSearchParams();
   const [user, setUser] = useState("");
   const [username, setUserName] = useState("");
@@ -20,7 +20,7 @@ const InvestmentMenu = () => {
   const [email, setUserEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [investment, setInvestments] = useState([])
-  const Navigate = useNavigate();
+  // const Navigate = useNavigate();
   const override = css`
     display: block;
     z-index: 9999;

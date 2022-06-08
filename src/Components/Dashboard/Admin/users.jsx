@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import AdminNav from "./adminnav";
 import Swal from "sweetalert2";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 import AdminHarmbugger from "./admin-harmuggernav";
 import api from "../../../config";
 import Unauthorized from "../../unauthorized";

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Nav from "../Components/Dashboard/nav";
 import HarmbuggerNav from "../Components/Dashboard/harmbugger-nav";
 import Profile from "../Components/Dashboard/profile";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import api from '../config';
 let url = api.url

@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import api from "../../config";
 import Swal from "sweetalert2";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 let url = api.url;
 
 const Profile = ({

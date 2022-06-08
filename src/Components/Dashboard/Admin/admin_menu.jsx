@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Swal from "sweetalert2";
-import { useLocation, useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router-dom";
 import api from "../../../config";
 const url = api.url;
 

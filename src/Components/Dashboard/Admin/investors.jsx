@@ -6,7 +6,7 @@ import { css } from "@emotion/react";
 import Swal from "sweetalert2";
 import PulseLoader from "react-spinners/PulseLoader";
 import Unauthorized from "../../unauthorized";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 import AdminHarmbugger from "./admin-harmuggernav";
 import axios from "axios";
 import api from "../../../config";
