@@ -11,7 +11,6 @@ const Features = () => {
             <div className="col-sm-8 col-md-6">
               <div data-aos="fade-up" data-aos-duration="3000" className="">
                 <img
-                className="image-feature"
                   src="/images/info.jpg"
                   width="100%"
                   height="100%"

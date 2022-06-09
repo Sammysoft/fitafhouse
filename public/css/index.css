@@ -12,7 +12,7 @@
     align-items: center;
   }
   .section1-item{
-    width: 50% !important
+    width: 90% !important
   }
   .about-wrapper .sign-in-img {
     width: 100vw;
@@ -556,6 +556,7 @@ input {
   font-weight: 300;
   padding: 5% 10% 5% 10%;
 }
+
 .partner-wrapper {
   position: relative;
   height: 30vh;
