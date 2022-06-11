@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Homepage from "./Pages/Homepage";
@@ -13,7 +14,7 @@ import Users from "./Components/Dashboard/Admin/users";
 import Investors from "./Components/Dashboard/Admin/investors";
 import ProfilePage from "./Pages/ProfilePage";
 import AdminSupport from './Components/Dashboard/Admin/support'
-// import Developing from "./Pages/Developing";
+import Developing from "./Pages/Developing";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -25,8 +26,8 @@ const App = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/home" element={<Homepage />} />
+        <Route path="/" element={<Developing />} />
+        <Route path="/home" element={<Developing />} />
         <Route path="/ourcompany" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/dashboard" element={<DashboardPage />} />

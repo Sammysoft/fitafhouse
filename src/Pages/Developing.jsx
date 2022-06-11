@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React from "react";
 // import rocket from '/images/rocket.png'
 
