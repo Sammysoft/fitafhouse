@@ -70,7 +70,7 @@ const InvestmentMenu = () => {
             text: `You have made a placement for ${val.plan}
                                                     investment of N${val.amount} for
                                                      ${val.investmentDuration} Months you will recieve
-                                                     ${val.rate} at the end of the period, Thank You for using FITAFHOUSE!`,
+                                                     ${val.rate} and a variable ROI from the company at the end of the period, Thank You for using FITAFHOUSE!`,
             icon: "success",
           })
           }).catch(error =>{
