@@ -3,6 +3,14 @@
     display: flex !important;
     flex-direction: column !important;
   }
+  .center{
+    text-align: center !important;
+    width: 100%;
+  }
+  .img-center{
+    margin:auto !important;
+    width: 100% !important
+  }
   .value,
   .value2 {
     width: 100% !important;

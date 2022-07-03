@@ -9,7 +9,7 @@ const About = () => {
         style={{ fontFamily: "Ubuntu" }}
       >
         <div
-        className="aboutfirst"
+          className="aboutfirst"
           style={{
             display: "flex",
             flexDirection: "row",
@@ -23,7 +23,7 @@ const About = () => {
           }}
         >
           <div
-          className="value value1"
+            className="value value2"
             style={{
               width: "50%",
               color: "black",
@@ -34,26 +34,30 @@ const About = () => {
               paddingBottom: "5%",
             }}
           >
-            <span
-              style={{
-                fontWeight: "700",
-                fontSize: "1.5rem",
-                color: "#535353",
-              }}
-            >
-              {" "}
-              Our{" "}
-            </span>
-            <span
-              style={{
-                color: "#0263aa",
-                fontSize: "2rem",
-                fontWeight: "700",
-                opacity: "100%",
-              }}
-            >
-              Beginnings
-            </span><br/><br></br>
+            <div className="center">
+              <span
+                style={{
+                  fontWeight: "700",
+                  fontSize: "1.5rem",
+                  color: "#535353",
+                }}
+              >
+                {" "}
+                Our{" "}
+              </span>
+              <span
+                style={{
+                  color: "#0263aa",
+                  fontSize: "2rem",
+                  fontWeight: "700",
+                  opacity: "100%",
+                }}
+              >
+                Beginnings
+              </span>
+            </div>
+            <br />
+            <br></br>
             <p style={{ color: "#535353", opacity: 1 }}>
               First International Trade and Finance House Limited, also known as
               FITAFHOUSE, opened her door to the public for business in Nigeria
@@ -74,7 +78,7 @@ const About = () => {
             </p>
           </div>
           <div
-          className="value value2"
+            className="value value1"
             style={{
               width: "50%",
               color: "black",
@@ -85,7 +89,8 @@ const About = () => {
               paddingBottom: "5%",
             }}
           >
-            <span
+           <div className="center">
+           <span
               style={{
                 fontWeight: "700",
                 fontSize: "1.5rem",
@@ -100,7 +105,10 @@ const About = () => {
               style={{ color: "#0263aa", fontSize: "2rem", fontWeight: "700" }}
             >
               Package
-            </span><br/><br></br>
+            </span>
+           </div>
+            <br />
+            <br></br>
             <p style={{ color: "#535353", opacity: 1 }}>
               Our business package is very clear. Shortly put, we decide whether
               or not to finance a project or investment after critical, thorough

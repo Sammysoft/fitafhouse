@@ -19,16 +19,23 @@ const Horizon = () => {
         }}
       >
         <div className="value value1" style={{ width: "50%", padding: "5%" }}>
-          <img src={"/images/logo.png"} alt="logo" height="400px" width="80%" />
+          <img
+            src={"/images/logo.png"}
+            alt="logo"
+            height="400px"
+            width="80%"
+            className="img-center"
+          />
         </div>
         <div className="value value2" style={{ width: "50%" }}>
-          <span
+          <div
+            className="center"
             style={{ fontWeight: "700", fontSize: "2rem", color: "#0263aa" }}
           >
             Horizons...
-          </span>
+          </div>
           <p
-          className="parag"
+            className="parag"
             style={{
               color: "#535353",
               opacity: 1,
@@ -37,7 +44,6 @@ const Horizon = () => {
               lineHeight: "2",
             }}
           >
-
             The future of our company is very bright because of our strategy of
             doing business. We are not biting more than we can chew. We have
             very competent hands handling all project appraisal and approval. We
