@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <>
       <header
-        // className="masthead"
+        className="masthead"
         style={{
           width: "100%",
           height: "90vh",

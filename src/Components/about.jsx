@@ -9,6 +9,7 @@ const About = () => {
         style={{ fontFamily: "Ubuntu" }}
       >
         <div
+        className="aboutfirst"
           style={{
             display: "flex",
             flexDirection: "row",
@@ -22,6 +23,7 @@ const About = () => {
           }}
         >
           <div
+          className="value value1"
             style={{
               width: "50%",
               color: "black",
@@ -72,6 +74,7 @@ const About = () => {
             </p>
           </div>
           <div
+          className="value value2"
             style={{
               width: "50%",
               color: "black",

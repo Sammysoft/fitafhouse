@@ -1,18 +1,42 @@
 @media (max-width: 1080px) {
-  .image-feature{
-    width: 200% !important
+  .aboutfirst {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .value,
+  .value2 {
+    width: 100% !important;
+    margin: auto !important;
+    padding: 15px !important
+  }
+  .value2 {
+    order: 1;
+    padding: 15px !important;
+  }
+  .parag{
+    width:100% !important;
+  }
+  .value1 {
+    order: 2;
+  }
+  .horizon {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .image-feature {
+    width: 200% !important;
   }
   .harmbugger {
     display: block !important;
   }
-  .section1{
+  .section1 {
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between;
     align-items: center;
   }
-  .section1-item{
-    width: 90% !important
+  .section1-item {
+    width: 90% !important;
   }
   .about-wrapper .sign-in-img {
     width: 100vw;
@@ -386,12 +410,12 @@ input {
   padding: 10px 0px 0px 0px;
   width: 100vw;
 }
-.content{
+.content {
   position: absolute;
   bottom: 0;
   order: 2;
   top: 100vh;
-  width: 100vw
+  width: 100vw;
 }
 
 .sign-in-content {
@@ -1009,14 +1033,14 @@ textarea {
   justify-content: space-between;
 }
 
-.section1{
+.section1 {
   display: grid;
- grid-template-columns: 20% 20% 20% 20%;
+  grid-template-columns: 20% 20% 20% 20%;
   justify-content: space-around;
   align-items: center;
   height: "auto";
-  width: "100vw" !important
+  width: "100vw" !important;
 }
-.section1-item{
-  width: "fit-content"
+.section1-item {
+  width: "fit-content";
 }

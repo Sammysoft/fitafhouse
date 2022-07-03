@@ -4,6 +4,7 @@ const Horizon = () => {
   return (
     <>
       <div
+        className="horizon"
         style={{
           width: "100%",
           minHeight: "70vh",
@@ -14,19 +15,29 @@ const Horizon = () => {
           alignItems: "center",
           fontFamily: "Ubuntu",
           padding: "15px 30px",
-          backgroundColor:"#E4ECF2"
+          backgroundColor: "#E4ECF2",
         }}
       >
-        <div style={{ width: "50%", padding:"5%" }}>
+        <div className="value value1" style={{ width: "50%", padding: "5%" }}>
           <img src={"/images/logo.png"} alt="logo" height="400px" width="80%" />
         </div>
-        <div style={{ width: "50%" }}>
+        <div className="value value2" style={{ width: "50%" }}>
           <span
             style={{ fontWeight: "700", fontSize: "2rem", color: "#0263aa" }}
           >
             Horizons...
           </span>
-          <p style={{color:"#535353", opacity:1, width:"70%", font:"normal normal normal 1rem Ubuntu", lineHeight:"2"}}>
+          <p
+          className="parag"
+            style={{
+              color: "#535353",
+              opacity: 1,
+              width: "70%",
+              font: "normal normal normal 1rem Ubuntu",
+              lineHeight: "2",
+            }}
+          >
+
             The future of our company is very bright because of our strategy of
             doing business. We are not biting more than we can chew. We have
             very competent hands handling all project appraisal and approval. We
