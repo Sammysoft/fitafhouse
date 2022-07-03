@@ -1,6 +1,7 @@
 /* eslint-disable */
 import React from "react";
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+
 
 const Footer = () => {
   return (
@@ -15,17 +16,18 @@ const Footer = () => {
               className="col-lg-4 my-3 my-lg-0"
               style={{ flex: "1", padding: "20px", textAlign: "center" }}
             >
-              <a className="btn btn-dark btn-social mx-2" href="https://twitter.com/FitafhouseL" target="_blank">
-                <i class="bi bi-twitter"></i>
+              <a style={{margin:"15px"}} href="https://twitter.com/FitafhouseL" target="_blank">
+
+                <img src={"/images/twitter.png"} alt="twitter" height="30px" width="30px"/>
               </a>
-              <a className="btn btn-dark btn-social mx-2" href="https://instagram.com/fitafhouse_limited/" target="_blank">
-                <i class="bi bi-instagram"></i>
+              <a style={{margin:"15px"}} href="https://instagram.com/fitafhouse_limited/" target="_blank">
+              <img src={"/images/instagram.png"} alt="instagram" height="30px" width="30px"/>
               </a>
-              <a className="btn btn-dark btn-social mx-2" href="https://web.facebook.com/fitafhouse1/?ref=page_internal" target="_blank">
-                <i class="bi bi-facebook"></i>
+              <a style={{margin:"15px"}} href="https://web.facebook.com/fitafhouse1/?ref=page_internal" target="_blank">
+              <img src={"/images/facebook.png"} alt="facebook" height="30px" width="30px"/>
               </a>
-              <a className="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/fitafhouse-limited-1a9135240/" target="_blank">
-                <i class="bi bi-linkedin"></i>
+              <a style={{margin:"15px"}} href="https://www.linkedin.com/in/fitafhouse-limited-1a9135240/" target="_blank">
+              <img src={"/images/linkedIn.png"} alt="linkedIn" height="50px" width="50px"/>
               </a>
             </div>
           </div>

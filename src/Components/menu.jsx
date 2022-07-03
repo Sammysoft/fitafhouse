@@ -107,14 +107,14 @@ const Menu = () => {
           <div className="row">
             <div
               className="wrap"
-              style={{ textAlign: "center", width: "center" }}
+              style={{ textAlign: "center", width: "center", marginTop:"5vh" }}
             >
               <div style={{ alignItems: "center" }}>
                 <button
                   style={{
                     backgroundColor: "#0263aa",
                     color: "white",
-                    padding: "2% 5% 2% 5%",
+                    padding: "2% 5%",
                     border: "none",
                     float: "center",
                     padding: "10px 30px 10px 30px",

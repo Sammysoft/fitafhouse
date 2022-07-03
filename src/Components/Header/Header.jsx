@@ -9,16 +9,16 @@ const Header = () => {
   return (
     <>
       <header
-        className="masthead"
+        // className="masthead"
         style={{
           width: "100%",
-          height: "auto",
+          height: "90vh",
           margin: "auto",
           padding: "10px",
         }}
       >
         <div
-          className="align-items-center"
+          // className="align-items-center"
           style={{
             display: "flex",
             flexDirection: "row",
@@ -54,7 +54,7 @@ const Header = () => {
                   style={{
                     backgroundColor: "#0263aa",
                     color: "white",
-                    padding: "5% 15% 5% 15%",
+                    padding: "3% 15% ",
                     border: "none",
                   }}
                 >

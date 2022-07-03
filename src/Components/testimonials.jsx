@@ -28,17 +28,19 @@ const Testimonial = () => {
                   HOUSE
                 </span>
               </span>
-              <p style={{ fontFamily: "ubuntu", fontSize: "15px" }}>
-                FITAFHOUSE is a business house where we determine whether a
+              <p style={{ fontFamily: "ubuntu", fontSize: "15px", lineHeight:"2.5" }}>
+                At FIirst International Trade and Finance House, we determine whether a
                 project or business or investment is viable or not. We raise
                 money for qualified ones and appoint credible team for
-                execution.
+                execution. We eliminate the concerns of getting funding for your great business project<br/>
+                In addition, you get access to our team of competent, world class professionals
+                to help your business expand beyond expectations. With FITAFHOUSE, the possibilities are endless
               </p>
               <button
                 style={{
                   backgroundColor: "#0263aa",
                   color: "white",
-                  padding: "5% 15% 5% 15%",
+                  padding: "3% 15%",
                   border: "none",
                 }}
               >
@@ -53,7 +55,7 @@ const Testimonial = () => {
                   >
                     <span style={{ fontSize: "14px", fontFamily: "ubuntu" }}>
                       {" "}
-                      Learn More
+                      Contact Us Today!
                     </span>
                   </Link>
                 </span>

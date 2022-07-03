@@ -12,7 +12,7 @@ const Navbar = () => {
           width: "100vw",
         }}
       >
-        <div className="container px-5">
+        <div className="container px-5" style={{width:"87%", margin:"auto"}}>
           <a
             className="navbar-brand fw-bold"
             href="/home"

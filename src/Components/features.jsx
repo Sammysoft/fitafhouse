@@ -39,7 +39,7 @@ const Features = () => {
                   HOUSE
                 </span>
               </span>
-              <p style={{ fontFamily: "ubuntu", fontSize: "15px" }}>
+              <p style={{ fontFamily: "ubuntu", fontSize: "15px", lineHeight:"2.5" }}>
                 International trade business involves large sum of money
                 expecially now that we have global challenges with the value of
                 our currencies It's on this note that we humbly ask for your
@@ -54,7 +54,7 @@ const Features = () => {
                 style={{
                   backgroundColor: "#0263aa",
                   color: "white",
-                  padding: "5% 15% 5% 15%",
+                  padding: "3% 15%",
                   border: "none",
                 }}
               >

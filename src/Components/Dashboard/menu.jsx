@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import api from "../../config";
 const url = api.url;
-
+``
 const Menu = ({ id, fullname, name }) => {
   const [notification, setNotification] = useState();
   const [investment, setInvestments] = useState([]);
