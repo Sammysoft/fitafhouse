@@ -33,7 +33,7 @@ const Footer = () => {
           </div>
           <div
             className="nav-menu"
-            style={{ display: "inline-block", flex: "1", textAlign: "center" }}
+            style={{ display: "inline-block", flex: "1", textAlign: "center", color:"#999999" }}
           >
             <ul
               style={{

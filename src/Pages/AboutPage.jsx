@@ -4,6 +4,7 @@ import NavBar from "../Components/navbar";
 import Footer from "../Components/footer";
 import About from "../Components/about";
 import Partner from "../Components/partner";
+import Horizon from "../Components/Horizons";
 
 const AboutPage = () => {
   return (
@@ -12,6 +13,7 @@ const AboutPage = () => {
       <Header />
       <About />
       <Partner />
+      <Horizon />
       <Footer />
     </>
   );
