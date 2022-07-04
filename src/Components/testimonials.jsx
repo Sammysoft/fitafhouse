@@ -29,7 +29,7 @@ const Testimonial = () => {
                 </span>
               </span>
               <p style={{ fontFamily: "ubuntu", fontSize: "15px", lineHeight:"2.5" }}>
-                At FIirst International Trade and Finance House, we determine whether a
+                At First International Trade and Finance House, we determine whether a
                 project or business or investment is viable or not. We raise
                 money for qualified ones and appoint credible team for
                 execution. We eliminate the concerns of getting funding for your great business project<br/>
