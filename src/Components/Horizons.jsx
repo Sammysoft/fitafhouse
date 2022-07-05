@@ -30,7 +30,7 @@ const Horizon = () => {
         <div className="value value2" style={{ width: "50%" }}>
           <div
             className="center"
-            style={{ fontWeight: "700", fontSize: "2rem", color: "#0263aa" }}
+            style={{ fontWeight: "700", fontSize: "2rem", color: "#0263aa", textTransform:"uppercase" }}
           >
             Horizons...
           </div>

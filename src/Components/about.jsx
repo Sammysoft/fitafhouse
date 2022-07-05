@@ -34,7 +34,7 @@ const About = () => {
               paddingBottom: "5%",
             }}
           >
-            <div className="center">
+            <div className="center" style={{textTransform:"uppercase"}}>
               <span
                 style={{
                   fontWeight: "700",
@@ -89,7 +89,7 @@ const About = () => {
               paddingBottom: "5%",
             }}
           >
-           <div className="center">
+           <div className="center" style={{textTransform:"uppercase"}}>
            <span
               style={{
                 fontWeight: "700",
