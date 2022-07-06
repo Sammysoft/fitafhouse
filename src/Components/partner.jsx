@@ -22,7 +22,7 @@ const Partner = () => {
             className="btn btn-outline-light py-3 px-4"
             href="/contact#form"
             target="_blank"
-            style={{ fontFamily: "ubuntu" }}
+            style={{ fontFamily: "Montserrat" }}
           >
             Become Our partner
           </a>

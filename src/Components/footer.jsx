@@ -46,7 +46,7 @@ const Footer = () => {
                 style={{
                   display: "inline-block",
                   padding: "20px",
-                  fontFamily: "ubuntu",
+                  fontFamily: "Montserrat",
                 }}
               >
                 <Link
@@ -65,7 +65,7 @@ const Footer = () => {
                 style={{
                   display: "inline-block",
                   padding: "20px",
-                  fontFamily: "ubuntu",
+                  fontFamily: "Montserrat",
                 }}
               >
                 <Link
@@ -84,7 +84,7 @@ const Footer = () => {
                 style={{
                   display: "inline-block",
                   padding: "20px",
-                  fontFamily: "ubuntu",
+                  fontFamily: "Montserrat",
                 }}
               >
                 <Link
@@ -106,7 +106,7 @@ const Footer = () => {
               flex: "1",
               padding: "20px",
               textAlign: "center",
-              fontFamily: "ubuntu",
+              fontFamily: "Montserrat",
             }}
           >
             Copyright &copy; FIRST INTERNATIONAL TRADE AND FINANCE HOUSE LIMITED

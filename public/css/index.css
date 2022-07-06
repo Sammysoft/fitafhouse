@@ -84,7 +84,7 @@
 
   .sign-in-content {
     position: absolute;
-    font-family: "ubuntu";
+    font-family: "Montserrat";
     display: flex;
     top: 50vh;
     flex-direction: column;
@@ -112,7 +112,7 @@
   }
 
   .menu-wrapper {
-    font-family: "ubuntu";
+    font-family: "Montserrat";
     overflow-y: scroll;
     height: 100vh !important;
     padding: 15px !important;
@@ -188,12 +188,12 @@
     flex-direction: column !important;
     justify-content: space-between;
     align-items: flex-start;
-    font-family: "ubuntu";
+    font-family: "Montserrat";
     width: 100%;
     height: 100vh !important;
   }
   .menu-wrapper {
-    font-family: "ubuntu";
+    font-family: "Montserrat";
     width: 90% !important;
     margin: auto;
   }
@@ -221,7 +221,7 @@
   }
 
   .menu-wrapper {
-    font-family: "ubuntu";
+    font-family: "Montserrat";
     flex: 4;
   }
   .inner-menu {
@@ -354,11 +354,11 @@
   }
   #btn {
     font-size: 10px !important;
-    font-family: "ubuntu" !important;
+    font-family: "Montserrat" !important;
   }
   #fitaf-full {
     font-size: 8px !important;
-    font-family: "ubuntu" !important;
+    font-family: "Montserrat" !important;
     font-weight: lighter !important;
     display: none;
   }
@@ -368,7 +368,7 @@
   height: 10vh;
   background-color: #f3f3f3;
   padding: 3%;
-  font-family: "ubuntu";
+  font-family: "Montserrat";
   text-align: left;
   color: white;
   background-color: #0263aa;
@@ -410,7 +410,7 @@ input {
 
 .sign-up-content {
   position: absolute;
-  font-family: "ubuntu";
+  font-family: "Montserrat";
   top: 50vh;
   align-items: center;
   text-align: center;
@@ -428,7 +428,7 @@ input {
 
 .sign-in-content {
   position: absolute;
-  font-family: "ubuntu";
+  font-family: "Montserrat";
   display: flex;
   top: 50vh;
   flex-direction: row;
@@ -548,7 +548,7 @@ input {
 
 .form-wrapper {
   background-color: whitesmoke;
-  font-family: "ubuntu";
+  font-family: "Montserrat";
 }
 
 .form-inputs {
@@ -577,12 +577,12 @@ input {
 
 .texter {
   text-align: center;
-  font-family: "ubuntu";
+  font-family: "Montserrat";
   line-height: 4rem;
 }
 
 .about-wrapper {
-  font-family: "ubuntu";
+  font-family: "Montserrat";
   background-color: #f3f3f3;
   text-align: justify;
   font-weight: 300;
@@ -616,7 +616,7 @@ input {
 }
 
 .menu-wrapper {
-  font-family: "ubuntu";
+  font-family: "Montserrat";
   flex: 3;
   overflow-y: scroll;
   height: 90vh;
@@ -688,7 +688,7 @@ input {
 }
 
 .right-menu-wrapper {
-  font-family: "ubuntu";
+  font-family: "Montserrat";
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -714,7 +714,7 @@ input {
   justify-content: space-between;
   align-items: flex-start;
   /* padding: 2%; */
-  font-family: "ubuntu";
+  font-family: "Montserrat";
   width: 100%;
   /* height: max-content; */
 }
@@ -984,7 +984,7 @@ textarea {
   margin: auto;
   width: 60%;
   position: relative;
-  font-family: "ubuntu";
+  font-family: "Montserrat";
 }
 .send-msg:hover {
   cursor: pointer;
@@ -1016,7 +1016,7 @@ textarea {
 }
 .invest-card {
   background-color: white;
-  font-family: "Ubuntu";
+  font-family: "Montserrat";
   color: #0263aa;
   padding: 10px;
   border-radius: 10px;

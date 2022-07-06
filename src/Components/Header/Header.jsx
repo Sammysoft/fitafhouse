@@ -70,7 +70,7 @@ const Header = () => {
                       {" "}
                       <span
                         id="btn"
-                        style={{ fontSize: "14px", fontFamily: "ubuntu" }}
+                        style={{ fontSize: "14px", fontFamily: "Montserrat" }}
                       >
                         {" "}
                         Learn More
@@ -85,7 +85,7 @@ const Header = () => {
                   style={{
                     fontSize: "12px",
                     fontWeight: "200",
-                    fontFamily: "ubuntu",
+                    fontFamily: "Montserrat",
                   }}
                 >
                   FIRST INTERNATIONAL TRADE AND FINANCE HOUSE LIMITED

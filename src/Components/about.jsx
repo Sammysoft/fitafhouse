@@ -6,7 +6,7 @@ const About = () => {
       <div
         data-aos="fade-up"
         data-aos-duration="3000"
-        style={{ fontFamily: "Ubuntu" }}
+        style={{ fontFamily: "Montserrat" }}
       >
         <div
           className="aboutfirst"
@@ -40,6 +40,7 @@ const About = () => {
                   fontWeight: "700",
                   fontSize: "1.5rem",
                   color: "#535353",
+                  textTransform:"capitalize"
                 }}
               >
                 {" "}
@@ -96,6 +97,7 @@ const About = () => {
                 fontSize: "1.5rem",
                 color: "#535353",
                 opacity: "100%",
+                textTransform:"capitalize"
               }}
             >
               {" "}

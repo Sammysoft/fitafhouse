@@ -11,7 +11,7 @@ const Testimonial = () => {
               data-aos="fade-up"
               data-aos-druration="3000"
               className="col-12 col-lg-5"
-              style={{ fontSize: "10px", fontFamily: "ubuntu" }}
+              style={{ fontSize: "10px", fontFamily: "Montserrat" }}
             >
               <span style={{ fontWeight: "bolder", fontSize: "40px" }}>
                 Growing With <br />
@@ -28,7 +28,7 @@ const Testimonial = () => {
                   HOUSE
                 </span>
               </span>
-              <p style={{ fontFamily: "ubuntu", fontSize: "15px", lineHeight:"2.5" }}>
+              <p style={{ fontFamily: "Montserrat", fontSize: "15px", lineHeight:"2.5" }}>
                 At First International Trade and Finance House, we determine whether a
                 project or business or investment is viable or not. We raise
                 money for qualified ones and appoint credible team for
@@ -53,7 +53,7 @@ const Testimonial = () => {
                       color: "white",
                     }}
                   >
-                    <span style={{ fontSize: "14px", fontFamily: "ubuntu" }}>
+                    <span style={{ fontSize: "14px", fontFamily: "Montserrat" }}>
                       {" "}
                       Contact Us Today!
                     </span>

@@ -48,7 +48,7 @@ const HarmbuggerNav = () => {
                   <a
                     className="nav-link me-lg-3"
                     href="/dashboard"
-                    style={{ padding: "20px", fontFamily: "ubuntu" }}
+                    style={{ padding: "20px", fontFamily: "Montserrat" }}
                   >
                     Dashboard
                   </a>
@@ -57,7 +57,7 @@ const HarmbuggerNav = () => {
                   <a
                     className="nav-link me-lg-3"
                     href="/dashboard/investments"
-                    style={{ padding: "20px", fontFamily: "ubuntu" }}
+                    style={{ padding: "20px", fontFamily: "Montserrat" }}
                   >
                     Investments
                   </a>
@@ -66,7 +66,7 @@ const HarmbuggerNav = () => {
                   <a
                     className="nav-link me-lg-3"
                     href="/dashboard/profile"
-                    style={{ padding: "20px", fontFamily: "ubuntu" }}
+                    style={{ padding: "20px", fontFamily: "Montserrat" }}
                   >
                     Profile
                   </a>
@@ -75,7 +75,7 @@ const HarmbuggerNav = () => {
                   <a
                     className="nav-link me-lg-3"
                     href="/dashboard/support"
-                    style={{ padding: "20px", fontFamily: "ubuntu" }}
+                    style={{ padding: "20px", fontFamily: "Montserrat" }}
                   >
                     Support
                   </a>

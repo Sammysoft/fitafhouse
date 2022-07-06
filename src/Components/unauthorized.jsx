@@ -7,7 +7,7 @@ const Unauthorized = () => {
         <div
           className="container"
           style={{
-            fontFamily: "ubuntu",
+            fontFamily: "Montserrat",
             textAlign: "center",
             paddingTop: "40vh",
           }}

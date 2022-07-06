@@ -19,7 +19,7 @@ const InvestmentMenu = () => {
   const [phonenumber, setUserPhoneNumber] = useState("");
   const [email, setUserEmail] = useState("");
   const [loading, setLoading] = useState(false);
-  const [investment, setInvestments] = useState([])
+  const [investment, setInvestments] = useState([]);
   // const Navigate = useNavigate();
   const override = css`
     display: block;
@@ -32,8 +32,6 @@ const InvestmentMenu = () => {
     height: 100%;
     position: absolute;
   `;
-
-
 
   const token = localStorage.getItem("token");
 
@@ -55,33 +53,36 @@ const InvestmentMenu = () => {
         amount: searchParams.get("amount"),
         email: searchParams.get("email"),
         phonenumber: searchParams.get("phonenumber"),
-        investmentDuration: searchParams.get('duration'),
+        investmentDuration: searchParams.get("duration"),
         plan: searchParams.get("plan"),
         rate: searchParams.get("rate"),
         username: response.data.fullname,
-        investorID: response.data._id
-      }
+        investorID: response.data._id,
+      };
       console.log(status);
-      if (status ===  "successful") {
+      if (status === "successful") {
         setLoading(false);
-        axios.post(`${url}/api/invest/${response.data._id}`, val).then(() => {
-          Swal.fire({
-            title: `${val.plan} plan`,
-            text: `You have made a placement for ${val.plan}
+        axios
+          .post(`${url}/api/invest/${response.data._id}`, val)
+          .then(() => {
+            Swal.fire({
+              title: `${val.plan} plan`,
+              text: `You have made a placement for ${val.plan}
                                                     investment of N${val.amount} for
                                                      ${val.investmentDuration} Months you will recieve
                                                      ${val.rate} and a variable ROI from the company at the end of the period, Thank You for using FITAFHOUSE!`,
-            icon: "success",
+              icon: "success",
+            });
           })
-          }).catch(error =>{
-            console.log(error)
+          .catch((error) => {
+            console.log(error);
             Swal.fire({
               icon: "error",
-              title:"Oops!",
-              text: error.response.data.msg
-            })
-        });
-    } else if (status ==="cancelled") {
+              title: "Oops!",
+              text: error.response.data.msg,
+            });
+          });
+      } else if (status === "cancelled") {
         Swal.fire({
           icon: "warning",
           title: "Cancelled",
@@ -91,15 +92,15 @@ const InvestmentMenu = () => {
     });
   }, []);
 
-  useEffect(()=>{
+  useEffect(() => {
     fetch(`${url}/api/investments/${user}`).then(async (res) => {
-      const response = await res.json()
+      const response = await res.json();
       console.log(response.result);
-      setInvestments(response.result.filter(el => el.investments.isActive == false));
+      setInvestments(
+        response.result.filter((el) => el.investments.isActive == false)
+      );
     });
-  }, [user])
-
-
+  }, [user]);
 
   const initiateInvestment = (val) => {
     console.log(val);
@@ -116,7 +117,7 @@ const InvestmentMenu = () => {
           .post(`${url}/api/payments`, val)
           .then((res) => {
             const raveLink = res.data.data.data.link;
-            window.location.replace(raveLink)
+            window.location.replace(raveLink);
           })
           .catch((error) => {
             setLoading(false);
@@ -149,7 +150,6 @@ const InvestmentMenu = () => {
       ) : (
         <>
           {investment.length == 0 ? (
-
             <div className="menu-wrapper">
               <div className="investment">
                 <div className="investment-info1">
@@ -221,11 +221,12 @@ const InvestmentMenu = () => {
                 </div>
               </div>
             </div>
-) : (
+          ) : (
             <div className="menu-wrapper">
               <div className="investment-wrapper">
                 <div className="inner-menu">
-                  Sorry, You have a pending approval.<br/> Wait for your investments to be approved
+                  Sorry, You have a pending approval.
+                  <br /> Wait for your investments to be approved
                   <br />
                   <Link
                     style={{

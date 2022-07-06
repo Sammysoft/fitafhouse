@@ -22,7 +22,7 @@ const Features = () => {
               data-aos="fade-up"
               data-aos-duration="3000"
               className="col-12 col-lg-5"
-              style={{ fontSize: "10px", fontFamily: "ubuntu" }}
+              style={{ fontSize: "10px", fontFamily: "Montserrat" }}
             >
               <span style={{ fontWeight: "bolder", fontSize: "40px" }}>
                 Investment With <br />
@@ -39,7 +39,7 @@ const Features = () => {
                   HOUSE
                 </span>
               </span>
-              <p style={{ fontFamily: "ubuntu", fontSize: "15px", lineHeight:"2.5" }}>
+              <p style={{ fontFamily: "Montserrat", fontSize: "15px", lineHeight:"2.5" }}>
                 International trade business involves large sum of money
                 expecially now that we have global challenges with the value of
                 our currencies It's on this note that we humbly ask for your
@@ -69,7 +69,7 @@ const Features = () => {
                     to="/onboarding"
                   >
                     {" "}
-                    <span style={{ fontSize: "14px", fontFamily: "ubuntu" }}>
+                    <span style={{ fontSize: "14px", fontFamily: "Montserrat" }}>
                       {" "}
                       Learn More
                     </span>

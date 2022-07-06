@@ -44,7 +44,7 @@ const Navbar = () => {
                 <a
                   className="nav-link me-lg-3"
                   href="/home"
-                  style={{ padding: "20px", fontFamily: "ubuntu" }}
+                  style={{ padding: "20px", fontFamily: "Montserrat" }}
                 >
                   Home
                 </a>
@@ -53,7 +53,7 @@ const Navbar = () => {
                 <a
                   className="nav-link me-lg-3"
                   href="/ourcompany"
-                  style={{ padding: "20px", fontFamily: "ubuntu" }}
+                  style={{ padding: "20px", fontFamily: "Montserrat" }}
                 >
                   Our Company
                 </a>
@@ -62,7 +62,7 @@ const Navbar = () => {
                 <a
                   className="nav-link me-lg-3"
                   href="/onboarding"
-                  style={{ padding: "20px", fontFamily: "ubuntu" }}
+                  style={{ padding: "20px", fontFamily: "Montserrat" }}
                 >
                   Invest With Us
                 </a>
@@ -71,7 +71,7 @@ const Navbar = () => {
                 <a
                   className="nav-link me-lg-3"
                   href="/contact"
-                  style={{ padding: "20px", fontFamily: "ubuntu" }}
+                  style={{ padding: "20px", fontFamily: "Montserrat" }}
                 >
                   Get In Touch
                 </a>

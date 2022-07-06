@@ -13,7 +13,7 @@ const Horizon = () => {
           flexDirection: "row",
           justifyContent: "center",
           alignItems: "center",
-          fontFamily: "Ubuntu",
+          fontFamily: "Montserrat",
           padding: "15px 30px",
           backgroundColor: "#E4ECF2",
         }}
@@ -30,7 +30,7 @@ const Horizon = () => {
         <div className="value value2" style={{ width: "50%" }}>
           <div
             className="center"
-            style={{ fontWeight: "700", fontSize: "2rem", color: "#0263aa", textTransform:"uppercase" }}
+            style={{ fontWeight: "700", fontSize: "2rem", color: "#0263aa", textTransform:"capitalize" }}
           >
             Horizons...
           </div>
@@ -40,7 +40,7 @@ const Horizon = () => {
               color: "#535353",
               opacity: 1,
               width: "70%",
-              font: "normal normal normal 1rem Ubuntu",
+              font: "normal normal normal 1rem Montserrat",
               lineHeight: "2",
             }}
           >
