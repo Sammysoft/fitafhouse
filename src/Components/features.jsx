@@ -38,8 +38,8 @@ const Features = () => {
                 <span style={{ color: "#6bbe43", fontWeight: "bolder" }}>
                   HOUSE
                 </span>
-              </span>
-              <p style={{ fontFamily: "Montserrat", fontSize: "15px", lineHeight:"2.5" }}>
+              </span><br/><br/>
+              <p style={{ fontFamily: "Montserrat", fontSize: "15px", lineHeight:"1.5" }}>
                 International trade business involves large sum of money
                 expecially now that we have global challenges with the value of
                 our currencies It's on this note that we humbly ask for your
@@ -49,7 +49,7 @@ const Features = () => {
                 with corresponding increase in our profit. That means more
                 returns will be made available to all investors at the end of
                 the financial year
-              </p>
+              </p><br/><br/>
               <button
                 style={{
                   backgroundColor: "#0263aa",

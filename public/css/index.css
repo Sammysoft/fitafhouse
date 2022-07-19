@@ -76,10 +76,16 @@
   .header-content {
     text-align: center;
   }
+  .header-welcome{
+    font-weight: 900 !important;
+    font-size: 40px !important;
+  }
   .fitaf,
   .house {
     color: white !important;
-    font-size: 25px !important;
+    font-size: 40px !important;
+    font-weight: 900 !important;
+
   }
 
   .sign-in-content {

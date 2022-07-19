@@ -27,15 +27,15 @@ const Testimonial = () => {
                 <span style={{ color: "#6bbe43", fontWeight: "bolder" }}>
                   HOUSE
                 </span>
-              </span>
-              <p style={{ fontFamily: "Montserrat", fontSize: "15px", lineHeight:"2.5" }}>
+              </span><br/><br/>
+              <p style={{ fontFamily: "Montserrat", fontSize: "15px", lineHeight:"1.5" }}>
                 At First International Trade and Finance House, we determine whether a
                 project or business or investment is viable or not. We raise
                 money for qualified ones and appoint credible team for
                 execution. We eliminate the concerns of getting funding for your great business project<br/>
                 In addition, you get access to our team of competent, world class professionals
                 to help your business expand beyond expectations. With FITAFHOUSE, the possibilities are endless
-              </p>
+              </p><br/><br/>
               <button
                 style={{
                   backgroundColor: "#0263aa",

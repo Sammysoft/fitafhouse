@@ -41,7 +41,7 @@ const Horizon = () => {
               opacity: 1,
               width: "70%",
               font: "normal normal normal 1rem Montserrat",
-              lineHeight: "2",
+              lineHeight: "1.5",
             }}
           >
             The future of our company is very bright because of our strategy of
