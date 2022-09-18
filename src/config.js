@@ -1,5 +1,5 @@
 const api = {
-  url: "https://fitafhouse-api.herokuapp.com",
+  url: "https://node-api-fitafhouse.onrender.com",
 };
 
 export default api;
