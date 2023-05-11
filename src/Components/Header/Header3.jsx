@@ -5,12 +5,16 @@ const Header3 = () => {
   return (
     <>
       <header
-        className="masthead3"
+        // className="masthead3"
         style={{
           width: "100%",
-          height: "auto",
+          height: "70vh",
           margin: "auto",
           padding: "10px",
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),url("/images/phone.jpg")`,
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "cover",
+          backgroundSize: "120%",
         }}
       >
         <div
@@ -29,18 +33,18 @@ const Header3 = () => {
               className="header-content"
               style={{ padding: "20%" }}
             >
-              <h1 className="header-welcome">
+              <h1 style={{color:"white"}}>
                 Get in Touch -<br />{" "}
-                <span style={{ color: "#0263aa" }} className="fitaf">
+                <span style={{ color: "white" }} className="fitaf">
                   FITAF
                 </span>
-                <span style={{ color: "#6bbe43" }} className="house">
+                <span style={{ color: "white" }} className="house">
                   HOUSE
                 </span>
               </h1>
               <br />
               <br />
-              <p className="lead fw-normal text-muted mb-5">
+              <p style={{color:"white"}}>
                 Your home for comprehensive, <br />
                 all-round trade and financing.
               </p>
@@ -52,6 +56,7 @@ const Header3 = () => {
                     fontSize: "12px",
                     fontWeight: "200",
                     fontFamily: "Montserrat",
+                    color:"white"
                   }}
                 >
                   FIRST INTERNATIONAL TRADE AND FINANCE HOUSE LIMITED

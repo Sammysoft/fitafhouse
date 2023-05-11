@@ -12,7 +12,7 @@ const HeaderImg = () => {
         <img
           src="/images/head-img.jpg"
           width="100%"
-          height="450px"
+          height="500px"
           alt="High quality House Cliparts For Free!"
         />
       </div>

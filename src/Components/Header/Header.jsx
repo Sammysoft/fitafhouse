@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderImg from "./HeaderImg";
+// import HeaderImg from "./HeaderImg";
 import AOS from "aos";
 import { Link } from "react-router-dom";
 import "aos/dist/aos.css";
@@ -9,16 +9,91 @@ const Header = () => {
   return (
     <>
       <header
-        className="masthead"
         style={{
           width: "100%",
           height: "90vh",
           margin: "auto",
           padding: "10px",
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),url("/images/head-img.jpg")`,
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "cover",
+          backgroundSize: "100%",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "space-between",
         }}
       >
+        <div style={{ paddingTop: "20vh" }}>
+          <div
+            style={{
+              color: "white",
+              fontWeight: 700,
+              fontSize: "2rem",
+              fontFamily: "Montserrat",
+            }}
+          >
+            Welcome to First International Trade and Finance House Limited
+          </div>
+          <div
+            style={{
+              color: "white",
+              fontWeight: 400,
+              fontSize: "1rem",
+              fontFamily: "Montserrat",
+              textAlign: "center",
+            }}
+          >
+            Your home for comprehensive, all - round trade and financing.
+          </div>
+        </div>
+
         <div
-          // className="align-items-center"
+          style={{
+            width: "100vw",
+            textAlign: "center",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent:"center"
+          }}
+        >
+          <div style={{ width: "15%" }}>
+            <button
+              style={{
+                backgroundColor: "#0263aa",
+                color: "white",
+                padding: "5% 10% ",
+                border: "none",
+                width: "100%",
+              }}
+            >
+              <span>
+                <Link
+                  style={{
+                    textDecoration: "none",
+                    textDecorationLine: "none",
+                    color: "white",
+                  }}
+                  to="/ourcompany"
+                >
+                  {" "}
+                  <span
+                    id="btn"
+                    style={{ fontSize: "14px", fontFamily: "Montserrat" }}
+                  >
+                    {" "}
+                    Learn More
+                  </span>
+                </Link>
+              </span>
+            </button>
+          </div>
+          <div style={{fontFamily:"Montserrat", opacity: .5, textAlign:"center", width:"100%", marginTop:"20vh", color:"#A2A2A2"}}>
+          FIRST INTERNATIONAL TRADE AND FINANCE HOUSE LIMITED.
+          </div>
+        </div>
+        {/* <div
           style={{
             display: "flex",
             flexDirection: "row",
@@ -93,8 +168,7 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <HeaderImg />
-        </div>
+        </div> */}
       </header>
     </>
   );
