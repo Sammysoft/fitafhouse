@@ -1,7 +1,7 @@
 @media (max-width: 1080px) {
   .header{
     width: 100%;
-    height: 90vh;
+    height: 90vh !important;
     margin: auto;
     padding: 10px;
     display: flex;
@@ -10,8 +10,9 @@
     justify-content: space-between;
   }
 
+
   .pad-20{
-    padding-top: 20vh
+    padding-top: 3vh !important
   }
   .aboutfirst {
     display: flex !important;
@@ -1076,7 +1077,7 @@ textarea {
 
 .header{
   width: 100%;
-  height: 60vh !important;
+  height: 90vh !important;
   margin: auto;
   padding: 10px;
   display: flex;
@@ -1086,5 +1087,5 @@ textarea {
 }
 
 .pad-20{
-  padding-top: 3vh
+  padding-top: 20vh
 }
