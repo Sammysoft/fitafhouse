@@ -13,8 +13,8 @@ const Header2 = () => {
           padding: "10px",
           backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),url("/images/bar.jpg")`,
           backgroundRepeat: "no-repeat",
-          backgroundPosition: "cover",
-          backgroundSize: "120%",
+          backgroundPosition: "center",
+          backgroundSize: "100%",
         }}
       >
         <div

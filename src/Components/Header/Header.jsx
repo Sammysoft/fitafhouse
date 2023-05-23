@@ -9,22 +9,15 @@ const Header = () => {
   return (
     <>
       <header
+        className={"header"}
         style={{
-          width: "100%",
-          height: "90vh",
-          margin: "auto",
-          padding: "10px",
           backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),url("/images/head-img.jpg")`,
           backgroundRepeat: "no-repeat",
-          backgroundPosition: "cover",
+          backgroundPosition: "center",
           backgroundSize: "100%",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "space-between",
         }}
       >
-        <div style={{ paddingTop: "20vh" }}>
+        <div className={"pad-20"}>
           <div
             style={{
               color: "white",
@@ -55,10 +48,10 @@ const Header = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            justifyContent:"center"
+            justifyContent: "center",
           }}
         >
-          <div style={{ width: "15%" }}>
+          <div style={{ width: "20%" }}>
             <button
               style={{
                 backgroundColor: "#0263aa",
@@ -77,20 +70,30 @@ const Header = () => {
                   }}
                   to="/ourcompany"
                 >
-                  {" "}
                   <span
                     id="btn"
-                    style={{ fontSize: "14px", fontFamily: "Montserrat" }}
+                    style={{
+                      fontSize: "14px",
+                      fontFamily: "Montserrat",
+                    }}
                   >
-                    {" "}
                     Learn More
                   </span>
                 </Link>
               </span>
             </button>
           </div>
-          <div style={{fontFamily:"Montserrat", opacity: .5, textAlign:"center", width:"100%", marginTop:"20vh", color:"#A2A2A2"}}>
-          FIRST INTERNATIONAL TRADE AND FINANCE HOUSE LIMITED.
+          <div
+            style={{
+              fontFamily: "Montserrat",
+              opacity: 0.5,
+              textAlign: "center",
+              width: "100%",
+              marginTop: "20vh",
+              color: "#A2A2A2",
+            }}
+          >
+            FIRST INTERNATIONAL TRADE AND FINANCE HOUSE LIMITED.
           </div>
         </div>
         {/* <div

@@ -1,4 +1,18 @@
 @media (max-width: 1080px) {
+  .header{
+    width: 100%;
+    height: 90vh;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .pad-20{
+    padding-top: 20vh
+  }
   .aboutfirst {
     display: flex !important;
     flex-direction: column !important;
@@ -1057,4 +1071,20 @@ textarea {
 }
 .section1-item {
   width: "fit-content";
+}
+
+
+.header{
+  width: 100%;
+  height: 60vh !important;
+  margin: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pad-20{
+  padding-top: 3vh
 }

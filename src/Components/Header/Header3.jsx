@@ -13,7 +13,7 @@ const Header3 = () => {
           padding: "10px",
           backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),url("/images/phone.jpg")`,
           backgroundRepeat: "no-repeat",
-          backgroundPosition: "cover",
+          backgroundPosition: "center",
           backgroundSize: "120%",
         }}
       >
