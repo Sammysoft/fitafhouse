@@ -5,10 +5,9 @@ const Header3 = () => {
   return (
     <>
       <header
-        // className="masthead3"
+        className="mast"
         style={{
           width: "100%",
-          height: "70vh",
           margin: "auto",
           padding: "10px",
           backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),url("/images/phone.jpg")`,

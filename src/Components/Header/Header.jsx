@@ -19,20 +19,20 @@ const Header = () => {
       >
         <div className={"pad-20"}>
           <div
+          className={"center-text"}
             style={{
               color: "white",
               fontWeight: 700,
-              fontSize: "2rem",
               fontFamily: "Montserrat",
             }}
           >
             Welcome to First International Trade and Finance House Limited
           </div>
           <div
+            className={"center-text-2"}
             style={{
               color: "white",
               fontWeight: 400,
-              fontSize: "1rem",
               fontFamily: "Montserrat",
               textAlign: "center",
             }}
@@ -48,7 +48,7 @@ const Header = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            justifyContent: "center",
+            justifyContent: "space-around",
           }}
         >
           <div style={{ width: "20%" }}>
@@ -89,7 +89,7 @@ const Header = () => {
               opacity: 0.5,
               textAlign: "center",
               width: "100%",
-              marginTop: "20vh",
+              marginTop: "10vh",
               color: "#A2A2A2",
             }}
           >

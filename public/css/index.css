@@ -1,43 +1,57 @@
 @media (max-width: 1080px) {
-  .header{
+  .header {
     width: 100%;
-    height: 90vh !important;
+    height: 50vh !important;
     margin: auto;
     padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around !important;
   }
 
+  .mast{
+    height: 50vh !important;
+  }
 
-  .pad-20{
-    padding-top: 3vh !important
+  .center-text {
+    text-align: center !important;
+    font-size: 1.5rem !important;
+  }
+  .center-text-2{
+    text-align: center !important;
+    font-size: 0.7rem !important;
+  }
+
+  .pad-20 {
+    padding-top: 3vh !important;
+    width: 90% !important;
+    font-size: 1rem !important;
   }
   .aboutfirst {
     display: flex !important;
     flex-direction: column !important;
   }
-  .center{
+  .center {
     text-align: center !important;
     width: 100%;
   }
-  .img-center{
-    margin:auto !important;
-    width: 100% !important
+  .img-center {
+    margin: auto !important;
+    width: 100% !important;
   }
   .value,
   .value2 {
     width: 100% !important;
     margin: auto !important;
-    padding: 15px !important
+    padding: 15px !important;
   }
   .value2 {
     order: 1;
     padding: 15px !important;
   }
-  .parag{
-    width:100% !important;
+  .parag {
+    width: 100% !important;
   }
   .value1 {
     order: 2;
@@ -91,7 +105,7 @@
   .header-content {
     text-align: center;
   }
-  .header-welcome{
+  .header-welcome {
     font-weight: 900 !important;
     font-size: 40px !important;
   }
@@ -100,7 +114,6 @@
     color: white !important;
     font-size: 40px !important;
     font-weight: 900 !important;
-
   }
 
   .sign-in-content {
@@ -1074,10 +1087,9 @@ textarea {
   width: "fit-content";
 }
 
-
-.header{
+.header {
   width: 100%;
-  height: 90vh !important;
+  height: 90vh;
   margin: auto;
   padding: 10px;
   display: flex;
@@ -1086,6 +1098,22 @@ textarea {
   justify-content: space-between;
 }
 
-.pad-20{
-  padding-top: 20vh
+.pad-20 {
+  padding-top: 20vh;
+  width: 60%;
+  text-align: center;
+}
+
+.center-text-2{
+  text-align: center !important;
+  font-size: 1rem
+}
+
+.center-text{
+  text-align: center !important;
+  font-size: 2rem
+}
+
+.mast{
+  height: 90vh;
 }
