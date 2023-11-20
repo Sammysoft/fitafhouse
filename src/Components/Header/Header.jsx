@@ -26,7 +26,7 @@ const Header = () => {
               fontFamily: "Montserrat",
             }}
           >
-            Welcome to First International Trade and Finance House Limited
+            Welcome to First International Trade and Finance House PLC
           </div>
           <div
             className={"center-text-2"}

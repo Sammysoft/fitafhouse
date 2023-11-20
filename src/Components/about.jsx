@@ -60,7 +60,7 @@ const About = () => {
             <br />
             <br></br>
             <p style={{ color: "#535353", opacity: 1 }}>
-              First International Trade and Finance House Limited, also known as
+              First International Trade and Finance House PLC, also known as
               FITAFHOUSE, opened her door to the public for business in Nigeria
               on March 26th, 1984. The company started her operation in Benin
               City before relocating to Akure, Ondo State in 1993. Generally,

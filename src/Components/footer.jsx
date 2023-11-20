@@ -109,7 +109,7 @@ const Footer = () => {
               fontFamily: "Montserrat",
             }}
           >
-            Copyright &copy; FIRST INTERNATIONAL TRADE AND FINANCE HOUSE LIMITED
+            Copyright &copy; FIRST INTERNATIONAL TRADE AND FINANCE HOUSE PLC
           </div>
         </div>
       </footer>
