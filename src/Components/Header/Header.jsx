@@ -93,7 +93,7 @@ const Header = () => {
               color: "#A2A2A2",
             }}
           >
-            FIRST INTERNATIONAL TRADE AND FINANCE HOUSE LIMITED.
+            FIRST INTERNATIONAL TRADE AND FINANCE HOUSE PLC.
           </div>
         </div>
         {/* <div

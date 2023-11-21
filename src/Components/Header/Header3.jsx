@@ -58,7 +58,7 @@ const Header3 = () => {
                     color:"white"
                   }}
                 >
-                  FIRST INTERNATIONAL TRADE AND FINANCE HOUSE LIMITED
+                  FIRST INTERNATIONAL TRADE AND FINANCE HOUSE PLC
                 </span>
               </div>
             </div>
